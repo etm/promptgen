@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a139" endpoint="">
+    <parameters>
+      <label>"employee submits vacation request"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'1'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a141" endpoint="">
+    <parameters>
+      <label>"register the requirement"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a143" endpoint="">
+    <parameters>
+      <label>"supervisor receives the request"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a145" endpoint="">
+    <parameters>
+      <label>"supervisor approves the request"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'4'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="not approved" language="text/javascript">
+      <call id="a149" endpoint="">
+        <parameters>
+          <label>"return application"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'6'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="approved" language="text/javascript">
+      <call id="a151" endpoint="">
+        <parameters>
+          <label>"generate notification"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'8'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a155" endpoint="">
+        <parameters>
+          <label>"HR completes the respective management procedures"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'9'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+</description>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a117" endpoint="">
+    <parameters>
+      <label>"claims officer registers claim"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'1'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a119" endpoint="">
+    <parameters>
+      <label>"claims officer examines claim"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a122" endpoint="">
+      <parameters>
+        <label>"claims officer writes settlement recommendation"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'4'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a123" endpoint="">
+      <parameters>
+        <label>"senior claims officer checks recommendation"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'5'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a125" endpoint="">
+      <parameters>
+        <label>"senior claims officer marks the claim"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'6'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="nok" language="text/javascript">
+        <call id="a131" endpoint="">
+          <parameters>
+            <label>"senior claims officer sends recommendation back"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'9'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition="ok" language="text/javascript">
+        <call id="a129" endpoint="">
+          <parameters>
+            <label>"the claim handling process proceeds"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'8'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <escape/>
+      </alternative>
+    </choose>
+  </loop>
+</description>
