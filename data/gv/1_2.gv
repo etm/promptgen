@@ -1,0 +1,37 @@
+digraph {
+rankdir=LR;
+"start_1"[shape=circle label=""];
+"end_1"[shape=doublecircle label=""];
+"end_2"[shape=doublecircle label=""];
+"Customer brings in defective computer"[shape=rectangle];
+"CRS checks the defect"[shape=rectangle];
+"Repair cost calculation"[shape=rectangle];
+"seg_1"[shape=diamond label="X"];
+"Customer decides costs are acceptable"[shape=rectangle];
+"Check and repair hardware"[shape=rectangle];
+"Check and configure software"[shape=rectangle];
+"spg_1"[shape=diamond label="AND"];
+"mpg_1"[shape=diamond label="AND"];
+"Test system functionality"[shape=rectangle];
+"seg_2"[shape=diamond label="X"];
+"Repair is finished"[shape=rectangle];
+"Execute arbitrary repair activity"[shape=rectangle];
+
+"start_1" -> "Customer brings in defective computer";
+"Customer brings in defective computer" -> "CRS checks the defect";
+"CRS checks the defect" -> "Repair cost calculation";
+"Repair cost calculation" -> "seg_1";
+"seg_1" -> "Customer decides costs are acceptable"[label="Costs are acceptable"];
+"seg_1" -> "end_1"[label="Costs are not acceptable"];
+"Customer decides costs are acceptable" -> "spg_1";
+"spg_1" -> "Check and repair hardware";
+"spg_1" -> "Check and configure software";
+"Check and repair hardware" -> "mpg_1";
+"Check and configure software" -> "mpg_1";
+"mpg_1" -> "Test system functionality";
+"Test system functionality" -> "seg_2";
+"seg_2" -> "Repair is finished"[label="No error detected"];
+"seg_2" -> "Execute arbitrary repair activity"[label="Error detected"];
+"Execute arbitrary repair activity" -> "Test system functionality";
+"Repair is finished" -> "end_2";
+}

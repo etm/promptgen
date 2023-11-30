@@ -1,0 +1,12 @@
+flowchart LR
+0:startevent:((startevent))-->1:task:(claims officer registers claim)
+1:task:-->2:task:(claims officer examines claim)
+2:task:-->3:exclusivegateway:{x}
+4:task:(claims officer writes settlement recommendation)-->5:task:(senior claims officer checks recommendation)
+5:task:-->6:task:(senior claims officer marks the claim)
+6:task:-->7:exclusivegateway:{x}
+7:exclusivegateway:-->|ok|8:task:(the claim handling process proceeds)
+7:exclusivegateway:-->|nok|9:task:(senior claims officer sends recommendation back)
+9:task:-->3:exclusivegateway:
+8:task:-->10:endevent:((endevent))
+3:exclusivegateway:-->4:task:

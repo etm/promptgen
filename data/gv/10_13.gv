@@ -1,0 +1,20 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "task_1"[shape=rectangle label="INQ transmits the transaction data request to the IP"];
+  "task_2"[shape=rectangle label="IP checks the request of the INQ"];
+  "seg_1"[shape=diamond label="X"];
+  "task_3"[shape=rectangle label="IP answers the question of the INQ"];
+  "task_4"[shape=rectangle label="Transmission of data"];
+  "task_5"[shape=rectangle label="Rejection"];
+  
+  "start_1" -> "task_1";
+  "task_1" -> "task_2";
+  "task_2" -> "seg_1";
+  "seg_1" -> "task_3"[label="Request is valid"];
+  "seg_1" -> "task_5"[label="Request is not valid"];
+  "task_3" -> "task_4";
+  "task_4" -> "end_1";
+  "task_5" -> "end_1";
+}

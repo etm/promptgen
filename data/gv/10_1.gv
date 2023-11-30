@@ -1,0 +1,17 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle];
+  "end_1"[shape=doublecircle] ;
+  "seg_1"[shape=diamond label="X"];
+  "MPON sents the dismissal to the MPOO"[shape=rectangle];
+  "MPOO reviews the dismissal"[shape=rectangle];
+  "MPOO opposes the dismissal of MPON"[shape=rectangle];
+  "MPOO confirmes the dismissal of the MPON"[shape=rectangle];
+  "start_1" -> "MPON sents the dismissal to the MPOO";
+  "MPON sents the dismissal to the MPOO" -> "MPOO reviews the dismissal";
+  "MPOO reviews the dismissal" -> "seg_1";
+  "seg_1" -> "MPOO opposes the dismissal of MPON"[label="Oppose"];
+  "seg_1" -> "MPOO confirmes the dismissal of the MPON"[label="Confirm"];
+  "MPOO opposes the dismissal of MPON" -> "end_1";
+  "MPOO confirmes the dismissal of the MPON" -> "end_1";
+}

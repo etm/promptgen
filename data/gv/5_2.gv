@@ -1,0 +1,22 @@
+digraph {
+rankdir=LR;
+"start_1"[shape=circle label=""];
+"end_1"[shape=doublecircle label=""];
+"seg_1"[shape=diamond label="X"];
+"Employee submits vacation request"[shape=rectangle];
+"Supervisor reviews request"[shape=rectangle];
+"Request is rejected"[shape=rectangle];
+"Employee reviews rejection reasons"[shape=rectangle];
+"Request is approved"[shape=rectangle];
+"HR completes management procedures"[shape=rectangle];
+
+"start_1" -> "Employee submits vacation request"
+"Employee submits vacation request" -> "Supervisor reviews request"
+"Supervisor reviews request" -> "seg_1"
+"seg_1" -> "Request is rejected"[label="Request is rejected"]
+"seg_1" -> "Request is approved"[label="Request is approved"]
+"Request is rejected" -> "Employee reviews rejection reasons"
+"Employee reviews rejection reasons" -> "Supervisor reviews request"[label="Resubmit request"]
+"Request is approved" -> "HR completes management procedures"
+"HR completes management procedures" -> "end_1"
+}

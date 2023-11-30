@@ -1,0 +1,9 @@
+flowchart LR
+0:startevent:((startevent))-->1:task:(MPON sends the dismissal)
+1:task:-->2:task:(MPOO reviews the dismissal)
+2:task:-->3:exclusivegateway:{x}
+3:exclusivegateway:-->4:task:(MPOO opposes the dismissal)
+3:exclusivegateway:-->6:task:(MPOO confirmes the dismissal)
+4:task:-->5:exclusivegateway:{x}
+6:task:-->5:exclusivegateway:
+5:exclusivegateway:-->7:endevent:((endevent))

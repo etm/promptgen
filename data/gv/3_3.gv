@@ -1,0 +1,21 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Claim is registered"[shape=rectangle];
+  "Claim is examined"[shape=rectangle];
+  "Settlement recommendation is written"[shape=rectangle];
+  "Recommendation is checked"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Claim is OK"[shape=rectangle];
+  "Claim is Not OK"[shape=rectangle];
+  "start_1" -> "Claim is registered";
+  "Claim is registered" -> "Claim is examined";
+  "Claim is examined" -> "Settlement recommendation is written";
+  "Settlement recommendation is written" -> "Recommendation is checked";
+  "Recommendation is checked" -> "seg_1";
+  "seg_1" -> "Claim is OK"[label="OK"];
+  "seg_1" -> "Claim is Not OK"[label="Not OK"];
+  "Claim is Not OK" -> "Settlement recommendation is written";
+  "Claim is OK" -> "end_1";
+}

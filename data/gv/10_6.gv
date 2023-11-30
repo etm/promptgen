@@ -1,0 +1,19 @@
+digraph {
+rankdir=LR;
+"start_1"[shape=circle label=""];
+"end_1"[shape=doublecircle label=""];
+"end_2"[shape=doublecircle label=""];
+"seg_1"[shape=diamond label="X"];
+"MSPN sends dismissal"[shape=rectangle];
+"MSPO reviews dismissal"[shape=rectangle];
+"MSPO rejects dismissal"[shape=rectangle];
+"MSPO confirms dismissal"[shape=rectangle];
+
+"start_1" -> "MSPN sends dismissal";
+"MSPN sends dismissal" -> "MSPO reviews dismissal";
+"MSPO reviews dismissal" -> "seg_1";
+"seg_1" -> "MSPO rejects dismissal"[label="Rejection"];
+"seg_1" -> "MSPO confirms dismissal"[label="Confirmation"];
+"MSPO rejects dismissal" -> "end_1";
+"MSPO confirms dismissal" -> "end_2";
+}

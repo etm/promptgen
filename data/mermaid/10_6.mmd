@@ -1,0 +1,9 @@
+flowchart LR
+0:startevent:((startevent))-->1:task:(MSPN sends dismissal)
+1:task:-->2:task:(MSPO reviews the dismissal)
+2:task:-->3:exclusivegateway:{x}
+3:exclusivegateway:-->4:task:(MSPO rejects the dismissal)
+3:exclusivegateway:-->6:task:(MSPO confirms the dismissal)
+4:task:-->5:exclusivegateway:{x}
+6:task:-->5:exclusivegateway:
+5:exclusivegateway:-->7:endevent:((endevent))

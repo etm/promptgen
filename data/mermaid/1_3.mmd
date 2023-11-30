@@ -1,0 +1,19 @@
+flowchart LR
+0:startevent:((startevent))-->1:task:(guest calls)
+1:task:-->2:task:(manager takes down the order)
+2:task:-->3:task:(manager submits an order ticket to kitchen)
+3:task:-->4:task:(manager gives an order to the sommelier)
+4:task:-->5:task:(manager assigns the order to the waiter)
+5:task:-->6:parallelgateway:{AND}
+6:parallelgateway:-->7:task:(the kitchen and the sommelier are doing their tasks)
+6:parallelgateway:-->9:task:(the waiter readies cart)
+7:task:-->8:parallelgateway:{AND}
+9:task:-->8:parallelgateway:
+8:parallelgateway:-->10:task:(waiter delivers the cart)
+10:task:-->11:task:(waiter returns to the room service station)
+11:task:-->12:exclusivegateway:{x}
+13:task:(waiter may wait to do the billing)-->14:exclusivegateway:{x}
+15:task:(waiter debits the guest account)-->14:exclusivegateway:
+12:exclusivegateway:-->|another order|13:task:
+12:exclusivegateway:-->|no other orders|15:task:
+14:exclusivegateway:-->16:endevent:((endevent))

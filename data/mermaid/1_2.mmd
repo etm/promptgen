@@ -1,0 +1,21 @@
+flowchart LR
+0:startevent:((startevent))-->1:task:(customer brings defective computer)
+1:task:-->2:task:(the crs checks the defect)
+2:task:-->3:task:(the crs hands out repair cost calculation)
+3:task:-->4:exclusivegateway:{x}
+4:exclusivegateway:-->|not aceptable|5:task:(customer takes computer home)
+5:task:-->6:exclusivegateway:{x}
+4:exclusivegateway:{x}-->|aceptable|15:exclusivegateway:{x}
+15:exclusivegateway:-->7:parallelgateway:{AND}
+7:parallelgateway:{AND}-->8:task:(check the hardware)
+8:task:-->9:task:(repair the hardware)
+7:parallelgateway:-->10:task:
+10:task:(checks the software)-->11:task:(configures the software)
+12:task:(test system functionality)-->13:exclusivegateway:{x}
+13:exclusivegateway:{x}-->|no errors|16:task:(repair is finished)
+13:exclusivegateway:{x}-->|error detected|15:exclusivegateway:
+14:parallelgateway:{AND}-->12:task:
+16:task:-->6:exclusivegateway:
+9:task:-->14:parallelgateway:
+11:task:-->14:parallelgateway:
+6:exclusivegateway:-->17:endevent:((endevent))

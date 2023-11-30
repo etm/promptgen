@@ -1,0 +1,32 @@
+digraph {
+rankdir=LR;
+"start_1"[shape=circle label=""];
+"end_1"[shape=doublecircle label=""];
+"Guest calls room service"[shape=rectangle];
+"Room-service manager takes down the order"[shape=rectangle];
+"Order ticket is submitted to the kitchen"[shape=rectangle];
+"Sommelier is given an order"[shape=rectangle];
+"Waiter is assigned the order"[shape=rectangle];
+"Waiter readies a cart"[shape=rectangle];
+"Waiter prepares nonalcoholic drinks"[shape=rectangle];
+"Food, wine, and cart are ready"[shape=rectangle];
+"Waiter delivers order to the guest’s room"[shape=rectangle];
+"Waiter debits the guest’s account"[shape=rectangle];
+"seg_1"[shape=diamond label="X"];
+"meg_1"[shape=diamond label="X"];
+
+"start_1" -> "Guest calls room service";
+"Guest calls room service" -> "Room-service manager takes down the order";
+"Room-service manager takes down the order" -> "seg_1";
+"seg_1" -> "Order ticket is submitted to the kitchen"[label="80% orders"];
+"seg_1" -> "Waiter is assigned the order"[label="20% orders"];
+"Order ticket is submitted to the kitchen" -> "Sommelier is given an order";
+"Sommelier is given an order" -> "meg_1";
+"Waiter is assigned the order" -> "Waiter readies a cart";
+"Waiter readies a cart" -> "Waiter prepares nonalcoholic drinks";
+"Waiter prepares nonalcoholic drinks" -> "meg_1";
+"meg_1" -> "Food, wine, and cart are ready";
+"Food, wine, and cart are ready" -> "Waiter delivers order to the guest’s room";
+"Waiter delivers order to the guest’s room" -> "Waiter debits the guest’s account";
+"Waiter debits the guest’s account" -> "end_1";
+}
