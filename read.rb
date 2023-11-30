@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 require_relative 'lib/cpee/transformation/bpmn2'
 require_relative 'lib/cpee/transformation/mermaid'
 require_relative 'lib/cpee/transformation/transformer'
@@ -11,9 +12,7 @@ bpmn = Dir.glob(File.join(__dir__,'data','**/*.bpmn'))
 #pp source.graph
 
 source = CPEE::Transformation::Source::Mermaid.new(File.read('data/mermaid/1_2.mmd'))
-pp source.graph
-
-# trans = CPEE::Transformation::Transformer.new(source)
-# trans.build_traces
-# trans.build_tree(false)
-# puts trans.generate_model(CPEE::Transformation::Target::CPEE).to_s
+trans = CPEE::Transformation::Transformer.new(source)
+trans.build_traces
+trans.build_tree(false)
+puts trans.generate_model(CPEE::Transformation::Target::CPEE).to_s
