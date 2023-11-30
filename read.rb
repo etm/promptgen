@@ -13,7 +13,7 @@ bpmn = Dir.glob(File.join(__dir__,'data','**/*.bpmn'))
 # pp source.graph
 
 ### test Mermaid
-# source = CPEE::Transformation::Source::Mermaid.new(File.read(f))
+# source = CPEE::Transformation::Source::Mermaid.new(File.read('data/mermaid/1_2.mmd'))
 # trans = CPEE::Transformation::Transformer.new(source)
 # traces = trans.build_traces
 # puts traces.legend
@@ -23,7 +23,7 @@ mm.each do |f|
   source = CPEE::Transformation::Source::Mermaid.new(File.read(f))
   trans = CPEE::Transformation::Transformer.new(source)
   trans.build_traces
-  trans.build_tree(false)
+  trans.build_tree
   model = trans.generate_model(CPEE::Transformation::Target::CPEE).to_s
   File.write(f.sub(/\.mmd$/,'.xml'),model)
 end
