@@ -19,7 +19,7 @@
     </parameters>
   </call>
   <choose mode="exclusive">
-    <otherwise>
+    <alternative condition="">
       <call id="a7" endpoint="">
         <parameters>
           <label>"MPOO opposes the dismissal"</label>
@@ -29,8 +29,8 @@
           <arguments/>
         </parameters>
       </call>
-    </otherwise>
-    <otherwise>
+    </alternative>
+    <alternative condition="">
       <call id="a9" endpoint="">
         <parameters>
           <label>"MPOO confirmes the dismissal"</label>
@@ -40,6 +40,6 @@
           <arguments/>
         </parameters>
       </call>
-    </otherwise>
+    </alternative>
   </choose>
 </description>

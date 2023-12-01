@@ -19,7 +19,7 @@
     </parameters>
   </call>
   <choose mode="exclusive">
-    <otherwise>
+    <alternative condition="">
       <call id="a31" endpoint="">
         <parameters>
           <label>"MSPO rejects the dismissal"</label>
@@ -29,8 +29,8 @@
           <arguments/>
         </parameters>
       </call>
-    </otherwise>
-    <otherwise>
+    </alternative>
+    <alternative condition="">
       <call id="a33" endpoint="">
         <parameters>
           <label>"MSPO confirms the dismissal"</label>
@@ -40,6 +40,6 @@
           <arguments/>
         </parameters>
       </call>
-    </otherwise>
+    </alternative>
   </choose>
 </description>

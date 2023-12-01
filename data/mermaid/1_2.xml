@@ -40,7 +40,7 @@
       </call>
     </alternative>
     <alternative condition="aceptable" language="text/javascript">
-      <loop mode="pre_test" condition="true">
+      <loop mode="post_test" condition="error detected">
         <parallel wait="-1" cancel="last">
           <parallel_branch>
             <call id="a57" endpoint="">
@@ -65,7 +65,7 @@
           <parallel_branch>
             <call id="a61" endpoint="">
               <parameters>
-                <label>""</label>
+                <label>"checks the software"</label>
                 <method/>
                 <type>:task</type>
                 <mid>'10'</mid>
@@ -92,22 +92,16 @@
             <arguments/>
           </parameters>
         </call>
-        <choose mode="exclusive">
-          <alternative condition="error detected" language="text/javascript"/>
-          <alternative condition="no errors" language="text/javascript">
-            <call id="a67" endpoint="">
-              <parameters>
-                <label>"repair is finished"</label>
-                <method/>
-                <type>:task</type>
-                <mid>'16'</mid>
-                <arguments/>
-              </parameters>
-            </call>
-            <escape/>
-          </alternative>
-        </choose>
       </loop>
+      <call id="a67" endpoint="">
+        <parameters>
+          <label>"repair is finished"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'16'</mid>
+          <arguments/>
+        </parameters>
+      </call>
     </alternative>
   </choose>
 </description>
