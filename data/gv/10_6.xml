@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a164" endpoint="">
+    <parameters>
+      <label>"MSPN sends dismissal"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'MSPN sends dismissal'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a165" endpoint="">
+    <parameters>
+      <label>"MSPO reviews dismissal"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'MSPO reviews dismissal'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Rejection" language="text/javascript">
+      <call id="a166" endpoint="">
+        <parameters>
+          <label>"MSPO rejects dismissal"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'MSPO rejects dismissal'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Confirmation" language="text/javascript">
+      <call id="a167" endpoint="">
+        <parameters>
+          <label>"MSPO confirms dismissal"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'MSPO confirms dismissal'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+</description>

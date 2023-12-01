@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 require_relative 'lib/cpee/transformation/bpmn2'
 require_relative 'lib/cpee/transformation/mermaid'
+require_relative 'lib/cpee/transformation/graphviz'
 require_relative 'lib/cpee/transformation/transformer'
 require_relative 'lib/cpee/transformation/cpee'
 
@@ -27,6 +28,19 @@ mm.each do |f|
   model = trans.generate_model(CPEE::Transformation::Target::CPEE).to_s
   File.write(f.sub(/\.mmd$/,'.xml'),model)
 end
-
-
-
+gv.each do |f|
+  source = CPEE::Transformation::Source::Graphviz.new(File.read(f))
+  trans = CPEE::Transformation::Transformer.new(source)
+  trans.build_traces
+  trans.build_tree
+  model = trans.generate_model(CPEE::Transformation::Target::CPEE).to_s
+  File.write(f.sub(/\.gv$/,'.xml'),model)
+end
+bpmn.each do |f|
+  source = CPEE::Transformation::Source::BPMN2.new(File.read(f))
+  trans = CPEE::Transformation::Transformer.new(source)
+  trans.build_traces
+  trans.build_tree
+  model = trans.generate_model(CPEE::Transformation::Target::CPEE).to_s
+  File.write(f.sub(/\.bpmn$/,'.xml'),model)
+end

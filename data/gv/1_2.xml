@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a171" endpoint="">
+    <parameters>
+      <label>"Customer brings in defective computer"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Customer brings in defective computer'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a172" endpoint="">
+    <parameters>
+      <label>"CRS checks the defect"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'CRS checks the defect'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a173" endpoint="">
+    <parameters>
+      <label>"Repair cost calculation"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Repair cost calculation'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Costs are acceptable" language="text/javascript">
+      <call id="a175" endpoint="">
+        <parameters>
+          <label>"Customer decides costs are acceptable"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Customer decides costs are acceptable'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <parallel wait="-1" cancel="last">
+        <parallel_branch>
+          <call id="a176" endpoint="">
+            <parameters>
+              <label>"Check and repair hardware"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Check and repair hardware'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </parallel_branch>
+        <parallel_branch>
+          <call id="a177" endpoint="">
+            <parameters>
+              <label>"Check and configure software"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Check and configure software'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </parallel_branch>
+      </parallel>
+      <call id="a180" endpoint="">
+        <parameters>
+          <label>"Test system functionality"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Test system functionality'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <loop mode="pre_test" condition="Error detected" language="text/javascript">
+        <call id="a183" endpoint="">
+          <parameters>
+            <label>"Execute arbitrary repair activity"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Execute arbitrary repair activity'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a180" endpoint="">
+          <parameters>
+            <label>"Test system functionality"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Test system functionality'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </loop>
+      <call id="a182" endpoint="">
+        <parameters>
+          <label>"Repair is finished"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Repair is finished'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Costs are not acceptable" language="text/javascript"/>
+  </choose>
+</description>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a186" endpoint="">
+    <parameters>
+      <label>"Guest calls room service"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Guest calls room service'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a187" endpoint="">
+    <parameters>
+      <label>"Room-service manager takes down the order"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Room-service manager takes down the order'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="80% orders" language="text/javascript">
+      <call id="a188" endpoint="">
+        <parameters>
+          <label>"Order ticket is submitted to the kitchen"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Order ticket is submitted to the kitchen'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a189" endpoint="">
+        <parameters>
+          <label>"Sommelier is given an order"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Sommelier is given an order'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="20% orders" language="text/javascript">
+      <call id="a190" endpoint="">
+        <parameters>
+          <label>"Waiter is assigned the order"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Waiter is assigned the order'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a191" endpoint="">
+        <parameters>
+          <label>"Waiter readies a cart"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Waiter readies a cart'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a192" endpoint="">
+        <parameters>
+          <label>"Waiter prepares nonalcoholic drinks"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Waiter prepares nonalcoholic drinks'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+  <call id="a193" endpoint="">
+    <parameters>
+      <label>"Food, wine, and cart are ready"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Food, wine, and cart are ready'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a194" endpoint="">
+    <parameters>
+      <label>"Waiter delivers order to the guest&#x2019;s room"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Waiter delivers order to the guest&#x2019;s room'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a195" endpoint="">
+    <parameters>
+      <label>"Waiter debits the guest&#x2019;s account"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Waiter debits the guest&#x2019;s account'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+</description>
