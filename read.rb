@@ -16,6 +16,7 @@ bpmn = Dir.glob(File.join(__dir__,'data','**/*.bpmn'))
 ### Write CPEE trees (CPEE XML models) - use load model in the cpee
 #########################################################################################################
 mm.each do |f|
+  p f
   source = CPEE::Transformation::Source::Mermaid.new(File.read(f))
   trans = CPEE::Transformation::Transformer.new(source)
   trans.build_traces

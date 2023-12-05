@@ -5,8 +5,55 @@
       <label>"Enter machine type and serial number"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
       <arguments/>
     </parameters>
   </call>
+  <call id="a515" endpoint="">
+    <parameters>
+      <label>"Start inspection"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Question asked" language="text/javascript">
+      <call id="a519" endpoint="">
+        <parameters>
+          <label>"Input values"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'5'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Button pressed" language="text/javascript">
+      <call id="a521" endpoint="">
+        <parameters>
+          <label>"Collect and display values"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'6'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+  <choose mode="exclusive">
+    <alternative condition="Additional questions based on results" language="text/javascript">
+      <call id="a527" endpoint="">
+        <parameters>
+          <label>"Answer additional questions"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'8'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="No additional questions" language="text/javascript"/>
+  </choose>
 </description>

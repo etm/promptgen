@@ -5,7 +5,78 @@
       <label>"Select a starting block"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a711" endpoint="">
+    <parameters>
+      <label>"Run for 5km and measure the time"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="Time more than 25 minutes" language="text/javascript">
+    <call id="a717" endpoint="">
+      <parameters>
+        <label>"Train and check until goal is achieved"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'6'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+  <call id="a715" endpoint="">
+    <parameters>
+      <label>"Get your starting number"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'5'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="More than one hour left after work" language="text/javascript">
+      <call id="a723" endpoint="">
+        <parameters>
+          <label>"Go there from home"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'8'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Less than one hour left after work" language="text/javascript">
+      <call id="a725" endpoint="">
+        <parameters>
+          <label>"Leave directly from work"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'9'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+  <call id="a727" endpoint="">
+    <parameters>
+      <label>"Run and drink at the Night Run"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'10'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a733" endpoint="">
+    <parameters>
+      <label>"Receive your final running time"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'12'</mid>
       <arguments/>
     </parameters>
   </call>

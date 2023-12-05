@@ -5,8 +5,122 @@
       <label>"Customer logs into E-Shop"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
       <arguments/>
     </parameters>
   </call>
+  <call id="a615" endpoint="">
+    <parameters>
+      <label>"System checks credentials"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Login Successful" language="text/javascript">
+      <loop mode="pre_test" condition="true">
+        <call id="a619" endpoint="">
+          <parameters>
+            <label>"Customer selects products"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'5'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a623" endpoint="">
+          <parameters>
+            <label>"Add product to cart"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'7'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a625" endpoint="">
+          <parameters>
+            <label>"Save product"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'8'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <loop mode="pre_test" condition="Not all products selected" language="text/javascript">
+          <call id="a619" endpoint="">
+            <parameters>
+              <label>"Customer selects products"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'5'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a623" endpoint="">
+            <parameters>
+              <label>"Add product to cart"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'7'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a625" endpoint="">
+            <parameters>
+              <label>"Save product"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'8'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </loop>
+        <call id="a629" endpoint="">
+          <parameters>
+            <label>"Finish order"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'10'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <parallel wait="-1" cancel="last">
+          <parallel_branch>
+            <call id="a635" endpoint="">
+              <parameters>
+                <label>"Enter payment data"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'12'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+            <call id="a639" endpoint="">
+              <parameters>
+                <label>"Wait for bank confirmation"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'14'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </parallel_branch>
+          <parallel_branch>
+            <call id="a637" endpoint="">
+              <parameters>
+                <label>"Enter shipping address"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'13'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </parallel_branch>
+        </parallel>
+      </loop>
+    </alternative>
+    <alternative condition="Login Unsuccessful" language="text/javascript"/>
+  </choose>
 </description>

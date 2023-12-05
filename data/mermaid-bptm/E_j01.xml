@@ -5,8 +5,58 @@
       <label>"Report Job Applications"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
       <arguments/>
     </parameters>
   </call>
+  <call id="a163" endpoint="">
+    <parameters>
+      <label>"Receive Job Offers"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a165" endpoint="">
+    <parameters>
+      <label>"Company Confirms and Rates Application"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'4'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a169" endpoint="">
+    <parameters>
+      <label>"Enter Probation Phase"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'6'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a171" endpoint="">
+    <parameters>
+      <label>"Rate Company and Get Rated"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'7'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Job Becomes Permanent" language="text/javascript"/>
+    <alternative condition="Rated C or Less" language="text/javascript">
+      <call id="a177" endpoint="">
+        <parameters>
+          <label>"Continue Receiving Job Offers"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'10'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
 </description>

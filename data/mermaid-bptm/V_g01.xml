@@ -5,7 +5,63 @@
       <label>"Receive Order"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Menu" language="text/javascript">
+      <call id="a595" endpoint="">
+        <parameters>
+          <label>"Prepare Drink"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'4'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="Fries" language="text/javascript">
+          <call id="a601" endpoint="">
+            <parameters>
+              <label>"Prepare Fries"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'6'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Wedges" language="text/javascript">
+          <call id="a603" endpoint="">
+            <parameters>
+              <label>"Prepare Wedges"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'7'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+      </choose>
+    </alternative>
+    <alternative condition="Burger Only" language="text/javascript"/>
+  </choose>
+  <call id="a597" endpoint="">
+    <parameters>
+      <label>"Prepare Burger"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'8'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a609" endpoint="">
+    <parameters>
+      <label>"Give Status Updates"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'9'</mid>
       <arguments/>
     </parameters>
   </call>

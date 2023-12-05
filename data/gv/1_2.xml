@@ -62,25 +62,7 @@
           </call>
         </parallel_branch>
       </parallel>
-      <call id="a756" endpoint="">
-        <parameters>
-          <label>"Test system functionality"</label>
-          <method/>
-          <type>:task</type>
-          <mid>'Test system functionality'</mid>
-          <arguments/>
-        </parameters>
-      </call>
-      <loop mode="pre_test" condition="Error detected" language="text/javascript">
-        <call id="a759" endpoint="">
-          <parameters>
-            <label>"Execute arbitrary repair activity"</label>
-            <method/>
-            <type>:task</type>
-            <mid>'Execute arbitrary repair activity'</mid>
-            <arguments/>
-          </parameters>
-        </call>
+      <loop mode="pre_test" condition="true">
         <call id="a756" endpoint="">
           <parameters>
             <label>"Test system functionality"</label>
@@ -90,16 +72,36 @@
             <arguments/>
           </parameters>
         </call>
+        <loop mode="pre_test" condition="Error detected" language="text/javascript">
+          <call id="a759" endpoint="">
+            <parameters>
+              <label>"Execute arbitrary repair activity"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Execute arbitrary repair activity'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a756" endpoint="">
+            <parameters>
+              <label>"Test system functionality"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Test system functionality'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </loop>
+        <call id="a758" endpoint="">
+          <parameters>
+            <label>"Repair is finished"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Repair is finished'</mid>
+            <arguments/>
+          </parameters>
+        </call>
       </loop>
-      <call id="a758" endpoint="">
-        <parameters>
-          <label>"Repair is finished"</label>
-          <method/>
-          <type>:task</type>
-          <mid>'Repair is finished'</mid>
-          <arguments/>
-        </parameters>
-      </call>
     </alternative>
     <alternative condition="Costs are not acceptable" language="text/javascript"/>
   </choose>

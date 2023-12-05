@@ -5,8 +5,85 @@
       <label>"Send Invitations"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
       <arguments/>
     </parameters>
   </call>
+  <call id="a205" endpoint="">
+    <parameters>
+      <label>"Find out which games to play"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a207" endpoint="">
+      <parameters>
+        <label>"Appoint a date for LAN party"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'4'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Less than 8 agree" language="text/javascript">
+      <call id="a207" endpoint="">
+        <parameters>
+          <label>"Appoint a date for LAN party"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'4'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a211" endpoint="">
+      <parameters>
+        <label>"Check if all games are available"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'6'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="All games are available" language="text/javascript"/>
+      <alternative condition="Some games are missing" language="text/javascript">
+        <call id="a219" endpoint="">
+          <parameters>
+            <label>"Download missing games"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'9'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+    </choose>
+    <call id="a217" endpoint="">
+      <parameters>
+        <label>"Find out beer requirement"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'8'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="Enough beer available" language="text/javascript"/>
+      <alternative condition="Not enough beer" language="text/javascript">
+        <call id="a227" endpoint="">
+          <parameters>
+            <label>"Buy missing beer"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'12'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+    </choose>
+  </loop>
 </description>

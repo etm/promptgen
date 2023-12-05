@@ -5,8 +5,135 @@
       <label>"Collect Requirements"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
       <arguments/>
     </parameters>
   </call>
+  <call id="a435" endpoint="">
+    <parameters>
+      <label>"Send Requirements to Architect"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a437" endpoint="">
+    <parameters>
+      <label>"Receive Draft from Architect"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'4'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a439" endpoint="">
+      <parameters>
+        <label>"Refine Draft"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'5'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Additional Requirements" language="text/javascript">
+      <call id="a439" endpoint="">
+        <parameters>
+          <label>"Refine Draft"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'5'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a445" endpoint="">
+      <parameters>
+        <label>"Create Materials List"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'7'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a447" endpoint="">
+      <parameters>
+        <label>"Categorize Materials"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'8'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a449" endpoint="">
+      <parameters>
+        <label>"Order Materials Online"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'9'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <parallel wait="-1" cancel="last">
+      <parallel_branch>
+        <call id="a453" endpoint="">
+          <parameters>
+            <label>"Send Messages to Friends for Building"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'11'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </parallel_branch>
+      <parallel_branch>
+        <call id="a455" endpoint="">
+          <parameters>
+            <label>"Wait for Order Processing"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'12'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </parallel_branch>
+    </parallel>
+    <call id="a457" endpoint="">
+      <parameters>
+        <label>"Build Tree House"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'13'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a461" endpoint="">
+      <parameters>
+        <label>"Send Invitations for Tree House Party"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'14'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a463" endpoint="">
+      <parameters>
+        <label>"Create Attendee List"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'15'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a465" endpoint="">
+      <parameters>
+        <label>"Buy Snacks for Party"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'16'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
 </description>

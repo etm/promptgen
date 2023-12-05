@@ -5,7 +5,99 @@
       <label>"Read order from system"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="Product not in stock">
+    <call id="a653" endpoint="">
+      <parameters>
+        <label>"Reorder product from wholesaler"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'5'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="Wait more than 10 days" language="text/javascript">
+        <call id="a657" endpoint="">
+          <parameters>
+            <label>"Demand penalty from wholesaler"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'7'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition="Wait less than 10 days" language="text/javascript"/>
+    </choose>
+    <call id="a659" endpoint="">
+      <parameters>
+        <label>"Register product in stock management system"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'8'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="Order not ready for shipment" language="text/javascript">
+        <call id="a669" endpoint="">
+          <parameters>
+            <label>"Select next product"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'12'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition="">
+        <parallel wait="-1" cancel="last">
+          <parallel_branch>
+            <call id="a671" endpoint="">
+              <parameters>
+                <label>"Request courier"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'13'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </parallel_branch>
+          <parallel_branch>
+            <call id="a673" endpoint="">
+              <parameters>
+                <label>"Pack products"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'14'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </parallel_branch>
+        </parallel>
+        <escape/>
+      </alternative>
+    </choose>
+  </loop>
+  <call id="a651" endpoint="">
+    <parameters>
+      <label>"Withdraw product from warehouse"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'4'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a663" endpoint="">
+    <parameters>
+      <label>"Register product in stock management system"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'9'</mid>
       <arguments/>
     </parameters>
   </call>

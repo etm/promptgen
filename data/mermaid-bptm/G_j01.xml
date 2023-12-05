@@ -5,7 +5,44 @@
       <label>"Define Resources"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a263" endpoint="">
+    <parameters>
+      <label>"Set Urgency Levels"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a265" endpoint="">
+    <parameters>
+      <label>"Define Tool Dependencies"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'4'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true"/>
+  <call id="a285" endpoint="">
+    <parameters>
+      <label>"Brag to Friends"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'11'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a287" endpoint="">
+    <parameters>
+      <label>"Send Materials to Friends"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'12'</mid>
       <arguments/>
     </parameters>
   </call>

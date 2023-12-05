@@ -5,7 +5,81 @@
       <label>"Select a course"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a685" endpoint="">
+    <parameters>
+      <label>"System shows courses and dates"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'4'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a687" endpoint="">
+    <parameters>
+      <label>"Select a course and date"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'5'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Account exists" language="text/javascript"/>
+    <alternative condition="Account doesn't exist" language="text/javascript">
+      <choose mode="exclusive">
+        <alternative condition="Registered at eligible university" language="text/javascript">
+          <call id="a695" endpoint="">
+            <parameters>
+              <label>"Register your account"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'9'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Not registered at eligible university" language="text/javascript">
+          <call id="a697" endpoint="">
+            <parameters>
+              <label>"Request activation and wait for response"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'10'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+      </choose>
+    </alternative>
+  </choose>
+  <call id="a691" endpoint="">
+    <parameters>
+      <label>"Log into account"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'7'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a703" endpoint="">
+    <parameters>
+      <label>"Connect to Twitter account"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'11'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a705" endpoint="">
+    <parameters>
+      <label>"Complete course registration and provide payment information"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'12'</mid>
       <arguments/>
     </parameters>
   </call>

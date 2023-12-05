@@ -5,8 +5,91 @@
       <label>"Successful Service"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
       <arguments/>
     </parameters>
   </call>
+  <call id="a565" endpoint="">
+    <parameters>
+      <label>"System checks car registration"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Car is registered" language="text/javascript">
+      <call id="a569" endpoint="">
+        <parameters>
+          <label>"Notification for service"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'5'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="Service not attended" language="text/javascript">
+          <call id="a575" endpoint="">
+            <parameters>
+              <label>"Fine after 30 days"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'8'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Service attended" language="text/javascript">
+          <call id="a577" endpoint="">
+            <parameters>
+              <label>"Mechanic enters car problems"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'9'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a581" endpoint="">
+            <parameters>
+              <label>"Status updates via email"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'10'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a583" endpoint="">
+            <parameters>
+              <label>"Payment through app"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'11'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a585" endpoint="">
+            <parameters>
+              <label>"Mechanic confirms successful repair"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'12'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a587" endpoint="">
+            <parameters>
+              <label>"Mechanic enters next service time"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'13'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+      </choose>
+    </alternative>
+    <alternative condition="Car is not registered" language="text/javascript"/>
+  </choose>
 </description>

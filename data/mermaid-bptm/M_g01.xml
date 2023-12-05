@@ -5,7 +5,108 @@
       <label>"Instruct Artist"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a291" endpoint="">
+    <parameters>
+      <label>"Send Sketches"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a293" endpoint="">
+    <parameters>
+      <label>"Revise Model"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'4'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a295" endpoint="">
+    <parameters>
+      <label>"Choose Plastic Color"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'5'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Have color at home" language="text/javascript">
+      <call id="a299" endpoint="">
+        <parameters>
+          <label>"Check Color Quantity"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'7'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="Under 100 grams" language="text/javascript">
+          <call id="a305" endpoint="">
+            <parameters>
+              <label>"Add to Shopping List"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'10'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Over 100 grams" language="text/javascript"/>
+      </choose>
+    </alternative>
+    <alternative condition="Don't have color at home" language="text/javascript">
+      <call id="a301" endpoint="">
+        <parameters>
+          <label>"Order Color"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'8'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+  <call id="a307" endpoint="">
+    <parameters>
+      <label>"Turn on Printer"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'11'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a313" endpoint="">
+    <parameters>
+      <label>"Heat up Bed and Extruder"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'12'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a315" endpoint="">
+    <parameters>
+      <label>"Generate Gcode File"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'13'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a317" endpoint="">
+    <parameters>
+      <label>"Print Model"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'14'</mid>
       <arguments/>
     </parameters>
   </call>

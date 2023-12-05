@@ -5,8 +5,66 @@
       <label>"Enter topic, money, experience, hobbies"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
       <arguments/>
     </parameters>
   </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a183" endpoint="">
+      <parameters>
+        <label>"Receive offers"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'3'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Deny offer" language="text/javascript">
+      <call id="a183" endpoint="">
+        <parameters>
+          <label>"Receive offers"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'3'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a187" endpoint="">
+      <parameters>
+        <label>"Write 3 status updates weekly"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'5'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a191" endpoint="">
+      <parameters>
+        <label>"Company writes 3 status updates"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'6'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a195" endpoint="">
+      <parameters>
+        <label>"Recommend company to friends"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'8'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a199" endpoint="">
+      <parameters>
+        <label>"Send tweets in parallel"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'10'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
 </description>

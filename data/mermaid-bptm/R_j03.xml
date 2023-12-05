@@ -5,7 +5,93 @@
       <label>"Describe fridge symptoms and type"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a535" endpoint="">
+    <parameters>
+      <label>"Send description to central service center"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a537" endpoint="">
+    <parameters>
+      <label>"Service center selects local facility"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'4'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a539" endpoint="">
+    <parameters>
+      <label>"Local facility makes appointment"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'5'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a543" endpoint="">
+    <parameters>
+      <label>"Technician arrives"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'7'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Needs additional parts" language="text/javascript">
+      <call id="a547" endpoint="">
+        <parameters>
+          <label>"Technician leaves"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'9'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a551" endpoint="">
+        <parameters>
+          <label>"Technician returns with parts"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'11'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Doesn't need additional parts" language="text/javascript"/>
+  </choose>
+  <call id="a549" endpoint="">
+    <parameters>
+      <label>"Technician repairs fridge"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'10'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a557" endpoint="">
+    <parameters>
+      <label>"Confirm fridge is OK"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'13'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a559" endpoint="">
+    <parameters>
+      <label>"Rate the service facility"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'14'</mid>
       <arguments/>
     </parameters>
   </call>

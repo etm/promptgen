@@ -5,8 +5,74 @@
       <label>"Enter model and broken part"</label>
       <method/>
       <type>:task</type>
-      <mid>' 2'</mid>
+      <mid>'2'</mid>
       <arguments/>
     </parameters>
   </call>
+  <call id="a471" endpoint="">
+    <parameters>
+      <label>"Receive list of materials and tools"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'3'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Have some materials and tools" language="text/javascript">
+      <call id="a475" endpoint="">
+        <parameters>
+          <label>"Use existing materials and tools"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'5'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Need to buy or borrow" language="text/javascript">
+      <call id="a477" endpoint="">
+        <parameters>
+          <label>"Contact friends or buy materials and tools"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'6'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+  <call id="a483" endpoint="">
+    <parameters>
+      <label>"Receive instructions to fix phone"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'8'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Successful repair" language="text/javascript">
+      <call id="a487" endpoint="">
+        <parameters>
+          <label>"Send review or video"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'10'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Unsuccessful repair" language="text/javascript">
+      <call id="a489" endpoint="">
+        <parameters>
+          <label>"Send to expert"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'11'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
 </description>

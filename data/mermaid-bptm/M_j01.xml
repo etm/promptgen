@@ -1,12 +1,185 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a347" endpoint="">
-    <parameters>
-      <label>"Customer provides chainsaw properties"</label>
-      <method/>
-      <type>:task</type>
-      <mid>' 2'</mid>
-      <arguments/>
-    </parameters>
-  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a347" endpoint="">
+      <parameters>
+        <label>"Customer provides chainsaw properties"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'2'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <parallel wait="-1" cancel="last">
+      <parallel_branch>
+        <call id="a351" endpoint="">
+          <parameters>
+            <label>"Order guide bar"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'4'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </parallel_branch>
+      <parallel_branch>
+        <call id="a353" endpoint="">
+          <parameters>
+            <label>"Order chain width"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'5'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </parallel_branch>
+      <parallel_branch>
+        <call id="a355" endpoint="">
+          <parameters>
+            <label>"Order chainsaw type"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'6'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </parallel_branch>
+    </parallel>
+    <call id="a363" endpoint="">
+      <parameters>
+        <label>"Inspect parts"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'8'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a365" endpoint="">
+      <parameters>
+        <label>"Assemble chainsaw"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'9'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a367" endpoint="">
+      <parameters>
+        <label>"Send updates to customer"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'10'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a369" endpoint="">
+      <parameters>
+        <label>"Send first chainsaw to customer"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'11'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="true" language="text/javascript">
+      <call id="a375" endpoint="">
+        <parameters>
+          <label>"Adjust chainsaw properties"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'14'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a347" endpoint="">
+        <parameters>
+          <label>"Customer provides chainsaw properties"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'2'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <parallel wait="-1" cancel="last">
+        <parallel_branch>
+          <call id="a351" endpoint="">
+            <parameters>
+              <label>"Order guide bar"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'4'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </parallel_branch>
+        <parallel_branch>
+          <call id="a353" endpoint="">
+            <parameters>
+              <label>"Order chain width"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'5'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </parallel_branch>
+        <parallel_branch>
+          <call id="a355" endpoint="">
+            <parameters>
+              <label>"Order chainsaw type"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'6'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </parallel_branch>
+      </parallel>
+      <call id="a363" endpoint="">
+        <parameters>
+          <label>"Inspect parts"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'8'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a365" endpoint="">
+        <parameters>
+          <label>"Assemble chainsaw"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'9'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a367" endpoint="">
+        <parameters>
+          <label>"Send updates to customer"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'10'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a369" endpoint="">
+        <parameters>
+          <label>"Send first chainsaw to customer"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'11'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a373" endpoint="">
+      <parameters>
+        <label>"Produce rest of order"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'13'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
 </description>

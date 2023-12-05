@@ -1,12 +1,85 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a495" endpoint="">
-    <parameters>
-      <label>"Collect machine information"</label>
-      <method/>
-      <type>:task</type>
-      <mid>' 2'</mid>
-      <arguments/>
-    </parameters>
-  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a495" endpoint="">
+      <parameters>
+        <label>"Collect machine information"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'2'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="true">
+      <call id="a497" endpoint="">
+        <parameters>
+          <label>"Calculate OEE"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'3'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <loop mode="pre_test" condition="OEE below threshold">
+        <choose mode="pre_test">
+          <alternative condition="OEE below threshold" language="text/javascript">
+            <call id="a501" endpoint="">
+              <parameters>
+                <label>"Stop machine"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'5'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+            <call id="a505" endpoint="">
+              <parameters>
+                <label>"Send email to engineer"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'6'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+            <choose mode="exclusive">
+              <alternative condition="Machine restarted" language="text/javascript">
+                <call id="a495" endpoint="">
+                  <parameters>
+                    <label>"Collect machine information"</label>
+                    <method/>
+                    <type>:task</type>
+                    <mid>'2'</mid>
+                    <arguments/>
+                  </parameters>
+                </call>
+                <call id="a497" endpoint="">
+                  <parameters>
+                    <label>"Calculate OEE"</label>
+                    <method/>
+                    <type>:task</type>
+                    <mid>'3'</mid>
+                    <arguments/>
+                  </parameters>
+                </call>
+              </alternative>
+              <alternative condition="Machine disconnected" language="text/javascript">
+                <escape/>
+              </alternative>
+            </choose>
+          </alternative>
+          <alternative condition="OEE above threshold" language="text/javascript">
+            <call id="a497" endpoint="">
+              <parameters>
+                <label>"Calculate OEE"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'3'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </alternative>
+        </choose>
+      </loop>
+    </loop>
+  </loop>
 </description>
