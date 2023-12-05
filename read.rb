@@ -6,6 +6,7 @@ require_relative 'lib/cpee/transformation/transformer'
 require_relative 'lib/cpee/transformation/cpee'
 require_relative 'lib/cpee/transformation/text-df-PO-reduced'
 require_relative 'lib/cpee/transformation/text-df-PO-extended'
+require_relative 'lib/cpee/transformation/text-bf'
 
 mm = Dir.glob(File.join(__dir__,'data','**/*.mmd'))
 gv = Dir.glob(File.join(__dir__,'data','**/*.gv'))
