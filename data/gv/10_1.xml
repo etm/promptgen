@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a739" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"MPON sents the dismissal to the MPOO"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a740" endpoint="">
+  <call id="a4" endpoint="">
     <parameters>
       <label>"MPOO reviews the dismissal"</label>
       <method/>
@@ -20,7 +20,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Oppose" language="text/javascript">
-      <call id="a741" endpoint="">
+      <call id="a5" endpoint="">
         <parameters>
           <label>"MPOO opposes the dismissal of MPON"</label>
           <method/>
@@ -31,7 +31,7 @@
       </call>
     </alternative>
     <alternative condition="Confirm" language="text/javascript">
-      <call id="a742" endpoint="">
+      <call id="a6" endpoint="">
         <parameters>
           <label>"MPOO confirmes the dismissal of the MPON"</label>
           <method/>

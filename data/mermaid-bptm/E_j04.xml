@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a181" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Enter topic, money, experience, hobbies"</label>
       <method/>
@@ -10,7 +10,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true">
-    <call id="a183" endpoint="">
+    <call id="a3" endpoint="">
       <parameters>
         <label>"Receive offers"</label>
         <method/>
@@ -20,7 +20,7 @@
       </parameters>
     </call>
     <loop mode="pre_test" condition="Deny offer" language="text/javascript">
-      <call id="a183" endpoint="">
+      <call id="a3" endpoint="">
         <parameters>
           <label>"Receive offers"</label>
           <method/>
@@ -30,7 +30,7 @@
         </parameters>
       </call>
     </loop>
-    <call id="a187" endpoint="">
+    <call id="a7" endpoint="">
       <parameters>
         <label>"Write 3 status updates weekly"</label>
         <method/>
@@ -39,7 +39,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a191" endpoint="">
+    <call id="a11" endpoint="">
       <parameters>
         <label>"Company writes 3 status updates"</label>
         <method/>
@@ -48,7 +48,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a195" endpoint="">
+    <call id="a15" endpoint="">
       <parameters>
         <label>"Recommend company to friends"</label>
         <method/>
@@ -57,7 +57,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a199" endpoint="">
+    <call id="a19" endpoint="">
       <parameters>
         <label>"Send tweets in parallel"</label>
         <method/>

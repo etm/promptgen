@@ -1,2 +1,87 @@
 <?xml version="1.0"?>
-<description xmlns="http://cpee.org/ns/description/1.0"/>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a2" endpoint="">
+    <parameters>
+      <label>"Query web shops"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Query web shops'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a3" endpoint="">
+      <parameters>
+        <label>"Order parts"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Order parts'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Not enough parts" language="text/javascript">
+      <call id="a3" endpoint="">
+        <parameters>
+          <label>"Order parts"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Order parts'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a10" endpoint="">
+      <parameters>
+        <label>"Start building"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Start building'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a11" endpoint="">
+      <parameters>
+        <label>"Check stock"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Check stock'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="Stock &lt; 5" language="text/javascript">
+        <call id="a7" endpoint="">
+          <parameters>
+            <label>"Reorder parts (cheapest)"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Reorder parts (cheapest)'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition="Stock &lt; 3" language="text/javascript">
+        <call id="a8" endpoint="">
+          <parameters>
+            <label>"Reorder parts (fastest)"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Reorder parts (fastest)'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition="Stock = 0" language="text/javascript">
+        <call id="a9" endpoint="">
+          <parameters>
+            <label>"Complain to friends"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Complain to friends'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+    </choose>
+  </loop>
+</description>

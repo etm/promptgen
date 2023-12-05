@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a1050" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Select starting block"</label>
       <method/>
@@ -10,7 +10,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true">
-    <call id="a1051" endpoint="">
+    <call id="a2" endpoint="">
       <parameters>
         <label>"Run and measure time"</label>
         <method/>
@@ -20,7 +20,7 @@
       </parameters>
     </call>
     <loop mode="pre_test" condition="&gt; 25 minutes" language="text/javascript">
-      <call id="a1053" endpoint="">
+      <call id="a4" endpoint="">
         <parameters>
           <label>"Train and check"</label>
           <method/>
@@ -29,7 +29,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a1051" endpoint="">
+      <call id="a2" endpoint="">
         <parameters>
           <label>"Run and measure time"</label>
           <method/>
@@ -39,7 +39,7 @@
         </parameters>
       </call>
     </loop>
-    <call id="a1054" endpoint="">
+    <call id="a5" endpoint="">
       <parameters>
         <label>"Get starting number"</label>
         <method/>
@@ -50,7 +50,7 @@
     </call>
     <choose mode="exclusive">
       <alternative condition="&gt; 1 hour" language="text/javascript">
-        <call id="a1056" endpoint="">
+        <call id="a7" endpoint="">
           <parameters>
             <label>"Go from home"</label>
             <method/>
@@ -61,7 +61,7 @@
         </call>
       </alternative>
       <alternative condition="&lt;= 1 hour" language="text/javascript">
-        <call id="a1057" endpoint="">
+        <call id="a8" endpoint="">
           <parameters>
             <label>"Leave from work"</label>
             <method/>
@@ -74,7 +74,7 @@
     </choose>
     <parallel wait="-1" cancel="last">
       <parallel_branch>
-        <call id="a1059" endpoint="">
+        <call id="a10" endpoint="">
           <parameters>
             <label>"Run at Night Run"</label>
             <method/>
@@ -85,7 +85,7 @@
         </call>
       </parallel_branch>
       <parallel_branch>
-        <call id="a1060" endpoint="">
+        <call id="a11" endpoint="">
           <parameters>
             <label>"Drink at Night Run"</label>
             <method/>
@@ -96,7 +96,7 @@
         </call>
       </parallel_branch>
     </parallel>
-    <call id="a1062" endpoint="">
+    <call id="a13" endpoint="">
       <parameters>
         <label>"Receive final running time"</label>
         <method/>

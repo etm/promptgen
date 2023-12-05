@@ -4,7 +4,7 @@ require_relative 'lib/cpee/transformation/graphviz'
 require_relative 'lib/cpee/transformation/transformer'
 require_relative 'lib/cpee/transformation/text-df-PO-reduced'
 
-source = CPEE::Transformation::Source::Graphviz.new(File.read('data/gv/10_1.gv'))
+source = CPEE::Transformation::Source::Graphviz.new(File.read('data/gv-bptm/R_g01.gv'))
 puts source.graph.to_s
 trans = CPEE::Transformation::Transformer.new(source)
 

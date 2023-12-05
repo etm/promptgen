@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a871" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Instruct artist"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a872" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Choose plastic color"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a873" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Check color stock"</label>
       <method/>
@@ -29,7 +29,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Yes" language="text/javascript">
-      <call id="a875" endpoint="">
+      <call id="a5" endpoint="">
         <parameters>
           <label>"Put color on shopping list"</label>
           <method/>
@@ -40,7 +40,7 @@
       </call>
     </alternative>
     <alternative condition="No" language="text/javascript">
-      <call id="a876" endpoint="">
+      <call id="a6" endpoint="">
         <parameters>
           <label>"Order color"</label>
           <method/>
@@ -51,7 +51,7 @@
       </call>
     </alternative>
   </choose>
-  <call id="a877" endpoint="">
+  <call id="a7" endpoint="">
     <parameters>
       <label>"Turn on printer"</label>
       <method/>
@@ -60,7 +60,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a878" endpoint="">
+  <call id="a8" endpoint="">
     <parameters>
       <label>"Heat up bed and extruder"</label>
       <method/>
@@ -69,7 +69,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a879" endpoint="">
+  <call id="a9" endpoint="">
     <parameters>
       <label>"Generate gcode file"</label>
       <method/>
@@ -78,7 +78,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a880" endpoint="">
+  <call id="a10" endpoint="">
     <parameters>
       <label>"Print model"</label>
       <method/>

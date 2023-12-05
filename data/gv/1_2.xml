@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a762" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Customer brings in defective computer"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a763" endpoint="">
+  <call id="a4" endpoint="">
     <parameters>
       <label>"CRS checks the defect"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a764" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"Repair cost calculation"</label>
       <method/>
@@ -29,7 +29,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Costs are acceptable" language="text/javascript">
-      <call id="a766" endpoint="">
+      <call id="a7" endpoint="">
         <parameters>
           <label>"Customer decides costs are acceptable"</label>
           <method/>
@@ -40,7 +40,7 @@
       </call>
       <parallel wait="-1" cancel="last">
         <parallel_branch>
-          <call id="a767" endpoint="">
+          <call id="a8" endpoint="">
             <parameters>
               <label>"Check and repair hardware"</label>
               <method/>
@@ -51,7 +51,7 @@
           </call>
         </parallel_branch>
         <parallel_branch>
-          <call id="a768" endpoint="">
+          <call id="a9" endpoint="">
             <parameters>
               <label>"Check and configure software"</label>
               <method/>
@@ -63,7 +63,7 @@
         </parallel_branch>
       </parallel>
       <loop mode="pre_test" condition="true">
-        <call id="a771" endpoint="">
+        <call id="a12" endpoint="">
           <parameters>
             <label>"Test system functionality"</label>
             <method/>
@@ -73,7 +73,7 @@
           </parameters>
         </call>
         <loop mode="pre_test" condition="Error detected" language="text/javascript">
-          <call id="a774" endpoint="">
+          <call id="a15" endpoint="">
             <parameters>
               <label>"Execute arbitrary repair activity"</label>
               <method/>
@@ -82,7 +82,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a771" endpoint="">
+          <call id="a12" endpoint="">
             <parameters>
               <label>"Test system functionality"</label>
               <method/>
@@ -92,7 +92,7 @@
             </parameters>
           </call>
         </loop>
-        <call id="a773" endpoint="">
+        <call id="a14" endpoint="">
           <parameters>
             <label>"Repair is finished"</label>
             <method/>

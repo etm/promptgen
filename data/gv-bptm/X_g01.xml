@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a1037" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Select a course"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a1038" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Check account"</label>
       <method/>
@@ -20,7 +20,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="No account" language="text/javascript">
-      <call id="a1039" endpoint="">
+      <call id="a4" endpoint="">
         <parameters>
           <label>"Check university registration"</label>
           <method/>
@@ -31,7 +31,7 @@
       </call>
       <choose mode="exclusive">
         <alternative condition="Registered at university" language="text/javascript">
-          <call id="a1040" endpoint="">
+          <call id="a5" endpoint="">
             <parameters>
               <label>"Register account"</label>
               <method/>
@@ -42,7 +42,7 @@
           </call>
         </alternative>
         <alternative condition="Not registered at university" language="text/javascript">
-          <call id="a1041" endpoint="">
+          <call id="a6" endpoint="">
             <parameters>
               <label>"Request activation"</label>
               <method/>
@@ -56,7 +56,7 @@
     </alternative>
     <alternative condition="Has account" language="text/javascript"/>
   </choose>
-  <call id="a1042" endpoint="">
+  <call id="a7" endpoint="">
     <parameters>
       <label>"Log into account"</label>
       <method/>
@@ -65,7 +65,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a1043" endpoint="">
+  <call id="a8" endpoint="">
     <parameters>
       <label>"Tweet to friends"</label>
       <method/>
@@ -74,7 +74,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a1044" endpoint="">
+  <call id="a9" endpoint="">
     <parameters>
       <label>"Complete registration"</label>
       <method/>
@@ -83,7 +83,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a1045" endpoint="">
+  <call id="a10" endpoint="">
     <parameters>
       <label>"Provide payment information"</label>
       <method/>
@@ -92,7 +92,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a1046" endpoint="">
+  <call id="a11" endpoint="">
     <parameters>
       <label>"Receive course ticket"</label>
       <method/>

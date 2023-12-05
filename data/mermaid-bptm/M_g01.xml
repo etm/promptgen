@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a289" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Instruct Artist"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a291" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Send Sketches"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a293" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"Revise Model"</label>
       <method/>
@@ -27,7 +27,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a295" endpoint="">
+  <call id="a7" endpoint="">
     <parameters>
       <label>"Choose Plastic Color"</label>
       <method/>
@@ -38,7 +38,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Have color at home" language="text/javascript">
-      <call id="a299" endpoint="">
+      <call id="a11" endpoint="">
         <parameters>
           <label>"Check Color Quantity"</label>
           <method/>
@@ -49,7 +49,7 @@
       </call>
       <choose mode="exclusive">
         <alternative condition="Under 100 grams" language="text/javascript">
-          <call id="a305" endpoint="">
+          <call id="a17" endpoint="">
             <parameters>
               <label>"Add to Shopping List"</label>
               <method/>
@@ -63,7 +63,7 @@
       </choose>
     </alternative>
     <alternative condition="Don't have color at home" language="text/javascript">
-      <call id="a301" endpoint="">
+      <call id="a13" endpoint="">
         <parameters>
           <label>"Order Color"</label>
           <method/>
@@ -74,7 +74,7 @@
       </call>
     </alternative>
   </choose>
-  <call id="a307" endpoint="">
+  <call id="a19" endpoint="">
     <parameters>
       <label>"Turn on Printer"</label>
       <method/>
@@ -83,7 +83,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a313" endpoint="">
+  <call id="a25" endpoint="">
     <parameters>
       <label>"Heat up Bed and Extruder"</label>
       <method/>
@@ -92,7 +92,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a315" endpoint="">
+  <call id="a27" endpoint="">
     <parameters>
       <label>"Generate Gcode File"</label>
       <method/>
@@ -101,7 +101,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a317" endpoint="">
+  <call id="a29" endpoint="">
     <parameters>
       <label>"Print Model"</label>
       <method/>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a709" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Select a starting block"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a711" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Run for 5km and measure the time"</label>
       <method/>
@@ -19,7 +19,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="Time more than 25 minutes" language="text/javascript">
-    <call id="a717" endpoint="">
+    <call id="a9" endpoint="">
       <parameters>
         <label>"Train and check until goal is achieved"</label>
         <method/>
@@ -29,7 +29,7 @@
       </parameters>
     </call>
   </loop>
-  <call id="a715" endpoint="">
+  <call id="a7" endpoint="">
     <parameters>
       <label>"Get your starting number"</label>
       <method/>
@@ -40,7 +40,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="More than one hour left after work" language="text/javascript">
-      <call id="a723" endpoint="">
+      <call id="a15" endpoint="">
         <parameters>
           <label>"Go there from home"</label>
           <method/>
@@ -51,7 +51,7 @@
       </call>
     </alternative>
     <alternative condition="Less than one hour left after work" language="text/javascript">
-      <call id="a725" endpoint="">
+      <call id="a17" endpoint="">
         <parameters>
           <label>"Leave directly from work"</label>
           <method/>
@@ -62,7 +62,7 @@
       </call>
     </alternative>
   </choose>
-  <call id="a727" endpoint="">
+  <call id="a19" endpoint="">
     <parameters>
       <label>"Run and drink at the Night Run"</label>
       <method/>
@@ -71,7 +71,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a733" endpoint="">
+  <call id="a25" endpoint="">
     <parameters>
       <label>"Receive your final running time"</label>
       <method/>

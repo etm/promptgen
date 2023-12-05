@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a647" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Read order from system"</label>
       <method/>
@@ -10,7 +10,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="Product not in stock">
-    <call id="a653" endpoint="">
+    <call id="a7" endpoint="">
       <parameters>
         <label>"Reorder product from wholesaler"</label>
         <method/>
@@ -21,7 +21,7 @@
     </call>
     <choose mode="exclusive">
       <alternative condition="Wait more than 10 days" language="text/javascript">
-        <call id="a657" endpoint="">
+        <call id="a11" endpoint="">
           <parameters>
             <label>"Demand penalty from wholesaler"</label>
             <method/>
@@ -33,7 +33,7 @@
       </alternative>
       <alternative condition="Wait less than 10 days" language="text/javascript"/>
     </choose>
-    <call id="a659" endpoint="">
+    <call id="a13" endpoint="">
       <parameters>
         <label>"Register product in stock management system"</label>
         <method/>
@@ -44,7 +44,7 @@
     </call>
     <choose mode="exclusive">
       <alternative condition="Order not ready for shipment" language="text/javascript">
-        <call id="a669" endpoint="">
+        <call id="a23" endpoint="">
           <parameters>
             <label>"Select next product"</label>
             <method/>
@@ -57,7 +57,7 @@
       <alternative condition="">
         <parallel wait="-1" cancel="last">
           <parallel_branch>
-            <call id="a671" endpoint="">
+            <call id="a25" endpoint="">
               <parameters>
                 <label>"Request courier"</label>
                 <method/>
@@ -68,7 +68,7 @@
             </call>
           </parallel_branch>
           <parallel_branch>
-            <call id="a673" endpoint="">
+            <call id="a27" endpoint="">
               <parameters>
                 <label>"Pack products"</label>
                 <method/>
@@ -83,7 +83,7 @@
       </alternative>
     </choose>
   </loop>
-  <call id="a651" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"Withdraw product from warehouse"</label>
       <method/>
@@ -92,7 +92,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a663" endpoint="">
+  <call id="a17" endpoint="">
     <parameters>
       <label>"Register product in stock management system"</label>
       <method/>

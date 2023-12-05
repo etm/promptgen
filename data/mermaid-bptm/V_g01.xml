@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a591" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Receive Order"</label>
       <method/>
@@ -11,7 +11,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Menu" language="text/javascript">
-      <call id="a595" endpoint="">
+      <call id="a5" endpoint="">
         <parameters>
           <label>"Prepare Drink"</label>
           <method/>
@@ -22,7 +22,7 @@
       </call>
       <choose mode="exclusive">
         <alternative condition="Fries" language="text/javascript">
-          <call id="a601" endpoint="">
+          <call id="a11" endpoint="">
             <parameters>
               <label>"Prepare Fries"</label>
               <method/>
@@ -33,7 +33,7 @@
           </call>
         </alternative>
         <alternative condition="Wedges" language="text/javascript">
-          <call id="a603" endpoint="">
+          <call id="a13" endpoint="">
             <parameters>
               <label>"Prepare Wedges"</label>
               <method/>
@@ -47,7 +47,7 @@
     </alternative>
     <alternative condition="Burger Only" language="text/javascript"/>
   </choose>
-  <call id="a597" endpoint="">
+  <call id="a7" endpoint="">
     <parameters>
       <label>"Prepare Burger"</label>
       <method/>
@@ -56,7 +56,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a609" endpoint="">
+  <call id="a19" endpoint="">
     <parameters>
       <label>"Give Status Updates"</label>
       <method/>

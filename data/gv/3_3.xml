@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a791" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Claim is registered"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a792" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Claim is examined"</label>
       <method/>
@@ -19,7 +19,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true">
-    <call id="a793" endpoint="">
+    <call id="a4" endpoint="">
       <parameters>
         <label>"Settlement recommendation is written"</label>
         <method/>
@@ -28,7 +28,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a794" endpoint="">
+    <call id="a5" endpoint="">
       <parameters>
         <label>"Recommendation is checked"</label>
         <method/>
@@ -38,7 +38,7 @@
       </parameters>
     </call>
     <loop mode="pre_test" condition="Not OK" language="text/javascript">
-      <call id="a797" endpoint="">
+      <call id="a8" endpoint="">
         <parameters>
           <label>"Claim is Not OK"</label>
           <method/>
@@ -47,7 +47,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a793" endpoint="">
+      <call id="a4" endpoint="">
         <parameters>
           <label>"Settlement recommendation is written"</label>
           <method/>
@@ -56,7 +56,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a794" endpoint="">
+      <call id="a5" endpoint="">
         <parameters>
           <label>"Recommendation is checked"</label>
           <method/>
@@ -66,7 +66,7 @@
         </parameters>
       </call>
     </loop>
-    <call id="a796" endpoint="">
+    <call id="a7" endpoint="">
       <parameters>
         <label>"Claim is OK"</label>
         <method/>

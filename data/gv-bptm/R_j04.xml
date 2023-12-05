@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a978" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Service is necessary"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a979" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Check car registration"</label>
       <method/>
@@ -20,7 +20,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Car is registered" language="text/javascript">
-      <call id="a980" endpoint="">
+      <call id="a4" endpoint="">
         <parameters>
           <label>"Notify user"</label>
           <method/>
@@ -31,7 +31,7 @@
       </call>
       <choose mode="exclusive">
         <alternative condition="No service after 30 days" language="text/javascript">
-          <call id="a981" endpoint="">
+          <call id="a5" endpoint="">
             <parameters>
               <label>"Fine user"</label>
               <method/>
@@ -42,7 +42,7 @@
           </call>
         </alternative>
         <alternative condition="Went to service" language="text/javascript">
-          <call id="a982" endpoint="">
+          <call id="a6" endpoint="">
             <parameters>
               <label>"Enter car problems"</label>
               <method/>
@@ -51,7 +51,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a983" endpoint="">
+          <call id="a7" endpoint="">
             <parameters>
               <label>"Send status updates"</label>
               <method/>
@@ -60,7 +60,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a984" endpoint="">
+          <call id="a8" endpoint="">
             <parameters>
               <label>"Pay through app"</label>
               <method/>
@@ -69,7 +69,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a985" endpoint="">
+          <call id="a9" endpoint="">
             <parameters>
               <label>"Enter successful repair"</label>
               <method/>
@@ -78,7 +78,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a986" endpoint="">
+          <call id="a10" endpoint="">
             <parameters>
               <label>"Enter next service time"</label>
               <method/>

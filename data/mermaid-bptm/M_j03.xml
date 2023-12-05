@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a405" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Query all web shops for parts"</label>
       <method/>
@@ -11,7 +11,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="If shop has enough parts" language="text/javascript">
-      <call id="a409" endpoint="">
+      <call id="a5" endpoint="">
         <parameters>
           <label>"Order parts from cheapest shop"</label>
           <method/>
@@ -22,7 +22,7 @@
       </call>
     </alternative>
     <alternative condition="If shop doesn't have enough parts" language="text/javascript">
-      <call id="a411" endpoint="">
+      <call id="a7" endpoint="">
         <parameters>
           <label>"Order parts from several shops"</label>
           <method/>
@@ -33,7 +33,7 @@
       </call>
     </alternative>
   </choose>
-  <call id="a413" endpoint="">
+  <call id="a9" endpoint="">
     <parameters>
       <label>"Wait for parts to arrive"</label>
       <method/>
@@ -42,7 +42,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a417" endpoint="">
+  <call id="a13" endpoint="">
     <parameters>
       <label>"Start building when first parts arrive"</label>
       <method/>
@@ -54,7 +54,7 @@
   <loop mode="pre_test" condition="If stock falls below 5">
     <choose mode="pre_test">
       <alternative condition="If stock falls below 5" language="text/javascript">
-        <call id="a421" endpoint="">
+        <call id="a17" endpoint="">
           <parameters>
             <label>"Reorder cheapest parts"</label>
             <method/>
@@ -65,7 +65,7 @@
         </call>
       </alternative>
       <alternative condition="If stock falls below 3" language="text/javascript">
-        <call id="a423" endpoint="">
+        <call id="a19" endpoint="">
           <parameters>
             <label>"Reorder fastest parts"</label>
             <method/>
@@ -80,7 +80,7 @@
       </alternative>
     </choose>
   </loop>
-  <call id="a425" endpoint="">
+  <call id="a21" endpoint="">
     <parameters>
       <label>"Write a mail complaining about webshops"</label>
       <method/>

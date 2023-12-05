@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a613" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Customer logs into E-Shop"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a615" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"System checks credentials"</label>
       <method/>
@@ -21,7 +21,7 @@
   <choose mode="exclusive">
     <alternative condition="Login Successful" language="text/javascript">
       <loop mode="pre_test" condition="true">
-        <call id="a619" endpoint="">
+        <call id="a7" endpoint="">
           <parameters>
             <label>"Customer selects products"</label>
             <method/>
@@ -30,7 +30,7 @@
             <arguments/>
           </parameters>
         </call>
-        <call id="a623" endpoint="">
+        <call id="a11" endpoint="">
           <parameters>
             <label>"Add product to cart"</label>
             <method/>
@@ -39,7 +39,7 @@
             <arguments/>
           </parameters>
         </call>
-        <call id="a625" endpoint="">
+        <call id="a13" endpoint="">
           <parameters>
             <label>"Save product"</label>
             <method/>
@@ -49,7 +49,7 @@
           </parameters>
         </call>
         <loop mode="pre_test" condition="Not all products selected" language="text/javascript">
-          <call id="a619" endpoint="">
+          <call id="a7" endpoint="">
             <parameters>
               <label>"Customer selects products"</label>
               <method/>
@@ -58,7 +58,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a623" endpoint="">
+          <call id="a11" endpoint="">
             <parameters>
               <label>"Add product to cart"</label>
               <method/>
@@ -67,7 +67,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a625" endpoint="">
+          <call id="a13" endpoint="">
             <parameters>
               <label>"Save product"</label>
               <method/>
@@ -77,7 +77,7 @@
             </parameters>
           </call>
         </loop>
-        <call id="a629" endpoint="">
+        <call id="a17" endpoint="">
           <parameters>
             <label>"Finish order"</label>
             <method/>
@@ -88,7 +88,7 @@
         </call>
         <parallel wait="-1" cancel="last">
           <parallel_branch>
-            <call id="a635" endpoint="">
+            <call id="a23" endpoint="">
               <parameters>
                 <label>"Enter payment data"</label>
                 <method/>
@@ -97,7 +97,7 @@
                 <arguments/>
               </parameters>
             </call>
-            <call id="a639" endpoint="">
+            <call id="a27" endpoint="">
               <parameters>
                 <label>"Wait for bank confirmation"</label>
                 <method/>
@@ -108,7 +108,7 @@
             </call>
           </parallel_branch>
           <parallel_branch>
-            <call id="a637" endpoint="">
+            <call id="a25" endpoint="">
               <parameters>
                 <label>"Enter shipping address"</label>
                 <method/>

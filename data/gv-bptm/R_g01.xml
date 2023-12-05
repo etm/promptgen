@@ -1,2 +1,86 @@
 <?xml version="1.0"?>
-<description xmlns="http://cpee.org/ns/description/1.0"/>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a3" endpoint="">
+    <parameters>
+      <label>"Enter model and issue"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Enter model and issue'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a4" endpoint="">
+    <parameters>
+      <label>"Get list of materials and tools"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Get list of materials and tools'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a5" endpoint="">
+    <parameters>
+      <label>"Check available materials and tools"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Check available materials and tools'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Need to borrow or buy" language="text/javascript">
+      <call id="a7" endpoint="">
+        <parameters>
+          <label>"Contact friends for materials and tools"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Contact friends for materials and tools'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Have all necessary" language="text/javascript"/>
+  </choose>
+  <call id="a8" endpoint="">
+    <parameters>
+      <label>"Buy remaining materials and tools"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Buy remaining materials and tools'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a9" endpoint="">
+    <parameters>
+      <label>"Receive instructions"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Receive instructions'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Repair successful" language="text/javascript">
+      <call id="a11" endpoint="">
+        <parameters>
+          <label>"Send review or video"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Send review or video'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Repair unsuccessful" language="text/javascript">
+      <call id="a12" endpoint="">
+        <parameters>
+          <label>"Send to expert"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Send to expert'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+</description>

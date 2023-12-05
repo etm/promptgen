@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
   <loop mode="pre_test" condition="true">
-    <call id="a347" endpoint="">
+    <call id="a1" endpoint="">
       <parameters>
         <label>"Customer provides chainsaw properties"</label>
         <method/>
@@ -12,7 +12,7 @@
     </call>
     <parallel wait="-1" cancel="last">
       <parallel_branch>
-        <call id="a351" endpoint="">
+        <call id="a5" endpoint="">
           <parameters>
             <label>"Order guide bar"</label>
             <method/>
@@ -23,7 +23,7 @@
         </call>
       </parallel_branch>
       <parallel_branch>
-        <call id="a353" endpoint="">
+        <call id="a7" endpoint="">
           <parameters>
             <label>"Order chain width"</label>
             <method/>
@@ -34,7 +34,7 @@
         </call>
       </parallel_branch>
       <parallel_branch>
-        <call id="a355" endpoint="">
+        <call id="a9" endpoint="">
           <parameters>
             <label>"Order chainsaw type"</label>
             <method/>
@@ -45,7 +45,7 @@
         </call>
       </parallel_branch>
     </parallel>
-    <call id="a363" endpoint="">
+    <call id="a17" endpoint="">
       <parameters>
         <label>"Inspect parts"</label>
         <method/>
@@ -54,7 +54,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a365" endpoint="">
+    <call id="a19" endpoint="">
       <parameters>
         <label>"Assemble chainsaw"</label>
         <method/>
@@ -63,7 +63,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a367" endpoint="">
+    <call id="a21" endpoint="">
       <parameters>
         <label>"Send updates to customer"</label>
         <method/>
@@ -72,7 +72,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a369" endpoint="">
+    <call id="a23" endpoint="">
       <parameters>
         <label>"Send first chainsaw to customer"</label>
         <method/>
@@ -82,7 +82,7 @@
       </parameters>
     </call>
     <loop mode="pre_test" condition="true" language="text/javascript">
-      <call id="a375" endpoint="">
+      <call id="a29" endpoint="">
         <parameters>
           <label>"Adjust chainsaw properties"</label>
           <method/>
@@ -91,7 +91,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a347" endpoint="">
+      <call id="a1" endpoint="">
         <parameters>
           <label>"Customer provides chainsaw properties"</label>
           <method/>
@@ -102,7 +102,7 @@
       </call>
       <parallel wait="-1" cancel="last">
         <parallel_branch>
-          <call id="a351" endpoint="">
+          <call id="a5" endpoint="">
             <parameters>
               <label>"Order guide bar"</label>
               <method/>
@@ -113,7 +113,7 @@
           </call>
         </parallel_branch>
         <parallel_branch>
-          <call id="a353" endpoint="">
+          <call id="a7" endpoint="">
             <parameters>
               <label>"Order chain width"</label>
               <method/>
@@ -124,7 +124,7 @@
           </call>
         </parallel_branch>
         <parallel_branch>
-          <call id="a355" endpoint="">
+          <call id="a9" endpoint="">
             <parameters>
               <label>"Order chainsaw type"</label>
               <method/>
@@ -135,7 +135,7 @@
           </call>
         </parallel_branch>
       </parallel>
-      <call id="a363" endpoint="">
+      <call id="a17" endpoint="">
         <parameters>
           <label>"Inspect parts"</label>
           <method/>
@@ -144,7 +144,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a365" endpoint="">
+      <call id="a19" endpoint="">
         <parameters>
           <label>"Assemble chainsaw"</label>
           <method/>
@@ -153,7 +153,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a367" endpoint="">
+      <call id="a21" endpoint="">
         <parameters>
           <label>"Send updates to customer"</label>
           <method/>
@@ -162,7 +162,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a369" endpoint="">
+      <call id="a23" endpoint="">
         <parameters>
           <label>"Send first chainsaw to customer"</label>
           <method/>
@@ -172,7 +172,7 @@
         </parameters>
       </call>
     </loop>
-    <call id="a373" endpoint="">
+    <call id="a27" endpoint="">
       <parameters>
         <label>"Produce rest of order"</label>
         <method/>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a858" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Identify resources"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a859" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Create bot"</label>
       <method/>
@@ -19,7 +19,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true">
-    <call id="a860" endpoint="">
+    <call id="a4" endpoint="">
       <parameters>
         <label>"Start farming"</label>
         <method/>
@@ -31,7 +31,7 @@
     <loop mode="pre_test" condition="Disaster strikes">
       <choose mode="pre_test">
         <alternative condition="Disaster strikes" language="text/javascript">
-          <call id="a861" endpoint="">
+          <call id="a5" endpoint="">
             <parameters>
               <label>"Natural disaster"</label>
               <method/>
@@ -40,7 +40,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a860" endpoint="">
+          <call id="a4" endpoint="">
             <parameters>
               <label>"Start farming"</label>
               <method/>
@@ -51,7 +51,7 @@
           </call>
         </alternative>
         <alternative condition="Milestone reached" language="text/javascript">
-          <call id="a862" endpoint="">
+          <call id="a6" endpoint="">
             <parameters>
               <label>"Reach milestone"</label>
               <method/>
@@ -62,7 +62,7 @@
           </call>
           <choose mode="exclusive">
             <alternative condition="More resources needed" language="text/javascript">
-              <call id="a860" endpoint="">
+              <call id="a4" endpoint="">
                 <parameters>
                   <label>"Start farming"</label>
                   <method/>
@@ -73,7 +73,7 @@
               </call>
             </alternative>
             <alternative condition="All resources gathered" language="text/javascript">
-              <call id="a864" endpoint="">
+              <call id="a8" endpoint="">
                 <parameters>
                   <label>"Finish farming"</label>
                   <method/>
@@ -82,7 +82,7 @@
                   <arguments/>
                 </parameters>
               </call>
-              <call id="a865" endpoint="">
+              <call id="a9" endpoint="">
                 <parameters>
                   <label>"Brag to friends"</label>
                   <method/>
@@ -96,7 +96,7 @@
           </choose>
         </alternative>
         <alternative condition="Update resources" language="text/javascript">
-          <call id="a863" endpoint="">
+          <call id="a7" endpoint="">
             <parameters>
               <label>"Update resources"</label>
               <method/>
@@ -107,7 +107,7 @@
           </call>
           <choose mode="exclusive">
             <alternative condition="More resources needed" language="text/javascript">
-              <call id="a860" endpoint="">
+              <call id="a4" endpoint="">
                 <parameters>
                   <label>"Start farming"</label>
                   <method/>
@@ -118,7 +118,7 @@
               </call>
             </alternative>
             <alternative condition="All resources gathered" language="text/javascript">
-              <call id="a864" endpoint="">
+              <call id="a8" endpoint="">
                 <parameters>
                   <label>"Finish farming"</label>
                   <method/>
@@ -127,7 +127,7 @@
                   <arguments/>
                 </parameters>
               </call>
-              <call id="a865" endpoint="">
+              <call id="a9" endpoint="">
                 <parameters>
                   <label>"Brag to friends"</label>
                   <method/>

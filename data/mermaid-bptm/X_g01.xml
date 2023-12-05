@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a681" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Select a course"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a685" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"System shows courses and dates"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a687" endpoint="">
+  <call id="a7" endpoint="">
     <parameters>
       <label>"Select a course and date"</label>
       <method/>
@@ -32,7 +32,7 @@
     <alternative condition="Account doesn't exist" language="text/javascript">
       <choose mode="exclusive">
         <alternative condition="Registered at eligible university" language="text/javascript">
-          <call id="a695" endpoint="">
+          <call id="a15" endpoint="">
             <parameters>
               <label>"Register your account"</label>
               <method/>
@@ -43,7 +43,7 @@
           </call>
         </alternative>
         <alternative condition="Not registered at eligible university" language="text/javascript">
-          <call id="a697" endpoint="">
+          <call id="a17" endpoint="">
             <parameters>
               <label>"Request activation and wait for response"</label>
               <method/>
@@ -56,7 +56,7 @@
       </choose>
     </alternative>
   </choose>
-  <call id="a691" endpoint="">
+  <call id="a11" endpoint="">
     <parameters>
       <label>"Log into account"</label>
       <method/>
@@ -65,7 +65,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a703" endpoint="">
+  <call id="a23" endpoint="">
     <parameters>
       <label>"Connect to Twitter account"</label>
       <method/>
@@ -74,7 +74,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a705" endpoint="">
+  <call id="a25" endpoint="">
     <parameters>
       <label>"Complete course registration and provide payment information"</label>
       <method/>

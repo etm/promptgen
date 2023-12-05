@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a1023" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Read order"</label>
       <method/>
@@ -10,7 +10,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true">
-    <call id="a1024" endpoint="">
+    <call id="a3" endpoint="">
       <parameters>
         <label>"Check product stock"</label>
         <method/>
@@ -21,7 +21,7 @@
     </call>
     <choose mode="exclusive">
       <alternative condition="In stock" language="text/javascript">
-        <call id="a1025" endpoint="">
+        <call id="a4" endpoint="">
           <parameters>
             <label>"Withdraw product"</label>
             <method/>
@@ -32,7 +32,7 @@
         </call>
       </alternative>
       <alternative condition="Not in stock" language="text/javascript">
-        <call id="a1026" endpoint="">
+        <call id="a5" endpoint="">
           <parameters>
             <label>"Reorder product"</label>
             <method/>
@@ -41,7 +41,7 @@
             <arguments/>
           </parameters>
         </call>
-        <call id="a1027" endpoint="">
+        <call id="a6" endpoint="">
           <parameters>
             <label>"Wait for product"</label>
             <method/>
@@ -52,7 +52,7 @@
         </call>
         <choose mode="exclusive">
           <alternative condition="Wait &gt; 10 days" language="text/javascript">
-            <call id="a1028" endpoint="">
+            <call id="a7" endpoint="">
               <parameters>
                 <label>"Demand penalty"</label>
                 <method/>
@@ -66,7 +66,7 @@
         </choose>
       </alternative>
     </choose>
-    <call id="a1029" endpoint="">
+    <call id="a8" endpoint="">
       <parameters>
         <label>"Register product"</label>
         <method/>
@@ -75,7 +75,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a1030" endpoint="">
+    <call id="a9" endpoint="">
       <parameters>
         <label>"Check order status"</label>
         <method/>
@@ -85,7 +85,7 @@
       </parameters>
     </call>
     <loop mode="pre_test" condition="true" language="text/javascript">
-      <call id="a1024" endpoint="">
+      <call id="a3" endpoint="">
         <parameters>
           <label>"Check product stock"</label>
           <method/>
@@ -96,7 +96,7 @@
       </call>
       <choose mode="exclusive">
         <alternative condition="In stock" language="text/javascript">
-          <call id="a1025" endpoint="">
+          <call id="a4" endpoint="">
             <parameters>
               <label>"Withdraw product"</label>
               <method/>
@@ -107,7 +107,7 @@
           </call>
         </alternative>
         <alternative condition="Not in stock" language="text/javascript">
-          <call id="a1026" endpoint="">
+          <call id="a5" endpoint="">
             <parameters>
               <label>"Reorder product"</label>
               <method/>
@@ -116,7 +116,7 @@
               <arguments/>
             </parameters>
           </call>
-          <call id="a1027" endpoint="">
+          <call id="a6" endpoint="">
             <parameters>
               <label>"Wait for product"</label>
               <method/>
@@ -127,7 +127,7 @@
           </call>
           <choose mode="exclusive">
             <alternative condition="Wait &gt; 10 days" language="text/javascript">
-              <call id="a1028" endpoint="">
+              <call id="a7" endpoint="">
                 <parameters>
                   <label>"Demand penalty"</label>
                   <method/>
@@ -141,7 +141,7 @@
           </choose>
         </alternative>
       </choose>
-      <call id="a1029" endpoint="">
+      <call id="a8" endpoint="">
         <parameters>
           <label>"Register product"</label>
           <method/>
@@ -150,7 +150,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a1030" endpoint="">
+      <call id="a9" endpoint="">
         <parameters>
           <label>"Check order status"</label>
           <method/>
@@ -160,7 +160,7 @@
         </parameters>
       </call>
     </loop>
-    <call id="a1031" endpoint="">
+    <call id="a10" endpoint="">
       <parameters>
         <label>"Request courier and pack"</label>
         <method/>

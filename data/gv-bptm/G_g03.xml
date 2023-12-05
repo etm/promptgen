@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a843" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Check battle.net account"</label>
       <method/>
@@ -11,7 +11,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="No account" language="text/javascript">
-      <call id="a844" endpoint="">
+      <call id="a3" endpoint="">
         <parameters>
           <label>"Enter account information"</label>
           <method/>
@@ -20,7 +20,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a845" endpoint="">
+      <call id="a4" endpoint="">
         <parameters>
           <label>"Check confirmation mail"</label>
           <method/>
@@ -32,7 +32,7 @@
     </alternative>
     <alternative condition="Has account" language="text/javascript"/>
   </choose>
-  <call id="a846" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"Check WoW subscription"</label>
       <method/>
@@ -43,7 +43,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="No subscription" language="text/javascript">
-      <call id="a847" endpoint="">
+      <call id="a6" endpoint="">
         <parameters>
           <label>"Select payment method"</label>
           <method/>
@@ -54,7 +54,7 @@
       </call>
       <choose mode="exclusive">
         <alternative condition="Credit card" language="text/javascript">
-          <call id="a848" endpoint="">
+          <call id="a7" endpoint="">
             <parameters>
               <label>"Enter credit card information"</label>
               <method/>
@@ -65,7 +65,7 @@
           </call>
         </alternative>
         <alternative condition="Bank account" language="text/javascript">
-          <call id="a849" endpoint="">
+          <call id="a8" endpoint="">
             <parameters>
               <label>"Enter bank account information"</label>
               <method/>
@@ -79,7 +79,7 @@
     </alternative>
     <alternative condition="Has subscription" language="text/javascript"/>
   </choose>
-  <call id="a850" endpoint="">
+  <call id="a9" endpoint="">
     <parameters>
       <label>"Log into game"</label>
       <method/>
@@ -88,7 +88,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a851" endpoint="">
+  <call id="a10" endpoint="">
     <parameters>
       <label>"Select realm, race and class"</label>
       <method/>
@@ -97,7 +97,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a852" endpoint="">
+  <call id="a11" endpoint="">
     <parameters>
       <label>"Enter character name"</label>
       <method/>

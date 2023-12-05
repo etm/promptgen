@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
   <loop mode="pre_test" condition="true">
-    <call id="a495" endpoint="">
+    <call id="a1" endpoint="">
       <parameters>
         <label>"Collect machine information"</label>
         <method/>
@@ -11,7 +11,7 @@
       </parameters>
     </call>
     <loop mode="pre_test" condition="true">
-      <call id="a497" endpoint="">
+      <call id="a3" endpoint="">
         <parameters>
           <label>"Calculate OEE"</label>
           <method/>
@@ -23,7 +23,7 @@
       <loop mode="pre_test" condition="OEE below threshold">
         <choose mode="pre_test">
           <alternative condition="OEE below threshold" language="text/javascript">
-            <call id="a501" endpoint="">
+            <call id="a7" endpoint="">
               <parameters>
                 <label>"Stop machine"</label>
                 <method/>
@@ -32,7 +32,7 @@
                 <arguments/>
               </parameters>
             </call>
-            <call id="a505" endpoint="">
+            <call id="a11" endpoint="">
               <parameters>
                 <label>"Send email to engineer"</label>
                 <method/>
@@ -43,7 +43,7 @@
             </call>
             <choose mode="exclusive">
               <alternative condition="Machine restarted" language="text/javascript">
-                <call id="a495" endpoint="">
+                <call id="a1" endpoint="">
                   <parameters>
                     <label>"Collect machine information"</label>
                     <method/>
@@ -52,7 +52,7 @@
                     <arguments/>
                   </parameters>
                 </call>
-                <call id="a497" endpoint="">
+                <call id="a3" endpoint="">
                   <parameters>
                     <label>"Calculate OEE"</label>
                     <method/>
@@ -68,7 +68,7 @@
             </choose>
           </alternative>
           <alternative condition="OEE above threshold" language="text/javascript">
-            <call id="a497" endpoint="">
+            <call id="a3" endpoint="">
               <parameters>
                 <label>"Calculate OEE"</label>
                 <method/>

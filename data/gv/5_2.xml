@@ -1,2 +1,70 @@
 <?xml version="1.0"?>
-<description xmlns="http://cpee.org/ns/description/1.0"/>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a3" endpoint="">
+    <parameters>
+      <label>"Employee submits vacation request"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Employee submits vacation request'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a4" endpoint="">
+      <parameters>
+        <label>"Supervisor reviews request"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Supervisor reviews request'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Request is rejected" language="text/javascript">
+      <call id="a5" endpoint="">
+        <parameters>
+          <label>"Request is rejected"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Request is rejected'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a6" endpoint="">
+        <parameters>
+          <label>"Employee reviews rejection reasons"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Employee reviews rejection reasons'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a4" endpoint="">
+        <parameters>
+          <label>"Supervisor reviews request"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Supervisor reviews request'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a7" endpoint="">
+      <parameters>
+        <label>"Request is approved"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Request is approved'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a8" endpoint="">
+      <parameters>
+        <label>"HR completes management procedures"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'HR completes management procedures'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+</description>

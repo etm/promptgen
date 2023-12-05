@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a822" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Enter details"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a823" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Receive offers"</label>
       <method/>
@@ -20,7 +20,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Accept" language="text/javascript">
-      <call id="a825" endpoint="">
+      <call id="a5" endpoint="">
         <parameters>
           <label>"Accept offer"</label>
           <method/>
@@ -29,7 +29,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a827" endpoint="">
+      <call id="a7" endpoint="">
         <parameters>
           <label>"Write updates"</label>
           <method/>
@@ -38,7 +38,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a828" endpoint="">
+      <call id="a8" endpoint="">
         <parameters>
           <label>"Company writes updates"</label>
           <method/>
@@ -47,7 +47,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a829" endpoint="">
+      <call id="a9" endpoint="">
         <parameters>
           <label>"Recommend company"</label>
           <method/>
@@ -58,7 +58,7 @@
       </call>
     </alternative>
     <alternative condition="Deny" language="text/javascript">
-      <call id="a826" endpoint="">
+      <call id="a6" endpoint="">
         <parameters>
           <label>"Deny offer"</label>
           <method/>

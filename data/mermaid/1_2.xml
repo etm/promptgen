@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a41" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"customer brings defective computer"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a43" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"the crs checks the defect"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a45" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"the crs hands out repair cost calculation"</label>
       <method/>
@@ -29,7 +29,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="not aceptable" language="text/javascript">
-      <call id="a49" endpoint="">
+      <call id="a9" endpoint="">
         <parameters>
           <label>"customer takes computer home"</label>
           <method/>
@@ -43,7 +43,7 @@
       <loop mode="post_test" condition="error detected">
         <parallel wait="-1" cancel="last">
           <parallel_branch>
-            <call id="a57" endpoint="">
+            <call id="a17" endpoint="">
               <parameters>
                 <label>"check the hardware"</label>
                 <method/>
@@ -52,7 +52,7 @@
                 <arguments/>
               </parameters>
             </call>
-            <call id="a59" endpoint="">
+            <call id="a19" endpoint="">
               <parameters>
                 <label>"repair the hardware"</label>
                 <method/>
@@ -63,7 +63,7 @@
             </call>
           </parallel_branch>
           <parallel_branch>
-            <call id="a61" endpoint="">
+            <call id="a21" endpoint="">
               <parameters>
                 <label>"checks the software"</label>
                 <method/>
@@ -72,7 +72,7 @@
                 <arguments/>
               </parameters>
             </call>
-            <call id="a63" endpoint="">
+            <call id="a23" endpoint="">
               <parameters>
                 <label>"configures the software"</label>
                 <method/>
@@ -83,7 +83,7 @@
             </call>
           </parallel_branch>
         </parallel>
-        <call id="a64" endpoint="">
+        <call id="a24" endpoint="">
           <parameters>
             <label>"test system functionality"</label>
             <method/>
@@ -93,7 +93,7 @@
           </parameters>
         </call>
       </loop>
-      <call id="a67" endpoint="">
+      <call id="a27" endpoint="">
         <parameters>
           <label>"repair is finished"</label>
           <method/>

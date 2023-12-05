@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a883" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Develop Design"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a884" endpoint="">
+  <call id="a2" endpoint="">
     <parameters>
       <label>"Order Lego Sets"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a885" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Sort Parts"</label>
       <method/>
@@ -28,7 +28,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true">
-    <call id="a886" endpoint="">
+    <call id="a4" endpoint="">
       <parameters>
         <label>"Build Subcomponents"</label>
         <method/>
@@ -38,7 +38,7 @@
       </parameters>
     </call>
     <loop mode="pre_test" condition="No more parts" language="text/javascript">
-      <call id="a888" endpoint="">
+      <call id="a6" endpoint="">
         <parameters>
           <label>"Reorder Parts"</label>
           <method/>
@@ -47,7 +47,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a886" endpoint="">
+      <call id="a4" endpoint="">
         <parameters>
           <label>"Build Subcomponents"</label>
           <method/>
@@ -58,7 +58,7 @@
       </call>
     </loop>
     <loop mode="pre_test" condition="true">
-      <call id="a889" endpoint="">
+      <call id="a7" endpoint="">
         <parameters>
           <label>"Test Subcomponents"</label>
           <method/>
@@ -68,7 +68,7 @@
         </parameters>
       </call>
       <loop mode="pre_test" condition="Test failed" language="text/javascript">
-        <call id="a891" endpoint="">
+        <call id="a9" endpoint="">
           <parameters>
             <label>"Redesign and Rebuild"</label>
             <method/>
@@ -77,7 +77,7 @@
             <arguments/>
           </parameters>
         </call>
-        <call id="a889" endpoint="">
+        <call id="a7" endpoint="">
           <parameters>
             <label>"Test Subcomponents"</label>
             <method/>
@@ -87,7 +87,7 @@
           </parameters>
         </call>
       </loop>
-      <call id="a892" endpoint="">
+      <call id="a10" endpoint="">
         <parameters>
           <label>"Assemble"</label>
           <method/>

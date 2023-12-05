@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a117" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"claims officer registers claim"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a119" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"claims officer examines claim"</label>
       <method/>
@@ -19,7 +19,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true">
-    <call id="a122" endpoint="">
+    <call id="a6" endpoint="">
       <parameters>
         <label>"claims officer writes settlement recommendation"</label>
         <method/>
@@ -28,7 +28,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a123" endpoint="">
+    <call id="a7" endpoint="">
       <parameters>
         <label>"senior claims officer checks recommendation"</label>
         <method/>
@@ -37,7 +37,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a125" endpoint="">
+    <call id="a9" endpoint="">
       <parameters>
         <label>"senior claims officer marks the claim"</label>
         <method/>
@@ -48,7 +48,7 @@
     </call>
     <choose mode="exclusive">
       <alternative condition="nok" language="text/javascript">
-        <call id="a131" endpoint="">
+        <call id="a15" endpoint="">
           <parameters>
             <label>"senior claims officer sends recommendation back"</label>
             <method/>
@@ -59,7 +59,7 @@
         </call>
       </alternative>
       <alternative condition="ok" language="text/javascript">
-        <call id="a129" endpoint="">
+        <call id="a13" endpoint="">
           <parameters>
             <label>"the claim handling process proceeds"</label>
             <method/>

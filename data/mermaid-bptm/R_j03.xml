@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a533" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Describe fridge symptoms and type"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a535" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Send description to central service center"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a537" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"Service center selects local facility"</label>
       <method/>
@@ -27,7 +27,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a539" endpoint="">
+  <call id="a7" endpoint="">
     <parameters>
       <label>"Local facility makes appointment"</label>
       <method/>
@@ -36,7 +36,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a543" endpoint="">
+  <call id="a11" endpoint="">
     <parameters>
       <label>"Technician arrives"</label>
       <method/>
@@ -47,7 +47,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Needs additional parts" language="text/javascript">
-      <call id="a547" endpoint="">
+      <call id="a15" endpoint="">
         <parameters>
           <label>"Technician leaves"</label>
           <method/>
@@ -56,7 +56,7 @@
           <arguments/>
         </parameters>
       </call>
-      <call id="a551" endpoint="">
+      <call id="a19" endpoint="">
         <parameters>
           <label>"Technician returns with parts"</label>
           <method/>
@@ -68,7 +68,7 @@
     </alternative>
     <alternative condition="Doesn't need additional parts" language="text/javascript"/>
   </choose>
-  <call id="a549" endpoint="">
+  <call id="a17" endpoint="">
     <parameters>
       <label>"Technician repairs fridge"</label>
       <method/>
@@ -77,7 +77,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a557" endpoint="">
+  <call id="a25" endpoint="">
     <parameters>
       <label>"Confirm fridge is OK"</label>
       <method/>
@@ -86,7 +86,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a559" endpoint="">
+  <call id="a27" endpoint="">
     <parameters>
       <label>"Rate the service facility"</label>
       <method/>

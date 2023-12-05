@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a231" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Check if you have a battle.net account"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a237" endpoint="">
+  <call id="a7" endpoint="">
     <parameters>
       <label>"Check if you have an active WoW subscription"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a247" endpoint="">
+  <call id="a17" endpoint="">
     <parameters>
       <label>"Log into the game"</label>
       <method/>
@@ -27,7 +27,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a253" endpoint="">
+  <call id="a23" endpoint="">
     <parameters>
       <label>"Select realm, race and class of your character"</label>
       <method/>
@@ -36,7 +36,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a255" endpoint="">
+  <call id="a25" endpoint="">
     <parameters>
       <label>"Enter character names until a name is available"</label>
       <method/>
@@ -45,7 +45,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a257" endpoint="">
+  <call id="a27" endpoint="">
     <parameters>
       <label>"Receive confirmation and character selfies"</label>
       <method/>

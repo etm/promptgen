@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a161" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Report Job Applications"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a163" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Receive Job Offers"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a165" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"Company Confirms and Rates Application"</label>
       <method/>
@@ -27,7 +27,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a169" endpoint="">
+  <call id="a9" endpoint="">
     <parameters>
       <label>"Enter Probation Phase"</label>
       <method/>
@@ -36,7 +36,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a171" endpoint="">
+  <call id="a11" endpoint="">
     <parameters>
       <label>"Rate Company and Get Rated"</label>
       <method/>
@@ -48,7 +48,7 @@
   <choose mode="exclusive">
     <alternative condition="Job Becomes Permanent" language="text/javascript"/>
     <alternative condition="Rated C or Less" language="text/javascript">
-      <call id="a177" endpoint="">
+      <call id="a17" endpoint="">
         <parameters>
           <label>"Continue Receiving Job Offers"</label>
           <method/>

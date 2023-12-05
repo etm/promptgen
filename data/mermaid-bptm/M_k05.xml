@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a433" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Collect Requirements"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a435" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Send Requirements to Architect"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a437" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"Receive Draft from Architect"</label>
       <method/>
@@ -28,7 +28,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true">
-    <call id="a439" endpoint="">
+    <call id="a7" endpoint="">
       <parameters>
         <label>"Refine Draft"</label>
         <method/>
@@ -38,7 +38,7 @@
       </parameters>
     </call>
     <loop mode="pre_test" condition="Additional Requirements" language="text/javascript">
-      <call id="a439" endpoint="">
+      <call id="a7" endpoint="">
         <parameters>
           <label>"Refine Draft"</label>
           <method/>
@@ -48,7 +48,7 @@
         </parameters>
       </call>
     </loop>
-    <call id="a445" endpoint="">
+    <call id="a13" endpoint="">
       <parameters>
         <label>"Create Materials List"</label>
         <method/>
@@ -57,7 +57,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a447" endpoint="">
+    <call id="a15" endpoint="">
       <parameters>
         <label>"Categorize Materials"</label>
         <method/>
@@ -66,7 +66,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a449" endpoint="">
+    <call id="a17" endpoint="">
       <parameters>
         <label>"Order Materials Online"</label>
         <method/>
@@ -77,7 +77,7 @@
     </call>
     <parallel wait="-1" cancel="last">
       <parallel_branch>
-        <call id="a453" endpoint="">
+        <call id="a21" endpoint="">
           <parameters>
             <label>"Send Messages to Friends for Building"</label>
             <method/>
@@ -88,7 +88,7 @@
         </call>
       </parallel_branch>
       <parallel_branch>
-        <call id="a455" endpoint="">
+        <call id="a23" endpoint="">
           <parameters>
             <label>"Wait for Order Processing"</label>
             <method/>
@@ -99,7 +99,7 @@
         </call>
       </parallel_branch>
     </parallel>
-    <call id="a457" endpoint="">
+    <call id="a25" endpoint="">
       <parameters>
         <label>"Build Tree House"</label>
         <method/>
@@ -108,7 +108,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a461" endpoint="">
+    <call id="a29" endpoint="">
       <parameters>
         <label>"Send Invitations for Tree House Party"</label>
         <method/>
@@ -117,7 +117,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a463" endpoint="">
+    <call id="a31" endpoint="">
       <parameters>
         <label>"Create Attendee List"</label>
         <method/>
@@ -126,7 +126,7 @@
         <arguments/>
       </parameters>
     </call>
-    <call id="a465" endpoint="">
+    <call id="a33" endpoint="">
       <parameters>
         <label>"Buy Snacks for Party"</label>
         <method/>

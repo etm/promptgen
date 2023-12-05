@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a261" endpoint="">
+  <call id="a1" endpoint="">
     <parameters>
       <label>"Define Resources"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a263" endpoint="">
+  <call id="a3" endpoint="">
     <parameters>
       <label>"Set Urgency Levels"</label>
       <method/>
@@ -18,7 +18,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a265" endpoint="">
+  <call id="a5" endpoint="">
     <parameters>
       <label>"Define Tool Dependencies"</label>
       <method/>
@@ -28,7 +28,7 @@
     </parameters>
   </call>
   <loop mode="pre_test" condition="true"/>
-  <call id="a285" endpoint="">
+  <call id="a25" endpoint="">
     <parameters>
       <label>"Brag to Friends"</label>
       <method/>
@@ -37,7 +37,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a287" endpoint="">
+  <call id="a27" endpoint="">
     <parameters>
       <label>"Send Materials to Friends"</label>
       <method/>
