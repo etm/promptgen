@@ -1,0 +1,16 @@
+graph LR
+1:startevent:((startevent)) --> 2:task:(Define Resources)
+2:task: --> 3:task:(Set Urgency Levels)
+3:task: --> 4:task:(Define Tool Dependencies)
+4:task: --> 5:task:(Start Farming Bot)
+5:task: --> 6:exclusivegateway:{x}
+6:exclusivegateway:{x} --> |Natural Disaster Strikes| 7:task:(Reset Bot)
+6:exclusivegateway:{x} --> |Milestone Reached| 8:task:(Send Notification)
+7:task: --> 5:task:
+8:task: --> 5:task:
+5:task: --> 9:task:(Update Farming List)
+9:task: --> 5:task:
+5:task: --> 10:endevent:((endevent))
+10:endevent:((endevent)) --> 11:task:(Brag to Friends)
+11:task: --> 12:task:(Send Materials to Friends)
+

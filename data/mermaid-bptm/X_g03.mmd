@@ -1,0 +1,15 @@
+graph LR
+1:startevent:((startevent)) --> 2:task:(Select a starting block)
+2:task: --> 3:task:(Run for 5km and measure the time)
+3:task: --> 4:exclusivegateway:{x}
+4:exclusivegateway:{x} --> |Time less than 25 minutes| 5:task:(Get your starting number)
+4:exclusivegateway:{x} --> |Time more than 25 minutes| 6:task:(Train and check until goal is achieved)
+6:task: --> 4:exclusivegateway:{x}
+5:task: --> 7:exclusivegateway:{x}
+7:exclusivegateway:{x} --> |More than one hour left after work| 8:task:(Go there from home)
+7:exclusivegateway:{x} --> |Less than one hour left after work| 9:task:(Leave directly from work)
+8:task: --> 10:task:(Run and drink at the Night Run)
+9:task: --> 10:task:
+10:task: --> 11:endevent:((endevent))
+11:endevent: --> 12:task:(Receive your final running time)
+12:task: --> 13:endevent:((endevent))

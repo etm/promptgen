@@ -1,0 +1,18 @@
+graph LR
+1:startevent:((startevent)) --> 2:task:(Customer logs into E-Shop)
+2:task: --> 3:task:(System checks credentials)
+3:task: --> 4:exclusivegateway:{x}
+4:exclusivegateway:{x} --> |Login Successful| 5:task:(Customer selects products)
+4:exclusivegateway:{x} --> |Login Unsuccessful| 6:endevent:((endevent))
+5:task: --> 7:task:(Add product to cart)
+7:task: --> 8:task:(Save product)
+8:task: --> 9:exclusivegateway:{x}
+9:exclusivegateway:{x} --> |All products selected| 10:task:(Finish order)
+9:exclusivegateway:{x} --> |Not all products selected| 5:task:
+10:task: --> 11:parallelgateway:{AND}
+11:parallelgateway:{AND} --> 12:task:(Enter payment data)
+11:parallelgateway:{AND} --> 13:task:(Enter shipping address)
+12:task: --> 14:task:(Wait for bank confirmation)
+14:task: --> 15:parallelgateway:{AND}
+13:task: --> 15:parallelgateway:{AND}
+15:parallelgateway:{AND} --> 16:endevent:((endevent))

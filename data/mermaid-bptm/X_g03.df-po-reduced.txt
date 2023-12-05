@@ -1,0 +1,1 @@
+First, a task with the id a1492 and the label "Select a starting block" occurs, and the process ends.

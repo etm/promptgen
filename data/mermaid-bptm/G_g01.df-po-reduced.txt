@@ -1,0 +1,1 @@
+First, a task with the id a986 and the label "Send Invitations" occurs, and the process ends.

@@ -1,0 +1,13 @@
+graph LR
+1:startevent:((startevent)) --> 2:task:(Receive Customer Specifications)
+2:task: --> 3:task:(Send Specifications to Teams)
+3:task: --> 4:parallelgateway:{AND}
+4:parallelgateway:{AND} --> 5:task:(Manufacture Vodka Bar)
+4:parallelgateway:{AND} --> 6:task:(Manufacture Whiskey Bar)
+5:task: --> 7:parallelgateway:{AND}
+6:task: --> 7:parallelgateway:{AND}
+7:parallelgateway:{AND} --> 8:task:(Assemble Interior)
+8:task: --> 9:task:(Test Flight)
+9:task: --> 10:task:(Create Test Protocol)
+10:task: --> 11:task:(Deliver Plane to Customer)
+11:task: --> 12:endevent:((endevent))

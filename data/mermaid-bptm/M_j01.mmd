@@ -1,0 +1,18 @@
+graph LR
+    1:startevent:((startevent)) --> 2:task:(Customer provides chainsaw properties)
+    2:task: --> 3:parallelgateway:{AND}
+    3:parallelgateway:{AND} --> 4:task:(Order guide bar)
+    3:parallelgateway:{AND} --> 5:task:(Order chain width)
+    3:parallelgateway:{AND} --> 6:task:(Order chainsaw type)
+    4:task: --> 7:parallelgateway:{AND}
+    5:task: --> 7:parallelgateway:{AND}
+    6:task: --> 7:parallelgateway:{AND}
+    7:parallelgateway:{AND} --> 8:task:(Inspect parts)
+    8:task: --> 9:task:(Assemble chainsaw)
+    9:task: --> 10:task:(Send updates to customer)
+    10:task: --> 11:task:(Send first chainsaw to customer)
+    11:task: --> 12:exclusivegateway:{x}
+    12:exclusivegateway:{x} --> |Customer likes it| 13:task:(Produce rest of order)
+    12:exclusivegateway:{x} --> |Customer doesn't like it| 14:task:(Adjust chainsaw properties)
+    13:task: --> 15:endevent:((endevent))
+    14:task: --> 2:task:

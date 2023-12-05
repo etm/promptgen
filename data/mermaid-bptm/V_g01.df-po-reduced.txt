@@ -1,0 +1,1 @@
+First, a task with the id a1374 and the label "Receive Order" occurs, and the process ends.

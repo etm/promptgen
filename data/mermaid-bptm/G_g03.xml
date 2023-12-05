@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a231" endpoint="">
+    <parameters>
+      <label>"Check if you have a battle.net account"</label>
+      <method/>
+      <type>:task</type>
+      <mid>' 2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+</description>

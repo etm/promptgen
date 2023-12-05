@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a405" endpoint="">
+    <parameters>
+      <label>"Query all web shops for parts"</label>
+      <method/>
+      <type>:task</type>
+      <mid>' 2'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+</description>

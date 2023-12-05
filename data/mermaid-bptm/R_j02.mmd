@@ -1,0 +1,11 @@
+graph LR
+    1:startevent:((startevent)) --> 2:task:(Enter machine type and serial number)
+    2:task: --> 3:task:(Start inspection)
+    3:task: --> 4:exclusivegateway:{x}
+    4:exclusivegateway:{x} --> |Question asked| 5:task:(Input values)
+    4:exclusivegateway:{x} --> |Button pressed| 6:task:(Collect and display values)
+    5:task: --> 7:exclusivegateway:{x}
+    6:task: --> 7:exclusivegateway:{x}
+    7:exclusivegateway:{x} --> |Additional questions based on results| 8:task:(Answer additional questions)
+    7:exclusivegateway:{x} --> |No additional questions| 9:endevent:((endevent))
+    8:task: --> 9:endevent:((endevent))

@@ -1,0 +1,16 @@
+graph LR
+    1:startevent:((startevent)) --> 2:task:(Describe fridge symptoms and type)
+    2:task: --> 3:task:(Send description to central service center)
+    3:task: --> 4:task:(Service center selects local facility)
+    4:task: --> 5:task:(Local facility makes appointment)
+    5:task: --> 6:exclusivegateway:{x}
+    6:exclusivegateway:{x} --> |Arrival| 7:task:(Technician arrives)
+    7:task: --> 8:exclusivegateway:{x}
+    8:exclusivegateway:{x} --> |Needs additional parts| 9:task:(Technician leaves)
+    8:exclusivegateway:{x} --> |Doesn't need additional parts| 10:task:(Technician repairs fridge)
+    9:task: --> 11:task:(Technician returns with parts)
+    11:task: --> 10:task:
+    10:task: --> 12:endevent:((endevent))
+    12:endevent:((endevent)) --> 13:task:(Confirm fridge is OK)
+    13:task: --> 14:task:(Rate the service facility)
+    14:task: --> 15:endevent:((endevent))

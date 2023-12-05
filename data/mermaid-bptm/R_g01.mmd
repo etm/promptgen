@@ -1,0 +1,14 @@
+graph LR
+    1:startevent:((startevent)) --> 2:task:(Enter model and broken part)
+    2:task: --> 3:task:(Receive list of materials and tools)
+    3:task: --> 4:exclusivegateway:{x}
+    4:exclusivegateway:{x} --> |Have some materials and tools| 5:task:(Use existing materials and tools)
+    4:exclusivegateway:{x} --> |Need to buy or borrow| 6:task:(Contact friends or buy materials and tools)
+    5:task: --> 7:parallelgateway:{AND}
+    6:task: --> 7:parallelgateway:{AND}
+    7:parallelgateway:{AND} --> 8:task:(Receive instructions to fix phone)
+    8:task: --> 9:exclusivegateway:{x}
+    9:exclusivegateway:{x} --> |Successful repair| 10:task:(Send review or video)
+    9:exclusivegateway:{x} --> |Unsuccessful repair| 11:task:(Send to expert)
+    10:task: --> 12:endevent:((endevent))
+    11:task: --> 12:endevent:((endevent))

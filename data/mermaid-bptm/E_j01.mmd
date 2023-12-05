@@ -1,0 +1,11 @@
+graph LR
+1:startevent:((startevent)) --> 2:task:(Report Job Applications)
+2:task: --> 3:task:(Receive Job Offers)
+3:task: --> 4:task:(Company Confirms and Rates Application)
+4:task: --> 5:exclusivegateway:{x}
+5:exclusivegateway:{x} --> |Job Interview Negotiated| 6:task:(Enter Probation Phase)
+6:task: --> 7:task:(Rate Company and Get Rated)
+7:task: --> 8:exclusivegateway:{x}
+8:exclusivegateway:{x} --> |Job Becomes Permanent| 9:endevent:((endevent))
+8:exclusivegateway:{x} --> |Rated C or Less| 10:task:(Continue Receiving Job Offers)
+10:task: --> 9:endevent:((endevent))

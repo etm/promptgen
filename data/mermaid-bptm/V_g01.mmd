@@ -1,0 +1,12 @@
+graph LR
+    1:startevent:((startevent)) --> 2:task:(Receive Order)
+    2:task: --> 3:exclusivegateway:{x}
+    3:exclusivegateway:{x} --> |Menu| 4:task:(Prepare Drink)
+    3:exclusivegateway:{x} --> |Burger Only| 8:task:(Prepare Burger)
+    4:task:(Prepare Drink) --> 5:exclusivegateway:{x}
+    5:exclusivegateway:{x} --> |Fries| 6:task:(Prepare Fries)
+    5:exclusivegateway:{x} --> |Wedges| 7:task:(Prepare Wedges)
+    6:task:(Prepare Fries) --> 8:task:(Prepare Burger)
+    7:task:(Prepare Wedges) --> 8:task:(Prepare Burger)
+    8:task:(Prepare Burger) --> 9:task:(Give Status Updates)
+    9:task:(Give Status Updates) --> 10:endevent:((endevent))

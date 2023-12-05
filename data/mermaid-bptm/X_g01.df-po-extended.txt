@@ -1,0 +1,1 @@
+First, a task with the id a2247 and the label "Select a course" occurs, and the process ends.

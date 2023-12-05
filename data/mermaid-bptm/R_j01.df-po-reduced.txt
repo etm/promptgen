@@ -1,0 +1,1 @@
+First, a task with the id a1278 and the label "Collect machine information" occurs, and the process ends.

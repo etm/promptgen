@@ -1,0 +1,16 @@
+graph LR
+    1:startevent:((startevent)) --> 2:task:(Check if you have a battle.net account)
+    2:task: --> |If not| 3:task:(Enter account information)
+    3:task: --> 4:task:(Click the link in the confirmation mail)
+    4:task: --> 5:task:(Check if you have an active WoW subscription)
+    2:task: --> |If yes| 5:task:
+    5:task: --> |If not| 6:exclusivegateway:{x}
+    6:exclusivegateway:{x} --> |Credit Card| 7:task:(Enter your credit card information)
+    6:exclusivegateway:{x} --> |Bank Account| 8:task:(Enter your IBAN and BIC numbers)
+    7:task: --> 9:task:(Log into the game)
+    8:task: --> 9:task:
+    5:task: --> |If yes| 9:task:
+    9:task: --> 10:task:(Select realm, race and class of your character)
+    10:task: --> 11:task:(Enter character names until a name is available)
+    11:task: --> 12:task:(Receive confirmation and character selfies)
+    12:task: --> 13:endevent:((endevent))

@@ -1,0 +1,15 @@
+graph LR
+1:startevent:((startevent)) --> 2:task:(Develop Basic Design)
+2:task: --> 3:task:(Order Lego Brick Sets)
+3:task: --> 4:task:(Sort Lego Parts)
+4:task: --> 5:task:(Build Subcomponents)
+5:task: --> 6:exclusivegateway:{x}
+6:exclusivegateway:{x} --> |No more parts| 7:task:(Reorder Parts)
+7:task: --> 5:task: 
+6:exclusivegateway:{x} --> |Parts available| 8:task:(Test Subcomponents)
+8:task: --> 9:exclusivegateway:{x}
+9:exclusivegateway:{x} --> |Test Failed| 10:task:(Redesign and Rebuild)
+10:task: --> 8:task: 
+9:exclusivegateway:{x} --> |Test Successful| 11:task:(Assemble Subcomponents)
+11:task: --> 12:endevent:((endevent))
+

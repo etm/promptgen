@@ -1,0 +1,15 @@
+graph LR
+1:startevent:((startevent)) --> 2:task:(Successful Service)
+2:task: --> 3:task:(System checks car registration)
+3:task: --> 4:exclusivegateway:{x}
+4:exclusivegateway:{x} --> |Car is registered| 5:task:(Notification for service)
+4:exclusivegateway:{x} --> |Car is not registered| 6:endevent:((endevent))
+5:task: --> 7:exclusivegateway:{x}
+7:exclusivegateway:{x} --> |Service not attended| 8:task:(Fine after 30 days)
+7:exclusivegateway:{x} --> |Service attended| 9:task:(Mechanic enters car problems)
+8:task: --> 6:endevent:((endevent))
+9:task: --> 10:task:(Status updates via email)
+10:task: --> 11:task:(Payment through app)
+11:task: --> 12:task:(Mechanic confirms successful repair)
+12:task: --> 13:task:(Mechanic enters next service time)
+13:task: --> 6:endevent:((endevent))

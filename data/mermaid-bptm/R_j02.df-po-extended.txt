@@ -1,0 +1,1 @@
+First, a task with the id a2079 and the label "Enter machine type and serial number" occurs, and the process ends.

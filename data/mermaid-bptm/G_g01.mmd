@@ -1,0 +1,15 @@
+graph LR
+    1:startevent:((startevent)) --> 2:task:(Send Invitations)
+    2:task: --> 3:task:(Find out which games to play)
+    3:task: --> 4:task:(Appoint a date for LAN party)
+    4:task: --> 5:exclusivegateway:{x}
+    5:exclusivegateway:{x} --> |8 or more agree| 6:task:(Check if all games are available)
+    5:exclusivegateway:{x} --> |Less than 8 agree| 4:task:
+    6:task: --> 7:exclusivegateway:{x}
+    7:exclusivegateway:{x} --> |All games are available| 8:task:(Find out beer requirement)
+    7:exclusivegateway:{x} --> |Some games are missing| 9:task:(Download missing games)
+    9:task: --> 8:task:
+    8:task: --> 10:exclusivegateway:{x}
+    10:exclusivegateway:{x} --> |Enough beer available| 11:endevent:((endevent))
+    10:exclusivegateway:{x} --> |Not enough beer| 12:task:(Buy missing beer)
+    12:task: --> 11:endevent:((endevent))

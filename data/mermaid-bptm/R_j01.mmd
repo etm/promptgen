@@ -1,0 +1,10 @@
+graph LR
+    1:startevent:((startevent)) --> 2:task:(Collect machine information)
+    2:task: --> 3:task:(Calculate OEE)
+    3:task: --> 4:exclusivegateway:{x}
+    4:exclusivegateway:{x} --> |OEE below threshold| 5:task:(Stop machine)
+    4:exclusivegateway:{x} --> |OEE above threshold| 3:task:
+    5:task: --> 6:task:(Send email to engineer)
+    6:task: --> 7:exclusivegateway:{x}
+    7:exclusivegateway:{x} --> |Machine restarted| 2:task:
+    7:exclusivegateway:{x} --> |Machine disconnected| 8:endevent:((endevent))
