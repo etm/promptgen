@@ -1,1 +1,1 @@
-First, a task with the id a224 and the label "INQ transmits the transaction data request" occurs. Subsequently a task with the id a226 and the label "IP checks the request" occurs. Then a task with the id a228 and the label "IP answers the question" occurs, and the process ends.
+First, a task with the id a224 and the label "INQ transmits the transaction data request" occurs. Then a task with the id a226 and the label "IP checks the request" occurs. Then a task with the id a228 and the label "IP answers the question" occurs, and the process ends.
