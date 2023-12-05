@@ -1,0 +1,22 @@
+digraph G {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Enter details"[shape=rectangle];
+  "Receive offers"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Accept offer"[shape=rectangle];
+  "Deny offer"[shape=rectangle];
+  "Write updates"[shape=rectangle];
+  "Company writes updates"[shape=rectangle];
+  "Recommend company"[shape=rectangle];
+  "start_1" -> "Enter details";
+  "Enter details" -> "Receive offers";
+  "Receive offers" -> "seg_1";
+  "seg_1" -> "Accept offer"[label="Accept"];
+  "seg_1" -> "Deny offer"[label="Deny"];
+  "Accept offer" -> "Write updates";
+  "Write updates" -> "Company writes updates";
+  "Company writes updates" -> "Recommend company";
+  "Recommend company" -> "end_1";
+}

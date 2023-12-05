@@ -1,0 +1,28 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "Instruct artist"[shape=rectangle];
+  "Choose plastic color"[shape=rectangle];
+  "Check color stock"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Put color on shopping list"[shape=rectangle];
+  "Order color"[shape=rectangle];
+  "Turn on printer"[shape=rectangle];
+  "Heat up bed and extruder"[shape=rectangle];
+  "Generate gcode file"[shape=rectangle];
+  "Print model"[shape=rectangle];
+  "end_1"[shape=doublecircle label=""];
+  
+  "start_1" -> "Instruct artist";
+  "Instruct artist" -> "Choose plastic color";
+  "Choose plastic color" -> "Check color stock";
+  "Check color stock" -> "seg_1"[label="If under 100 grams"];
+  "seg_1" -> "Put color on shopping list"[label="Yes"];
+  "seg_1" -> "Order color"[label="No"];
+  "Put color on shopping list" -> "Turn on printer";
+  "Order color" -> "Turn on printer";
+  "Turn on printer" -> "Heat up bed and extruder";
+  "Heat up bed and extruder" -> "Generate gcode file";
+  "Generate gcode file" -> "Print model";
+  "Print model" -> "end_1";
+}

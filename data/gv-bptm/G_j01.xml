@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a858" endpoint="">
+    <parameters>
+      <label>"Identify resources"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Identify resources'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a859" endpoint="">
+    <parameters>
+      <label>"Create bot"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Create bot'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a860" endpoint="">
+      <parameters>
+        <label>"Start farming"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Start farming'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Disaster strikes">
+      <choose mode="pre_test">
+        <alternative condition="Disaster strikes" language="text/javascript">
+          <call id="a861" endpoint="">
+            <parameters>
+              <label>"Natural disaster"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Natural disaster'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a860" endpoint="">
+            <parameters>
+              <label>"Start farming"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Start farming'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Milestone reached" language="text/javascript">
+          <call id="a862" endpoint="">
+            <parameters>
+              <label>"Reach milestone"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Reach milestone'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <choose mode="exclusive">
+            <alternative condition="More resources needed" language="text/javascript">
+              <call id="a860" endpoint="">
+                <parameters>
+                  <label>"Start farming"</label>
+                  <method/>
+                  <type>:task</type>
+                  <mid>'Start farming'</mid>
+                  <arguments/>
+                </parameters>
+              </call>
+            </alternative>
+            <alternative condition="All resources gathered" language="text/javascript">
+              <call id="a864" endpoint="">
+                <parameters>
+                  <label>"Finish farming"</label>
+                  <method/>
+                  <type>:task</type>
+                  <mid>'Finish farming'</mid>
+                  <arguments/>
+                </parameters>
+              </call>
+              <call id="a865" endpoint="">
+                <parameters>
+                  <label>"Brag to friends"</label>
+                  <method/>
+                  <type>:task</type>
+                  <mid>'Brag to friends'</mid>
+                  <arguments/>
+                </parameters>
+              </call>
+              <escape/>
+            </alternative>
+          </choose>
+        </alternative>
+        <alternative condition="Update resources" language="text/javascript">
+          <call id="a863" endpoint="">
+            <parameters>
+              <label>"Update resources"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Update resources'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <choose mode="exclusive">
+            <alternative condition="More resources needed" language="text/javascript">
+              <call id="a860" endpoint="">
+                <parameters>
+                  <label>"Start farming"</label>
+                  <method/>
+                  <type>:task</type>
+                  <mid>'Start farming'</mid>
+                  <arguments/>
+                </parameters>
+              </call>
+            </alternative>
+            <alternative condition="All resources gathered" language="text/javascript">
+              <call id="a864" endpoint="">
+                <parameters>
+                  <label>"Finish farming"</label>
+                  <method/>
+                  <type>:task</type>
+                  <mid>'Finish farming'</mid>
+                  <arguments/>
+                </parameters>
+              </call>
+              <call id="a865" endpoint="">
+                <parameters>
+                  <label>"Brag to friends"</label>
+                  <method/>
+                  <type>:task</type>
+                  <mid>'Brag to friends'</mid>
+                  <arguments/>
+                </parameters>
+              </call>
+              <escape/>
+            </alternative>
+          </choose>
+        </alternative>
+      </choose>
+    </loop>
+  </loop>
+</description>

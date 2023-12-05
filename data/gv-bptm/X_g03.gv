@@ -1,0 +1,36 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "Select starting block"[shape=rectangle];
+  "Run and measure time"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Train and check"[shape=rectangle];
+  "Get starting number"[shape=rectangle];
+  "seg_2"[shape=diamond label="X"];
+  "Go from home"[shape=rectangle];
+  "Leave from work"[shape=rectangle];
+  "spg_1"[shape=diamond label="AND"];
+  "Run at Night Run"[shape=rectangle];
+  "Drink at Night Run"[shape=rectangle];
+  "mpg_1"[shape=diamond label="AND"];
+  "Receive final running time"[shape=rectangle];
+  "end_1"[shape=doublecircle label=""];
+
+  "start_1" -> "Select starting block";
+  "Select starting block" -> "Run and measure time";
+  "Run and measure time" -> "seg_1";
+  "seg_1" -> "Train and check"[label="> 25 minutes"];
+  "seg_1" -> "Get starting number"[label="< 25 minutes"];
+  "Train and check" -> "Run and measure time";
+  "Get starting number" -> "seg_2";
+  "seg_2" -> "Go from home"[label="> 1 hour"];
+  "seg_2" -> "Leave from work"[label="<= 1 hour"];
+  "Go from home" -> "spg_1";
+  "Leave from work" -> "spg_1";
+  "spg_1" -> "Run at Night Run";
+  "spg_1" -> "Drink at Night Run";
+  "Run at Night Run" -> "mpg_1";
+  "Drink at Night Run" -> "mpg_1";
+  "mpg_1" -> "Receive final running time";
+  "Receive final running time" -> "end_1";
+}

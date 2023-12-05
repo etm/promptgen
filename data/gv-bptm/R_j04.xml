@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a978" endpoint="">
+    <parameters>
+      <label>"Service is necessary"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Service is necessary'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a979" endpoint="">
+    <parameters>
+      <label>"Check car registration"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Check car registration'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Car is registered" language="text/javascript">
+      <call id="a980" endpoint="">
+        <parameters>
+          <label>"Notify user"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Notify user'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="No service after 30 days" language="text/javascript">
+          <call id="a981" endpoint="">
+            <parameters>
+              <label>"Fine user"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Fine user'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Went to service" language="text/javascript">
+          <call id="a982" endpoint="">
+            <parameters>
+              <label>"Enter car problems"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Enter car problems'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a983" endpoint="">
+            <parameters>
+              <label>"Send status updates"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Send status updates'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a984" endpoint="">
+            <parameters>
+              <label>"Pay through app"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Pay through app'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a985" endpoint="">
+            <parameters>
+              <label>"Enter successful repair"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Enter successful repair'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a986" endpoint="">
+            <parameters>
+              <label>"Enter next service time"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Enter next service time'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+      </choose>
+    </alternative>
+    <alternative condition="Car is not registered" language="text/javascript"/>
+  </choose>
+</description>

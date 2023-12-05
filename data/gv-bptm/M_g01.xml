@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a871" endpoint="">
+    <parameters>
+      <label>"Instruct artist"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Instruct artist'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a872" endpoint="">
+    <parameters>
+      <label>"Choose plastic color"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Choose plastic color'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a873" endpoint="">
+    <parameters>
+      <label>"Check color stock"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Check color stock'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Yes" language="text/javascript">
+      <call id="a875" endpoint="">
+        <parameters>
+          <label>"Put color on shopping list"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Put color on shopping list'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="No" language="text/javascript">
+      <call id="a876" endpoint="">
+        <parameters>
+          <label>"Order color"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Order color'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+  <call id="a877" endpoint="">
+    <parameters>
+      <label>"Turn on printer"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Turn on printer'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a878" endpoint="">
+    <parameters>
+      <label>"Heat up bed and extruder"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Heat up bed and extruder'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a879" endpoint="">
+    <parameters>
+      <label>"Generate gcode file"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Generate gcode file'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a880" endpoint="">
+    <parameters>
+      <label>"Print model"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Print model'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+</description>

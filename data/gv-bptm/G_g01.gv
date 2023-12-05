@@ -1,0 +1,27 @@
+digraph G {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Send invitations"[shape=rectangle];
+  "Find out games"[shape=rectangle];
+  "Appoint a date"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Check games"[shape=rectangle];
+  "Download games"[shape=rectangle];
+  "Find out beer"[shape=rectangle];
+  "Buy beer"[shape=rectangle];
+  "Enjoy LAN party"[shape=rectangle];
+  "start_1" -> "Send invitations";
+  "Send invitations" -> "Find out games";
+  "Find out games" -> "Appoint a date";
+  "Appoint a date" -> "seg_1"[label="8 or more agree?"];
+  "seg_1" -> "Appoint a date"[label="No"];
+  "seg_1" -> "Check games"[label="Yes"];
+  "Check games" -> "Download games"[label="Games missing"];
+  "Check games" -> "Find out beer"[label="All games available"];
+  "Download games" -> "Find out beer";
+  "Find out beer" -> "Buy beer"[label="Not enough beer"];
+  "Find out beer" -> "Enjoy LAN party"[label="Enough beer"];
+  "Buy beer" -> "Enjoy LAN party";
+  "Enjoy LAN party" -> "end_1";
+}

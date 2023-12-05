@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <loop mode="pre_test" condition="true">
+    <call id="a948" endpoint="">
+      <parameters>
+        <label>"Collect Information"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Collect Information'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a949" endpoint="">
+      <parameters>
+        <label>"Calculate OEE"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Calculate OEE'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="OEE &lt; Threshold" language="text/javascript">
+        <call id="a951" endpoint="">
+          <parameters>
+            <label>"Stop Machine"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Stop Machine'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a952" endpoint="">
+          <parameters>
+            <label>"Send Email"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Send Email'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition="OEE &gt;= Threshold" language="text/javascript"/>
+    </choose>
+    <loop mode="pre_test" condition="Machine Restarted">
+      <call id="a953" endpoint="">
+        <parameters>
+          <label>"Restart Machine"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Restart Machine'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a948" endpoint="">
+        <parameters>
+          <label>"Collect Information"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Collect Information'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a949" endpoint="">
+        <parameters>
+          <label>"Calculate OEE"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Calculate OEE'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <loop mode="post_test" condition="OEE &lt; Threshold">
+        <choose mode="post_test">
+          <alternative condition="OEE &lt; Threshold" language="text/javascript">
+            <call id="a951" endpoint="">
+              <parameters>
+                <label>"Stop Machine"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'Stop Machine'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+            <call id="a952" endpoint="">
+              <parameters>
+                <label>"Send Email"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'Send Email'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </alternative>
+          <alternative condition="OEE &gt;= Threshold" language="text/javascript"/>
+        </choose>
+      </loop>
+      <call id="a953" endpoint="">
+        <parameters>
+          <label>"Restart Machine"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Restart Machine'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a948" endpoint="">
+        <parameters>
+          <label>"Collect Information"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Collect Information'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a949" endpoint="">
+        <parameters>
+          <label>"Calculate OEE"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Calculate OEE'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+  </loop>
+</description>

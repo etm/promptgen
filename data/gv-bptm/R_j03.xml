@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a966" endpoint="">
+    <parameters>
+      <label>"Fridge produces strange noises"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Fridge produces strange noises'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a967" endpoint="">
+    <parameters>
+      <label>"Describe symptoms and send to service center"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Describe symptoms and send to service center'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a968" endpoint="">
+    <parameters>
+      <label>"Service center selects local facility"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Service center selects local facility'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a969" endpoint="">
+      <parameters>
+        <label>"Local facility makes appointment"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Local facility makes appointment'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Technician leaves without repair" language="text/javascript">
+      <call id="a972" endpoint="">
+        <parameters>
+          <label>"Technician leaves without repair"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Technician leaves without repair'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a969" endpoint="">
+        <parameters>
+          <label>"Local facility makes appointment"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Local facility makes appointment'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a971" endpoint="">
+      <parameters>
+        <label>"Technician arrives"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Technician arrives'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a973" endpoint="">
+      <parameters>
+        <label>"Technician repairs fridge"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Technician repairs fridge'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a974" endpoint="">
+      <parameters>
+        <label>"Confirm fridge is OK"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Confirm fridge is OK'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a975" endpoint="">
+      <parameters>
+        <label>"Rate the service facility"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Rate the service facility'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+</description>

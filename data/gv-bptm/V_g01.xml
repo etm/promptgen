@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a991" endpoint="">
+    <parameters>
+      <label>"Receive order"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Receive order'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a992" endpoint="">
+    <parameters>
+      <label>"Ask menu or burger"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Ask menu or burger'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Menu" language="text/javascript">
+      <call id="a993" endpoint="">
+        <parameters>
+          <label>"Prepare drink"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Prepare drink'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a994" endpoint="">
+        <parameters>
+          <label>"Ask fries or wedges"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Ask fries or wedges'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="Fries" language="text/javascript">
+          <call id="a995" endpoint="">
+            <parameters>
+              <label>"Prepare fries"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Prepare fries'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Wedges" language="text/javascript">
+          <call id="a996" endpoint="">
+            <parameters>
+              <label>"Prepare wedges"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Prepare wedges'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+      </choose>
+    </alternative>
+    <alternative condition="Burger only" language="text/javascript"/>
+  </choose>
+  <call id="a997" endpoint="">
+    <parameters>
+      <label>"Prepare burger"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Prepare burger'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a998" endpoint="">
+      <parameters>
+        <label>"Give status updates"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Give status updates'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Every 30 seconds" language="text/javascript">
+      <call id="a998" endpoint="">
+        <parameters>
+          <label>"Give status updates"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Give status updates'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a999" endpoint="">
+      <parameters>
+        <label>"Deliver order"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Deliver order'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+</description>

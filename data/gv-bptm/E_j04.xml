@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a822" endpoint="">
+    <parameters>
+      <label>"Enter details"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Enter details'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a823" endpoint="">
+    <parameters>
+      <label>"Receive offers"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Receive offers'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Accept" language="text/javascript">
+      <call id="a825" endpoint="">
+        <parameters>
+          <label>"Accept offer"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Accept offer'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a827" endpoint="">
+        <parameters>
+          <label>"Write updates"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Write updates'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a828" endpoint="">
+        <parameters>
+          <label>"Company writes updates"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Company writes updates'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a829" endpoint="">
+        <parameters>
+          <label>"Recommend company"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Recommend company'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Deny" language="text/javascript">
+      <call id="a826" endpoint="">
+        <parameters>
+          <label>"Deny offer"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Deny offer'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+</description>

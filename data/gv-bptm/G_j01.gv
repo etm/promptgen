@@ -1,0 +1,32 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Identify resources"[shape=rectangle];
+  "Create bot"[shape=rectangle];
+  "Start farming"[shape=rectangle];
+  "Natural disaster"[shape=rectangle];
+  "Reach milestone"[shape=rectangle];
+  "Update resources"[shape=rectangle];
+  "Finish farming"[shape=rectangle];
+  "Brag to friends"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "seg_2"[shape=diamond label="X"];
+  "spg_1"[shape=diamond label="AND"];
+  "mpg_1"[shape=diamond label="AND"];
+  
+  "start_1" -> "Identify resources";
+  "Identify resources" -> "Create bot";
+  "Create bot" -> "Start farming";
+  "Start farming" -> "seg_1";
+  "seg_1" -> "Natural disaster"[label="Disaster strikes"];
+  "seg_1" -> "Reach milestone"[label="Milestone reached"];
+  "seg_1" -> "Update resources"[label="Update resources"];
+  "Natural disaster" -> "Start farming";
+  "Reach milestone" -> "seg_2";
+  "Update resources" -> "seg_2";
+  "seg_2" -> "Finish farming"[label="All resources gathered"];
+  "seg_2" -> "Start farming"[label="More resources needed"];
+  "Finish farming" -> "Brag to friends";
+  "Brag to friends" -> "end_1";
+}

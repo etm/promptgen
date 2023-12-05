@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <description xmlns="http://cpee.org/ns/description/1.0">
-  <call id="a740" endpoint="">
+  <call id="a755" endpoint="">
     <parameters>
       <label>"MSPN sends dismissal"</label>
       <method/>
@@ -9,7 +9,7 @@
       <arguments/>
     </parameters>
   </call>
-  <call id="a741" endpoint="">
+  <call id="a756" endpoint="">
     <parameters>
       <label>"MSPO reviews dismissal"</label>
       <method/>
@@ -20,7 +20,7 @@
   </call>
   <choose mode="exclusive">
     <alternative condition="Rejection" language="text/javascript">
-      <call id="a742" endpoint="">
+      <call id="a757" endpoint="">
         <parameters>
           <label>"MSPO rejects dismissal"</label>
           <method/>
@@ -31,7 +31,7 @@
       </call>
     </alternative>
     <alternative condition="Confirmation" language="text/javascript">
-      <call id="a743" endpoint="">
+      <call id="a758" endpoint="">
         <parameters>
           <label>"MSPO confirms dismissal"</label>
           <method/>

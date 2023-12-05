@@ -1,0 +1,28 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Customer provides properties"[shape=rectangle];
+  "Order parts online"[shape=rectangle];
+  "Inspect parts"[shape=rectangle];
+  "Assemble chainsaw"[shape=rectangle];
+  "Update customer"[shape=rectangle];
+  "Send first chainsaw to customer"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Produce rest of order"[shape=rectangle];
+  "spg_1"[shape=diamond label="AND"];
+  "mpg_1"[shape=diamond label="AND"];
+  
+  "start_1" -> "Customer provides properties";
+  "Customer provides properties" -> "spg_1";
+  "spg_1" -> "Order parts online";
+  "Order parts online" -> "mpg_1";
+  "mpg_1" -> "Inspect parts";
+  "Inspect parts" -> "Assemble chainsaw";
+  "Assemble chainsaw" -> "Update customer";
+  "Update customer" -> "Send first chainsaw to customer";
+  "Send first chainsaw to customer" -> "seg_1";
+  "seg_1" -> "Produce rest of order"[label="Customer likes it"];
+  "seg_1" -> "Customer provides properties"[label="Customer doesn't like it"];
+  "Produce rest of order" -> "end_1";
+}

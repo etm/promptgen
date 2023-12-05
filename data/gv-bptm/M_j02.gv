@@ -1,0 +1,38 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "Receive customer specifications"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Manufacture vodka bar"[shape=rectangle];
+  "Manufacture whiskey bar"[shape=rectangle];
+  "Manufacture other bars"[shape=rectangle];
+  "Manufacture seats"[shape=rectangle];
+  "Fill toilets with water"[shape=rectangle];
+  "Assemble interior"[shape=rectangle];
+  "Test flight"[shape=rectangle];
+  "Create test protocol"[shape=rectangle];
+  "Deliver plane to customer"[shape=rectangle];
+  "Customer confirmation"[shape=rectangle];
+  "end_1"[shape=doublecircle label=""];
+  "spg_1"[shape=diamond label="AND"];
+  "mpg_1"[shape=diamond label="AND"];
+  
+  "start_1" -> "Receive customer specifications";
+  "Receive customer specifications" -> "seg_1";
+  "seg_1" -> "Manufacture vodka bar"[label="Vodka bar selected"];
+  "seg_1" -> "Manufacture whiskey bar"[label="Whiskey bar selected"];
+  "seg_1" -> "Manufacture other bars"[label="Other bar selected"];
+  "Manufacture vodka bar" -> "spg_1";
+  "Manufacture whiskey bar" -> "spg_1";
+  "Manufacture other bars" -> "spg_1";
+  "spg_1" -> "Manufacture seats";
+  "spg_1" -> "Fill toilets with water";
+  "Manufacture seats" -> "mpg_1";
+  "Fill toilets with water" -> "mpg_1";
+  "mpg_1" -> "Assemble interior";
+  "Assemble interior" -> "Test flight";
+  "Test flight" -> "Create test protocol";
+  "Create test protocol" -> "Deliver plane to customer";
+  "Deliver plane to customer" -> "Customer confirmation";
+  "Customer confirmation" -> "end_1";
+}

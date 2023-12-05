@@ -1,0 +1,29 @@
+digraph G {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "Develop Design"[shape=rectangle];
+  "Order Lego Sets"[shape=rectangle];
+  "Sort Parts"[shape=rectangle];
+  "Build Subcomponents"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Reorder Parts"[shape=rectangle];
+  "Test Subcomponents"[shape=rectangle];
+  "seg_2"[shape=diamond label="X"];
+  "Redesign and Rebuild"[shape=rectangle];
+  "Assemble"[shape=rectangle];
+  "end_1"[shape=doublecircle label=""];
+
+  "start_1" -> "Develop Design";
+  "Develop Design" -> "Order Lego Sets";
+  "Order Lego Sets" -> "Sort Parts";
+  "Sort Parts" -> "Build Subcomponents";
+  "Build Subcomponents" -> "seg_1";
+  "seg_1" -> "Reorder Parts"[label="No more parts"];
+  "Reorder Parts" -> "Build Subcomponents";
+  "seg_1" -> "Test Subcomponents"[label="Parts available"];
+  "Test Subcomponents" -> "seg_2";
+  "seg_2" -> "Redesign and Rebuild"[label="Test failed"];
+  "Redesign and Rebuild" -> "Test Subcomponents";
+  "seg_2" -> "Assemble"[label="Test passed"];
+  "Assemble" -> "end_1";
+}

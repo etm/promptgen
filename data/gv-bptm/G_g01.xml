@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a832" endpoint="">
+    <parameters>
+      <label>"Send invitations"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Send invitations'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a833" endpoint="">
+    <parameters>
+      <label>"Find out games"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Find out games'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="8 or more agree?">
+    <call id="a834" endpoint="">
+      <parameters>
+        <label>"Appoint a date"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Appoint a date'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="No" language="text/javascript">
+      <call id="a834" endpoint="">
+        <parameters>
+          <label>"Appoint a date"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Appoint a date'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a836" endpoint="">
+      <parameters>
+        <label>"Check games"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Check games'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a838" endpoint="">
+      <parameters>
+        <label>"Find out beer"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Find out beer'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a840" endpoint="">
+      <parameters>
+        <label>"Enjoy LAN party"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Enjoy LAN party'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+</description>

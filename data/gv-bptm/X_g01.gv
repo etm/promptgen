@@ -1,0 +1,32 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Select a course"[shape=rectangle];
+  "Check account"[shape=rectangle];
+  "Check university registration"[shape=rectangle];
+  "Register account"[shape=rectangle];
+  "Request activation"[shape=rectangle];
+  "Log into account"[shape=rectangle];
+  "Tweet to friends"[shape=rectangle];
+  "Complete registration"[shape=rectangle];
+  "Provide payment information"[shape=rectangle];
+  "Receive course ticket"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "seg_2"[shape=diamond label="X"];
+  "start_1" -> "Select a course";
+  "Select a course" -> "Check account";
+  "Check account" -> "seg_1";
+  "seg_1" -> "Check university registration"[label="No account"];
+  "seg_1" -> "Log into account"[label="Has account"];
+  "Check university registration" -> "seg_2";
+  "seg_2" -> "Register account"[label="Registered at university"];
+  "seg_2" -> "Request activation"[label="Not registered at university"];
+  "Register account" -> "Log into account";
+  "Request activation" -> "Log into account";
+  "Log into account" -> "Tweet to friends";
+  "Tweet to friends" -> "Complete registration";
+  "Complete registration" -> "Provide payment information";
+  "Provide payment information" -> "Receive course ticket";
+  "Receive course ticket" -> "end_1";
+}

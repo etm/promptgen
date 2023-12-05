@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a883" endpoint="">
+    <parameters>
+      <label>"Develop Design"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Develop Design'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a884" endpoint="">
+    <parameters>
+      <label>"Order Lego Sets"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Order Lego Sets'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a885" endpoint="">
+    <parameters>
+      <label>"Sort Parts"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Sort Parts'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a886" endpoint="">
+      <parameters>
+        <label>"Build Subcomponents"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Build Subcomponents'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="No more parts" language="text/javascript">
+      <call id="a888" endpoint="">
+        <parameters>
+          <label>"Reorder Parts"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Reorder Parts'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a886" endpoint="">
+        <parameters>
+          <label>"Build Subcomponents"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Build Subcomponents'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <loop mode="pre_test" condition="true">
+      <call id="a889" endpoint="">
+        <parameters>
+          <label>"Test Subcomponents"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Test Subcomponents'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <loop mode="pre_test" condition="Test failed" language="text/javascript">
+        <call id="a891" endpoint="">
+          <parameters>
+            <label>"Redesign and Rebuild"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Redesign and Rebuild'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a889" endpoint="">
+          <parameters>
+            <label>"Test Subcomponents"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Test Subcomponents'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </loop>
+      <call id="a892" endpoint="">
+        <parameters>
+          <label>"Assemble"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Assemble'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+  </loop>
+</description>

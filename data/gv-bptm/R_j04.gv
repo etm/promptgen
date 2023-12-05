@@ -1,0 +1,30 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Service is necessary"[shape=rectangle];
+  "Check car registration"[shape=rectangle];
+  "Notify user"[shape=rectangle];
+  "Fine user"[shape=rectangle];
+  "Enter car problems"[shape=rectangle];
+  "Send status updates"[shape=rectangle];
+  "Pay through app"[shape=rectangle];
+  "Enter successful repair"[shape=rectangle];
+  "Enter next service time"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "seg_2"[shape=diamond label="X"];
+  
+  "start_1" -> "Service is necessary";
+  "Service is necessary" -> "Check car registration";
+  "Check car registration" -> "seg_1";
+  "seg_1" -> "Notify user"[label="Car is registered"];
+  "seg_1" -> "end_1"[label="Car is not registered"];
+  "Notify user" -> "seg_2";
+  "seg_2" -> "Fine user"[label="No service after 30 days"];
+  "seg_2" -> "Enter car problems"[label="Went to service"];
+  "Enter car problems" -> "Send status updates";
+  "Send status updates" -> "Pay through app";
+  "Pay through app" -> "Enter successful repair";
+  "Enter successful repair" -> "Enter next service time";
+  "Enter next service time" -> "end_1";
+}

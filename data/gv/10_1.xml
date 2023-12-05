@@ -1,2 +1,45 @@
 <?xml version="1.0"?>
-<description xmlns="http://cpee.org/ns/description/1.0"/>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a739" endpoint="">
+    <parameters>
+      <label>"MPON sents the dismissal to the MPOO"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'MPON sents the dismissal to the MPOO'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a740" endpoint="">
+    <parameters>
+      <label>"MPOO reviews the dismissal"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'MPOO reviews the dismissal'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Oppose" language="text/javascript">
+      <call id="a741" endpoint="">
+        <parameters>
+          <label>"MPOO opposes the dismissal of MPON"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'MPOO opposes the dismissal of MPON'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Confirm" language="text/javascript">
+      <call id="a742" endpoint="">
+        <parameters>
+          <label>"MPOO confirmes the dismissal of the MPON"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'MPOO confirmes the dismissal of the MPON'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+</description>

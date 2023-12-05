@@ -1,0 +1,33 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Receive order"[shape=rectangle];
+  "Ask menu or burger"[shape=rectangle];
+  "Prepare drink"[shape=rectangle];
+  "Ask fries or wedges"[shape=rectangle];
+  "Prepare fries"[shape=rectangle];
+  "Prepare wedges"[shape=rectangle];
+  "Prepare burger"[shape=rectangle];
+  "Give status updates"[shape=rectangle];
+  "Deliver order"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "seg_2"[shape=diamond label="X"];
+  "seg_3"[shape=diamond label="X"];
+  "start_1" -> "Receive order";
+  "Receive order" -> "Ask menu or burger";
+  "Ask menu or burger" -> "seg_1";
+  "seg_1" -> "Prepare drink"[label="Menu"];
+  "seg_1" -> "Prepare burger"[label="Burger only"];
+  "Prepare drink" -> "Ask fries or wedges";
+  "Ask fries or wedges" -> "seg_2";
+  "seg_2" -> "Prepare fries"[label="Fries"];
+  "seg_2" -> "Prepare wedges"[label="Wedges"];
+  "Prepare fries" -> "Prepare burger";
+  "Prepare wedges" -> "Prepare burger";
+  "Prepare burger" -> "Give status updates";
+  "Give status updates" -> "seg_3";
+  "seg_3" -> "Give status updates"[label="Every 30 seconds"];
+  "seg_3" -> "Deliver order"[label="Burger ready"];
+  "Deliver order" -> "end_1";
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a907" endpoint="">
+    <parameters>
+      <label>"Receive customer specifications"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Receive customer specifications'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Vodka bar selected" language="text/javascript">
+      <call id="a909" endpoint="">
+        <parameters>
+          <label>"Manufacture vodka bar"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Manufacture vodka bar'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Whiskey bar selected" language="text/javascript">
+      <call id="a910" endpoint="">
+        <parameters>
+          <label>"Manufacture whiskey bar"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Manufacture whiskey bar'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Other bar selected" language="text/javascript">
+      <call id="a911" endpoint="">
+        <parameters>
+          <label>"Manufacture other bars"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Manufacture other bars'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+  <parallel wait="-1" cancel="last">
+    <parallel_branch>
+      <call id="a912" endpoint="">
+        <parameters>
+          <label>"Manufacture seats"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Manufacture seats'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </parallel_branch>
+    <parallel_branch>
+      <call id="a913" endpoint="">
+        <parameters>
+          <label>"Fill toilets with water"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Fill toilets with water'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </parallel_branch>
+  </parallel>
+  <call id="a914" endpoint="">
+    <parameters>
+      <label>"Assemble interior"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Assemble interior'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a915" endpoint="">
+    <parameters>
+      <label>"Test flight"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Test flight'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a916" endpoint="">
+    <parameters>
+      <label>"Create test protocol"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Create test protocol'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a917" endpoint="">
+    <parameters>
+      <label>"Deliver plane to customer"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Deliver plane to customer'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a918" endpoint="">
+    <parameters>
+      <label>"Customer confirmation"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Customer confirmation'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+</description>

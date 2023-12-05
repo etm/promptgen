@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <loop mode="pre_test" condition="true">
+    <call id="a896" endpoint="">
+      <parameters>
+        <label>"Customer provides properties"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Customer provides properties'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a897" endpoint="">
+      <parameters>
+        <label>"Order parts online"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Order parts online'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a898" endpoint="">
+      <parameters>
+        <label>"Inspect parts"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Inspect parts'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a899" endpoint="">
+      <parameters>
+        <label>"Assemble chainsaw"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Assemble chainsaw'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a900" endpoint="">
+      <parameters>
+        <label>"Update customer"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Update customer'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a901" endpoint="">
+      <parameters>
+        <label>"Send first chainsaw to customer"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Send first chainsaw to customer'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Customer doesn't like it" language="text/javascript">
+      <call id="a896" endpoint="">
+        <parameters>
+          <label>"Customer provides properties"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Customer provides properties'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a897" endpoint="">
+        <parameters>
+          <label>"Order parts online"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Order parts online'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a898" endpoint="">
+        <parameters>
+          <label>"Inspect parts"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Inspect parts'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a899" endpoint="">
+        <parameters>
+          <label>"Assemble chainsaw"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Assemble chainsaw'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a900" endpoint="">
+        <parameters>
+          <label>"Update customer"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Update customer'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a901" endpoint="">
+        <parameters>
+          <label>"Send first chainsaw to customer"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Send first chainsaw to customer'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a903" endpoint="">
+      <parameters>
+        <label>"Produce rest of order"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Produce rest of order'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+</description>

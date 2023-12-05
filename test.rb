@@ -4,8 +4,8 @@ require_relative 'lib/cpee/transformation/graphviz'
 require_relative 'lib/cpee/transformation/transformer'
 require_relative 'lib/cpee/transformation/text-df-PO-reduced'
 
-source = CPEE::Transformation::Source::Mermaid.new(File.read('data/mermaid-bptm/G_j01.mmd'))
- puts source.graph.to_s
+source = CPEE::Transformation::Source::Graphviz.new(File.read('data/gv/10_1.gv'))
+puts source.graph.to_s
 trans = CPEE::Transformation::Transformer.new(source)
 
 traces = trans.build_traces

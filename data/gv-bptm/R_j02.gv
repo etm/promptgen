@@ -1,0 +1,23 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "Enter machine type and serial number"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Answer questions"[shape=rectangle];
+  "Press buttons"[shape=rectangle];
+  "Collect and display values"[shape=rectangle];
+  "seg_2"[shape=diamond label="X"];
+  "Additional questions"[shape=rectangle];
+  "end_1"[shape=doublecircle label=""];
+
+  "start_1" -> "Enter machine type and serial number";
+  "Enter machine type and serial number" -> "seg_1";
+  "seg_1" -> "Answer questions"[label="Questions are asked"];
+  "seg_1" -> "Press buttons"[label="Buttons are to be pressed"];
+  "Answer questions" -> "Collect and display values";
+  "Press buttons" -> "Collect and display values";
+  "Collect and display values" -> "seg_2";
+  "seg_2" -> "Additional questions"[label="Depending on the results"];
+  "seg_2" -> "end_1"[label="No additional questions"];
+  "Additional questions" -> "end_1";
+}

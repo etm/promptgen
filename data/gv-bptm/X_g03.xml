@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a1050" endpoint="">
+    <parameters>
+      <label>"Select starting block"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Select starting block'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a1051" endpoint="">
+      <parameters>
+        <label>"Run and measure time"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Run and measure time'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="&gt; 25 minutes" language="text/javascript">
+      <call id="a1053" endpoint="">
+        <parameters>
+          <label>"Train and check"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Train and check'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a1051" endpoint="">
+        <parameters>
+          <label>"Run and measure time"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Run and measure time'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a1054" endpoint="">
+      <parameters>
+        <label>"Get starting number"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Get starting number'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="&gt; 1 hour" language="text/javascript">
+        <call id="a1056" endpoint="">
+          <parameters>
+            <label>"Go from home"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Go from home'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition="&lt;= 1 hour" language="text/javascript">
+        <call id="a1057" endpoint="">
+          <parameters>
+            <label>"Leave from work"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Leave from work'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+    </choose>
+    <parallel wait="-1" cancel="last">
+      <parallel_branch>
+        <call id="a1059" endpoint="">
+          <parameters>
+            <label>"Run at Night Run"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Run at Night Run'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </parallel_branch>
+      <parallel_branch>
+        <call id="a1060" endpoint="">
+          <parameters>
+            <label>"Drink at Night Run"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Drink at Night Run'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </parallel_branch>
+    </parallel>
+    <call id="a1062" endpoint="">
+      <parameters>
+        <label>"Receive final running time"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Receive final running time'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+</description>

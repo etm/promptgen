@@ -1,0 +1,34 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Read order"[shape=rectangle];
+  "Check product stock"[shape=rectangle];
+  "Withdraw product"[shape=rectangle];
+  "Reorder product"[shape=rectangle];
+  "Wait for product"[shape=rectangle];
+  "Demand penalty"[shape=rectangle];
+  "Register product"[shape=rectangle];
+  "Check order status"[shape=rectangle];
+  "Request courier and pack"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "seg_2"[shape=diamond label="X"];
+  "seg_3"[shape=diamond label="X"];
+  
+  "start_1" -> "Read order";
+  "Read order" -> "Check product stock";
+  "Check product stock" -> "seg_1";
+  "seg_1" -> "Withdraw product"[label="In stock"];
+  "seg_1" -> "Reorder product"[label="Not in stock"];
+  "Reorder product" -> "Wait for product";
+  "Wait for product" -> "seg_2";
+  "seg_2" -> "Demand penalty"[label="Wait > 10 days"];
+  "seg_2" -> "Register product"[label="Wait <= 10 days"];
+  "Demand penalty" -> "Register product";
+  "Withdraw product" -> "Register product";
+  "Register product" -> "Check order status";
+  "Check order status" -> "seg_3";
+  "seg_3" -> "Request courier and pack"[label="Order ready"];
+  "seg_3" -> "Check product stock"[label="Order not ready"];
+  "Request courier and pack" -> "end_1";
+}

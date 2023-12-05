@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a956" endpoint="">
+    <parameters>
+      <label>"Enter machine type and serial number"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Enter machine type and serial number'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Questions are asked" language="text/javascript">
+      <call id="a958" endpoint="">
+        <parameters>
+          <label>"Answer questions"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Answer questions'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Buttons are to be pressed" language="text/javascript">
+      <call id="a959" endpoint="">
+        <parameters>
+          <label>"Press buttons"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Press buttons'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+  <call id="a960" endpoint="">
+    <parameters>
+      <label>"Collect and display values"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Collect and display values'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Depending on the results" language="text/javascript">
+      <call id="a962" endpoint="">
+        <parameters>
+          <label>"Additional questions"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Additional questions'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="No additional questions" language="text/javascript"/>
+  </choose>
+</description>

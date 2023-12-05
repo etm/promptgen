@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a1037" endpoint="">
+    <parameters>
+      <label>"Select a course"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Select a course'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a1038" endpoint="">
+    <parameters>
+      <label>"Check account"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Check account'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="No account" language="text/javascript">
+      <call id="a1039" endpoint="">
+        <parameters>
+          <label>"Check university registration"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Check university registration'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="Registered at university" language="text/javascript">
+          <call id="a1040" endpoint="">
+            <parameters>
+              <label>"Register account"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Register account'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Not registered at university" language="text/javascript">
+          <call id="a1041" endpoint="">
+            <parameters>
+              <label>"Request activation"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Request activation'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+      </choose>
+    </alternative>
+    <alternative condition="Has account" language="text/javascript"/>
+  </choose>
+  <call id="a1042" endpoint="">
+    <parameters>
+      <label>"Log into account"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Log into account'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a1043" endpoint="">
+    <parameters>
+      <label>"Tweet to friends"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Tweet to friends'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a1044" endpoint="">
+    <parameters>
+      <label>"Complete registration"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Complete registration'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a1045" endpoint="">
+    <parameters>
+      <label>"Provide payment information"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Provide payment information'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a1046" endpoint="">
+    <parameters>
+      <label>"Receive course ticket"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Receive course ticket'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+</description>

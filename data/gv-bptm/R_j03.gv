@@ -1,0 +1,28 @@
+digraph G {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Fridge produces strange noises"[shape=rectangle];
+  "Describe symptoms and send to service center"[shape=rectangle];
+  "Service center selects local facility"[shape=rectangle];
+  "Local facility makes appointment"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Technician arrives"[shape=rectangle];
+  "Technician leaves without repair"[shape=rectangle];
+  "Technician repairs fridge"[shape=rectangle];
+  "Confirm fridge is OK"[shape=rectangle];
+  "Rate the service facility"[shape=rectangle];
+  
+  "start_1" -> "Fridge produces strange noises";
+  "Fridge produces strange noises" -> "Describe symptoms and send to service center";
+  "Describe symptoms and send to service center" -> "Service center selects local facility";
+  "Service center selects local facility" -> "Local facility makes appointment";
+  "Local facility makes appointment" -> "seg_1";
+  "seg_1" -> "Technician arrives"[label="Technician arrives"];
+  "seg_1" -> "Technician leaves without repair"[label="Technician leaves without repair"];
+  "Technician arrives" -> "Technician repairs fridge";
+  "Technician repairs fridge" -> "Confirm fridge is OK";
+  "Confirm fridge is OK" -> "Rate the service facility";
+  "Rate the service facility" -> "end_1";
+  "Technician leaves without repair" -> "Local facility makes appointment"[label="Needs additional parts"];
+}

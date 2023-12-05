@@ -1,2 +1,79 @@
 <?xml version="1.0"?>
-<description xmlns="http://cpee.org/ns/description/1.0"/>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a791" endpoint="">
+    <parameters>
+      <label>"Claim is registered"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Claim is registered'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a792" endpoint="">
+    <parameters>
+      <label>"Claim is examined"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Claim is examined'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a793" endpoint="">
+      <parameters>
+        <label>"Settlement recommendation is written"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Settlement recommendation is written'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a794" endpoint="">
+      <parameters>
+        <label>"Recommendation is checked"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Recommendation is checked'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="Not OK" language="text/javascript">
+      <call id="a797" endpoint="">
+        <parameters>
+          <label>"Claim is Not OK"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Claim is Not OK'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a793" endpoint="">
+        <parameters>
+          <label>"Settlement recommendation is written"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Settlement recommendation is written'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a794" endpoint="">
+        <parameters>
+          <label>"Recommendation is checked"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Recommendation is checked'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a796" endpoint="">
+      <parameters>
+        <label>"Claim is OK"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Claim is OK'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+</description>

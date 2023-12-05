@@ -1,0 +1,27 @@
+digraph G {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "Collect requirements"[shape=rectangle];
+  "Send to architect"[shape=rectangle];
+  "Refine draft"[shape=rectangle];
+  "Create materials list"[shape=rectangle];
+  "Order materials"[shape=rectangle];
+  "Invite friends to build"[shape=rectangle];
+  "Build tree house"[shape=rectangle];
+  "Invite friends to party"[shape=rectangle];
+  "Create attendees list"[shape=rectangle];
+  "Buy snacks"[shape=rectangle];
+  "end_1"[shape=doublecircle label=""];
+  
+  "start_1" -> "Collect requirements";
+  "Collect requirements" -> "Send to architect";
+  "Send to architect" -> "Refine draft";
+  "Refine draft" -> "Create materials list";
+  "Create materials list" -> "Order materials";
+  "Order materials" -> "Invite friends to build";
+  "Invite friends to build" -> "Build tree house";
+  "Build tree house" -> "Invite friends to party";
+  "Invite friends to party" -> "Create attendees list";
+  "Create attendees list" -> "Buy snacks";
+  "Buy snacks" -> "end_1";
+}

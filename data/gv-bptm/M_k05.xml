@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a923" endpoint="">
+    <parameters>
+      <label>"Collect requirements"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Collect requirements'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a924" endpoint="">
+    <parameters>
+      <label>"Send to architect"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Send to architect'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a925" endpoint="">
+    <parameters>
+      <label>"Refine draft"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Refine draft'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a926" endpoint="">
+    <parameters>
+      <label>"Create materials list"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Create materials list'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a927" endpoint="">
+    <parameters>
+      <label>"Order materials"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Order materials'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a928" endpoint="">
+    <parameters>
+      <label>"Invite friends to build"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Invite friends to build'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a929" endpoint="">
+    <parameters>
+      <label>"Build tree house"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Build tree house'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a930" endpoint="">
+    <parameters>
+      <label>"Invite friends to party"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Invite friends to party'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a931" endpoint="">
+    <parameters>
+      <label>"Create attendees list"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Create attendees list'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a932" endpoint="">
+    <parameters>
+      <label>"Buy snacks"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Buy snacks'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+</description>

@@ -1,0 +1,30 @@
+digraph G {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "task_1"[shape=rectangle label="Report job applications"];
+  "task_2"[shape=rectangle label="Receive job offers"];
+  "task_3"[shape=rectangle label="Companies confirm and rate applications"];
+  "task_4"[shape=rectangle label="Negotiate job interview"];
+  "task_5"[shape=rectangle label="Enter probation phase"];
+  "task_6"[shape=rectangle label="Rate the company"];
+  "task_7"[shape=rectangle label="Company rates you"];
+  "task_8"[shape=rectangle label="View company reviews after 1 year"];
+  "task_9"[shape=rectangle label="Job becomes permanent"];
+  "seg_1"[shape=diamond label="X"];
+  "seg_2"[shape=diamond label="X"];
+  "start_1" -> "task_1";
+  "task_1" -> "task_2";
+  "task_2" -> "task_3";
+  "task_3" -> "task_4";
+  "task_4" -> "task_5";
+  "task_5" -> "seg_1";
+  "seg_1" -> "task_6"[label="Probation phase ends"];
+  "seg_1" -> "task_2"[label="Probation phase continues"];
+  "task_6" -> "task_7";
+  "task_7" -> "seg_2";
+  "seg_2" -> "task_8"[label="After 1 year"];
+  "seg_2" -> "task_9"[label="Before 1 year"];
+  "task_8" -> "end_1";
+  "task_9" -> "end_1";
+}

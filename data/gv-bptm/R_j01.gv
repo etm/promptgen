@@ -1,0 +1,21 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "Collect Information"[shape=rectangle];
+  "Calculate OEE"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "Stop Machine"[shape=rectangle];
+  "Send Email"[shape=rectangle];
+  "Restart Machine"[shape=rectangle];
+  "end_1"[shape=doublecircle label=""];
+  
+  "start_1" -> "Collect Information";
+  "Collect Information" -> "Calculate OEE";
+  "Calculate OEE" -> "seg_1";
+  "seg_1" -> "Stop Machine"[label="OEE < Threshold"];
+  "seg_1" -> "Restart Machine"[label="OEE >= Threshold"];
+  "Stop Machine" -> "Send Email";
+  "Send Email" -> "Restart Machine";
+  "Restart Machine" -> "Collect Information"[label="Machine Restarted"];
+  "Restart Machine" -> "end_1"[label="Machine Disconnected"];
+}

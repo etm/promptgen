@@ -1,0 +1,34 @@
+digraph {
+  graph [rankdir=LR]
+  "start_1"[shape=circle label=""]
+  "end_1"[shape=doublecircle label=""]
+  "Query web shops"[shape=rectangle]
+  "Order parts"[shape=rectangle]
+  "seg_1"[shape=diamond label="X"]
+  "seg_2"[shape=diamond label="X"]
+  "seg_3"[shape=diamond label="X"]
+  "Reorder parts (cheapest)"[shape=rectangle]
+  "Reorder parts (fastest)"[shape=rectangle]
+  "Complain to friends"[shape=rectangle]
+  "Start building"[shape=rectangle]
+  "Check stock"[shape=rectangle]
+  "spg_1"[shape=diamond label="AND"]
+  "mpg_1"[shape=diamond label="AND"]
+
+  "start_1" -> "Query web shops"
+  "Query web shops" -> "Order parts"
+  "Order parts" -> "seg_1"
+  "seg_1" -> "Start building"[label="Parts arrived"]
+  "seg_1" -> "seg_2"[label="Not enough parts"]
+  "seg_2" -> "Order parts"[label="Order from several shops"]
+  "Start building" -> "Check stock"
+  "Check stock" -> "seg_3"
+  "seg_3" -> "Reorder parts (cheapest)"[label="Stock < 5"]
+  "seg_3" -> "Reorder parts (fastest)"[label="Stock < 3"]
+  "seg_3" -> "Complain to friends"[label="Stock = 0"]
+  "Reorder parts (cheapest)" -> "spg_1"
+  "Reorder parts (fastest)" -> "spg_1"
+  "Complain to friends" -> "spg_1"
+  "spg_1" -> "mpg_1"
+  "mpg_1" -> "end_1"
+}

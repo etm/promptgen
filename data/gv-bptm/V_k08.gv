@@ -1,0 +1,43 @@
+digraph G {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Login"[shape=rectangle];
+  "Check Credentials"[shape=rectangle];
+  "Select Products"[shape=rectangle];
+  "Add to Cart"[shape=rectangle];
+  "Save Product"[shape=rectangle];
+  "Check Selected Products"[shape=rectangle];
+  "Finish Order"[shape=rectangle];
+  "Prepare Payment and Shipment"[shape=rectangle];
+  "Enter Payment Data"[shape=rectangle];
+  "Wait for Bank Confirmation"[shape=rectangle];
+  "Enter Shipping Address"[shape=rectangle];
+  "Enter Billing Address"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "seg_2"[shape=diamond label="X"];
+  "spg_1"[shape=diamond label="AND"];
+  "mpg_1"[shape=diamond label="AND"];
+  
+  "start_1" -> "Login";
+  "Login" -> "Check Credentials";
+  "Check Credentials" -> "seg_1";
+  "seg_1" -> "Select Products"[label="Login Successful"];
+  "seg_1" -> "end_1"[label="Login Unsuccessful"];
+  "Select Products" -> "Add to Cart";
+  "Add to Cart" -> "Save Product";
+  "Save Product" -> "Check Selected Products";
+  "Check Selected Products" -> "seg_2";
+  "seg_2" -> "Select Products"[label="Not All Products Selected"];
+  "seg_2" -> "Finish Order"[label="All Products Selected"];
+  "Finish Order" -> "Prepare Payment and Shipment";
+  "Prepare Payment and Shipment" -> "spg_1";
+  "spg_1" -> "Enter Payment Data";
+  "spg_1" -> "Enter Shipping Address";
+  "Enter Payment Data" -> "Wait for Bank Confirmation";
+  "Wait for Bank Confirmation" -> "mpg_1";
+  "Enter Shipping Address" -> "Enter Billing Address"[label="Shipping Address != Billing Address"];
+  "Enter Shipping Address" -> "mpg_1"[label="Shipping Address = Billing Address"];
+  "Enter Billing Address" -> "mpg_1";
+  "mpg_1" -> "end_1";
+}

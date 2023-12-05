@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a1023" endpoint="">
+    <parameters>
+      <label>"Read order"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Read order'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <loop mode="pre_test" condition="true">
+    <call id="a1024" endpoint="">
+      <parameters>
+        <label>"Check product stock"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Check product stock'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <choose mode="exclusive">
+      <alternative condition="In stock" language="text/javascript">
+        <call id="a1025" endpoint="">
+          <parameters>
+            <label>"Withdraw product"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Withdraw product'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition="Not in stock" language="text/javascript">
+        <call id="a1026" endpoint="">
+          <parameters>
+            <label>"Reorder product"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Reorder product'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a1027" endpoint="">
+          <parameters>
+            <label>"Wait for product"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Wait for product'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <choose mode="exclusive">
+          <alternative condition="Wait &gt; 10 days" language="text/javascript">
+            <call id="a1028" endpoint="">
+              <parameters>
+                <label>"Demand penalty"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'Demand penalty'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </alternative>
+          <alternative condition="Wait &lt;= 10 days" language="text/javascript"/>
+        </choose>
+      </alternative>
+    </choose>
+    <call id="a1029" endpoint="">
+      <parameters>
+        <label>"Register product"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Register product'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <call id="a1030" endpoint="">
+      <parameters>
+        <label>"Check order status"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Check order status'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+    <loop mode="pre_test" condition="true" language="text/javascript">
+      <call id="a1024" endpoint="">
+        <parameters>
+          <label>"Check product stock"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Check product stock'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="In stock" language="text/javascript">
+          <call id="a1025" endpoint="">
+            <parameters>
+              <label>"Withdraw product"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Withdraw product'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Not in stock" language="text/javascript">
+          <call id="a1026" endpoint="">
+            <parameters>
+              <label>"Reorder product"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Reorder product'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a1027" endpoint="">
+            <parameters>
+              <label>"Wait for product"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Wait for product'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <choose mode="exclusive">
+            <alternative condition="Wait &gt; 10 days" language="text/javascript">
+              <call id="a1028" endpoint="">
+                <parameters>
+                  <label>"Demand penalty"</label>
+                  <method/>
+                  <type>:task</type>
+                  <mid>'Demand penalty'</mid>
+                  <arguments/>
+                </parameters>
+              </call>
+            </alternative>
+            <alternative condition="Wait &lt;= 10 days" language="text/javascript"/>
+          </choose>
+        </alternative>
+      </choose>
+      <call id="a1029" endpoint="">
+        <parameters>
+          <label>"Register product"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Register product'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a1030" endpoint="">
+        <parameters>
+          <label>"Check order status"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Check order status'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </loop>
+    <call id="a1031" endpoint="">
+      <parameters>
+        <label>"Request courier and pack"</label>
+        <method/>
+        <type>:task</type>
+        <mid>'Request courier and pack'</mid>
+        <arguments/>
+      </parameters>
+    </call>
+  </loop>
+</description>

@@ -1,0 +1,35 @@
+digraph {
+  rankdir=LR;
+  "start_1"[shape=circle label=""];
+  "end_1"[shape=doublecircle label=""];
+  "Check battle.net account"[shape=rectangle];
+  "Enter account information"[shape=rectangle];
+  "Check confirmation mail"[shape=rectangle];
+  "Check WoW subscription"[shape=rectangle];
+  "Select payment method"[shape=rectangle];
+  "Enter credit card information"[shape=rectangle];
+  "Enter bank account information"[shape=rectangle];
+  "Log into game"[shape=rectangle];
+  "Select realm, race and class"[shape=rectangle];
+  "Enter character name"[shape=rectangle];
+  "seg_1"[shape=diamond label="X"];
+  "seg_2"[shape=diamond label="X"];
+  "seg_3"[shape=diamond label="X"];
+  "start_1" -> "Check battle.net account";
+  "Check battle.net account" -> "seg_1";
+  "seg_1" -> "Enter account information"[label="No account"];
+  "Enter account information" -> "Check confirmation mail";
+  "Check confirmation mail" -> "Check WoW subscription";
+  "seg_1" -> "Check WoW subscription"[label="Has account"];
+  "Check WoW subscription" -> "seg_2";
+  "seg_2" -> "Select payment method"[label="No subscription"];
+  "Select payment method" -> "seg_3";
+  "seg_3" -> "Enter credit card information"[label="Credit card"];
+  "Enter credit card information" -> "Log into game";
+  "seg_3" -> "Enter bank account information"[label="Bank account"];
+  "Enter bank account information" -> "Log into game";
+  "seg_2" -> "Log into game"[label="Has subscription"];
+  "Log into game" -> "Select realm, race and class";
+  "Select realm, race and class" -> "Enter character name";
+  "Enter character name" -> "end_1";
+}

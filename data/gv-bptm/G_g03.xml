@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a843" endpoint="">
+    <parameters>
+      <label>"Check battle.net account"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Check battle.net account'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="No account" language="text/javascript">
+      <call id="a844" endpoint="">
+        <parameters>
+          <label>"Enter account information"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Enter account information'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a845" endpoint="">
+        <parameters>
+          <label>"Check confirmation mail"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Check confirmation mail'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="Has account" language="text/javascript"/>
+  </choose>
+  <call id="a846" endpoint="">
+    <parameters>
+      <label>"Check WoW subscription"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Check WoW subscription'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="No subscription" language="text/javascript">
+      <call id="a847" endpoint="">
+        <parameters>
+          <label>"Select payment method"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'Select payment method'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="Credit card" language="text/javascript">
+          <call id="a848" endpoint="">
+            <parameters>
+              <label>"Enter credit card information"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Enter credit card information'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Bank account" language="text/javascript">
+          <call id="a849" endpoint="">
+            <parameters>
+              <label>"Enter bank account information"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Enter bank account information'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+      </choose>
+    </alternative>
+    <alternative condition="Has subscription" language="text/javascript"/>
+  </choose>
+  <call id="a850" endpoint="">
+    <parameters>
+      <label>"Log into game"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Log into game'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a851" endpoint="">
+    <parameters>
+      <label>"Select realm, race and class"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Select realm, race and class'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a852" endpoint="">
+    <parameters>
+      <label>"Enter character name"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Enter character name'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+</description>

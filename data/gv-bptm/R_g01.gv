@@ -1,0 +1,30 @@
+digraph {
+rankdir=LR;
+"start_1"[shape=circle label=""];
+"end_1"[shape=doublecircle label=""];
+"end_2"[shape=doublecircle label=""];
+"Enter model and issue"[shape=rectangle];
+"Get list of materials and tools"[shape=rectangle];
+"Check available materials and tools"[shape=rectangle];
+"seg_1"[shape=diamond label="X"];
+"Contact friends for materials and tools"[shape=rectangle];
+"Buy remaining materials and tools"[shape=rectangle];
+"Receive instructions"[shape=rectangle];
+"seg_2"[shape=diamond label="X"];
+"Send review or video"[shape=rectangle];
+"Send to expert"[shape=rectangle];
+
+"start_1" -> "Enter model and issue"
+"Enter model and issue" -> "Get list of materials and tools"
+"Get list of materials and tools" -> "Check available materials and tools"
+"Check available materials and tools" -> "seg_1"
+"seg_1" -> "Contact friends for materials and tools"[label="Need to borrow or buy"]
+"seg_1" -> "Buy remaining materials and tools"[label="Have all necessary"]
+"Contact friends for materials and tools" -> "Buy remaining materials and tools"
+"Buy remaining materials and tools" -> "Receive instructions"
+"Receive instructions" -> "seg_2"
+"seg_2" -> "Send review or video"[label="Repair successful"]
+"seg_2" -> "Send to expert"[label="Repair unsuccessful"]
+"Send review or video" -> "end_1"
+"Send to expert" -> "end_2"
+}

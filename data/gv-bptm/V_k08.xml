@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a1005" endpoint="">
+    <parameters>
+      <label>"Login"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Login'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a1006" endpoint="">
+    <parameters>
+      <label>"Check Credentials"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'Check Credentials'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="Login Successful" language="text/javascript">
+      <loop mode="pre_test" condition="true">
+        <call id="a1007" endpoint="">
+          <parameters>
+            <label>"Select Products"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Select Products'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a1008" endpoint="">
+          <parameters>
+            <label>"Add to Cart"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Add to Cart'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a1009" endpoint="">
+          <parameters>
+            <label>"Save Product"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Save Product'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a1010" endpoint="">
+          <parameters>
+            <label>"Check Selected Products"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Check Selected Products'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <loop mode="pre_test" condition="Not All Products Selected" language="text/javascript">
+          <call id="a1007" endpoint="">
+            <parameters>
+              <label>"Select Products"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Select Products'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a1008" endpoint="">
+            <parameters>
+              <label>"Add to Cart"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Add to Cart'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a1009" endpoint="">
+            <parameters>
+              <label>"Save Product"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Save Product'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+          <call id="a1010" endpoint="">
+            <parameters>
+              <label>"Check Selected Products"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'Check Selected Products'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </loop>
+        <call id="a1011" endpoint="">
+          <parameters>
+            <label>"Finish Order"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Finish Order'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <call id="a1012" endpoint="">
+          <parameters>
+            <label>"Prepare Payment and Shipment"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Prepare Payment and Shipment'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+        <parallel wait="-1" cancel="last">
+          <parallel_branch>
+            <call id="a1013" endpoint="">
+              <parameters>
+                <label>"Enter Payment Data"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'Enter Payment Data'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+            <call id="a1014" endpoint="">
+              <parameters>
+                <label>"Wait for Bank Confirmation"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'Wait for Bank Confirmation'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </parallel_branch>
+          <parallel_branch>
+            <call id="a1015" endpoint="">
+              <parameters>
+                <label>"Enter Shipping Address"</label>
+                <method/>
+                <type>:task</type>
+                <mid>'Enter Shipping Address'</mid>
+                <arguments/>
+              </parameters>
+            </call>
+          </parallel_branch>
+        </parallel>
+      </loop>
+    </alternative>
+    <alternative condition="Login Unsuccessful" language="text/javascript"/>
+  </choose>
+</description>
