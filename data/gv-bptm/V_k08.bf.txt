@@ -1,0 +1,28 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a2 and the label "Login"
+  * a task with the id a3 and the label "Check Credentials"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "Login Successful". 
+    The second branch of D1 is executed if the condition is "Login Unsuccessful". 
+The first branch of D1 contains the following elements:
+  * an infinite loop (no condidition), furthermore referred to as L1.
+The loop L1 contains the following elements:
+  * a task with the id a4 and the label "Select Products"
+  * a task with the id a5 and the label "Add to Cart"
+  * a task with the id a6 and the label "Save Product"
+  * a task with the id a7 and the label "Check Selected Products"
+  * a loop, which starts if the condition "Not All Products Selected" is met, furthermore referred to as L2.
+  * a task with the id a8 and the label "Finish Order"
+  * a task with the id a9 and the label "Prepare Payment and Shipment"
+  * a parallel gateway with 2 branches, furthermore dubbed PG1. 
+The loop L2 contains the following elements:
+  * a task with the id a4 and the label "Select Products"
+  * a task with the id a5 and the label "Add to Cart"
+  * a task with the id a6 and the label "Save Product"
+  * a task with the id a7 and the label "Check Selected Products"
+The first branch of PG1 contains the following elements:
+  * a task with the id a10 and the label "Enter Payment Data"
+  * a task with the id a11 and the label "Wait for Bank Confirmation"
+The second branch of PG1 contains the following elements:
+  * a task with the id a12 and the label "Enter Shipping Address"
+The second branch of D1 contains the following elements:

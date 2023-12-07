@@ -1,0 +1,15 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Instruct artist"
+  * a task with the id a2 and the label "Choose plastic color"
+  * a task with the id a3 and the label "Check color stock"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "Yes". 
+    The second branch of D1 is executed if the condition is "No". 
+  * a task with the id a7 and the label "Turn on printer"
+  * a task with the id a8 and the label "Heat up bed and extruder"
+  * a task with the id a9 and the label "Generate gcode file"
+  * a task with the id a10 and the label "Print model"
+The first branch of D1 contains the following elements:
+  * a task with the id a5 and the label "Put color on shopping list"
+The second branch of D1 contains the following elements:
+  * a task with the id a6 and the label "Order color"

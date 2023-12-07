@@ -1,0 +1,23 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Send Invitations"
+  * a task with the id a3 and the label "Find out which games to play"
+  * an infinite loop (no condidition), furthermore referred to as L1.
+The loop L1 contains the following elements:
+  * a task with the id a5 and the label "Appoint a date for LAN party"
+  * a loop, which starts if the condition "Less than 8 agree" is met, furthermore referred to as L2.
+  * a task with the id a9 and the label "Check if all games are available"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "All games are available". 
+    The second branch of D1 is executed if the condition is "Some games are missing". 
+  * a task with the id a15 and the label "Find out beer requirement"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D2. 
+    The first branch of D2 is executed if the condition is "Enough beer available". 
+    The second branch of D2 is executed if the condition is "Not enough beer". 
+The loop L2 contains the following elements:
+  * a task with the id a5 and the label "Appoint a date for LAN party"
+The first branch of D1 contains the following elements:
+The second branch of D1 contains the following elements:
+  * a task with the id a17 and the label "Download missing games"
+The first branch of D2 contains the following elements:
+The second branch of D2 contains the following elements:
+  * a task with the id a25 and the label "Buy missing beer"

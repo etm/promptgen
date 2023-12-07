@@ -1,0 +1,13 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a2 and the label "Claim is registered"
+  * a task with the id a3 and the label "Claim is examined"
+  * an infinite loop (no condidition), furthermore referred to as L1.
+The loop L1 contains the following elements:
+  * a task with the id a4 and the label "Settlement recommendation is written"
+  * a task with the id a5 and the label "Recommendation is checked"
+  * a loop, which starts if the condition "Not OK" is met, furthermore referred to as L2.
+  * a task with the id a7 and the label "Claim is OK"
+The loop L2 contains the following elements:
+  * a task with the id a8 and the label "Claim is Not OK"
+  * a task with the id a4 and the label "Settlement recommendation is written"
+  * a task with the id a5 and the label "Recommendation is checked"

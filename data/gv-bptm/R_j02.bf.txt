@@ -1,0 +1,16 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Enter machine type and serial number"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "Questions are asked". 
+    The second branch of D1 is executed if the condition is "Buttons are to be pressed". 
+  * a task with the id a5 and the label "Collect and display values"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D2. 
+    The first branch of D2 is executed if the condition is "Depending on the results". 
+    The second branch of D2 is executed if the condition is "No additional questions". 
+The first branch of D1 contains the following elements:
+  * a task with the id a3 and the label "Answer questions"
+The second branch of D1 contains the following elements:
+  * a task with the id a4 and the label "Press buttons"
+The first branch of D2 contains the following elements:
+  * a task with the id a7 and the label "Additional questions"
+The second branch of D2 contains the following elements:

@@ -97,3 +97,31 @@ bpmn.each do |f|
   text = trans.generate_model(CPEE::Transformation::Target::Text_df_PO_extended)
   File.write(f.sub(/\.bpmn$/,'.df-po-extended.txt'),text)
 end
+
+#########################################################################################################
+### Write-Breath First traversed texts, with lots of enumerations.
+#########################################################################################################
+mm.each do |f|
+  source = CPEE::Transformation::Source::Mermaid.new(File.read(f))
+  trans = CPEE::Transformation::Transformer.new(source)
+  trans.build_traces
+  trans.build_tree
+  text = trans.generate_model(CPEE::Transformation::Target::Text_bf)
+  File.write(f.sub(/\.mmd$/,'.bf.txt'),text)
+end
+gv.each do |f|
+  source = CPEE::Transformation::Source::Graphviz.new(File.read(f))
+  trans = CPEE::Transformation::Transformer.new(source)
+  trans.build_traces
+  trans.build_tree
+  text = trans.generate_model(CPEE::Transformation::Target::Text_bf)
+  File.write(f.sub(/\.gv$/,'.bf.txt'),text)
+end
+bpmn.each do |f|
+  source = CPEE::Transformation::Source::BPMN2.new(File.read(f))
+  trans = CPEE::Transformation::Transformer.new(source)
+  trans.build_traces
+  trans.build_tree
+  text = trans.generate_model(CPEE::Transformation::Target::Text_bf)
+  File.write(f.sub(/\.bpmn$/,'.bf.txt'),text)
+end

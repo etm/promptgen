@@ -1,0 +1,25 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Read order from system"
+  * a loop, which starts if the condition "Product not in stock" is met, furthermore referred to as L1.
+  * a task with the id a5 and the label "Withdraw product from warehouse"
+  * a task with the id a17 and the label "Register product in stock management system"
+The loop L1 contains the following elements:
+  * a task with the id a7 and the label "Reorder product from wholesaler"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "Wait more than 10 days". 
+    The second branch of D1 is executed if the condition is "Wait less than 10 days". 
+  * a task with the id a13 and the label "Register product in stock management system"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D2. 
+    The first branch of D2 is executed if the condition is "Order not ready for shipment". 
+    The second branch of D2 is executed if the condition is "". 
+The first branch of D1 contains the following elements:
+  * a task with the id a11 and the label "Demand penalty from wholesaler"
+The second branch of D1 contains the following elements:
+The first branch of D2 contains the following elements:
+  * a task with the id a23 and the label "Select next product"
+The second branch of D2 contains the following elements:
+  * a parallel gateway with 2 branches, furthermore dubbed PG1. 
+At this point we escape the innermost loop. The first branch of PG1 contains the following elements:
+  * a task with the id a25 and the label "Request courier"
+The second branch of PG1 contains the following elements:
+  * a task with the id a27 and the label "Pack products"

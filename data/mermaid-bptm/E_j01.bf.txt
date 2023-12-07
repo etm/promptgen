@@ -1,0 +1,12 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Report Job Applications"
+  * a task with the id a3 and the label "Receive Job Offers"
+  * a task with the id a5 and the label "Company Confirms and Rates Application"
+  * a task with the id a9 and the label "Enter Probation Phase"
+  * a task with the id a11 and the label "Rate Company and Get Rated"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "Job Becomes Permanent". 
+    The second branch of D1 is executed if the condition is "Rated C or Less". 
+The first branch of D1 contains the following elements:
+The second branch of D1 contains the following elements:
+  * a task with the id a17 and the label "Continue Receiving Job Offers"

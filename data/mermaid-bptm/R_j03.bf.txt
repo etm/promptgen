@@ -1,0 +1,16 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Describe fridge symptoms and type"
+  * a task with the id a3 and the label "Send description to central service center"
+  * a task with the id a5 and the label "Service center selects local facility"
+  * a task with the id a7 and the label "Local facility makes appointment"
+  * a task with the id a11 and the label "Technician arrives"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "Needs additional parts". 
+    The second branch of D1 is executed if the condition is "Doesn't need additional parts". 
+  * a task with the id a17 and the label "Technician repairs fridge"
+  * a task with the id a25 and the label "Confirm fridge is OK"
+  * a task with the id a27 and the label "Rate the service facility"
+The first branch of D1 contains the following elements:
+  * a task with the id a15 and the label "Technician leaves"
+  * a task with the id a19 and the label "Technician returns with parts"
+The second branch of D1 contains the following elements:

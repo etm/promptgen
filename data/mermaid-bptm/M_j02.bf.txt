@@ -1,0 +1,12 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Receive Customer Specifications"
+  * a task with the id a3 and the label "Send Specifications to Teams"
+  * a parallel gateway with 2 branches, furthermore dubbed PG1. 
+  * a task with the id a15 and the label "Assemble Interior"
+  * a task with the id a17 and the label "Test Flight"
+  * a task with the id a19 and the label "Create Test Protocol"
+  * a task with the id a21 and the label "Deliver Plane to Customer"
+The first branch of PG1 contains the following elements:
+  * a task with the id a7 and the label "Manufacture Vodka Bar"
+The second branch of PG1 contains the following elements:
+  * a task with the id a9 and the label "Manufacture Whiskey Bar"

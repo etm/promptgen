@@ -1,0 +1,23 @@
+The process contains the following main elements, and the process ends.
+  * an infinite loop (no condidition), furthermore referred to as L1.
+The loop L1 contains the following elements:
+  * a task with the id a1 and the label "Collect Information"
+  * a task with the id a2 and the label "Calculate OEE"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "OEE < Threshold". 
+    The second branch of D1 is executed if the condition is "OEE >= Threshold". 
+  * a loop, which starts if the condition "Machine Restarted" is met, furthermore referred to as L2.
+The first branch of D1 contains the following elements:
+  * a task with the id a4 and the label "Stop Machine"
+  * a task with the id a5 and the label "Send Email"
+The second branch of D1 contains the following elements:
+The loop L2 contains the following elements:
+  * a task with the id a6 and the label "Restart Machine"
+  * a task with the id a1 and the label "Collect Information"
+  * a task with the id a2 and the label "Calculate OEE"
+  * an post_test decision with 2 branches. This decision will be furthermore refered to as D2. 
+    The first branch of D2 is executed if the condition is "OEE < Threshold". 
+    The second branch of D2 is executed if the condition is "OEE >= Threshold". 
+  * a task with the id a6 and the label "Restart Machine"
+  * a task with the id a1 and the label "Collect Information"
+  * a task with the id a2 and the label "Calculate OEE"

@@ -1,0 +1,23 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Select starting block"
+  * an infinite loop (no condidition), furthermore referred to as L1.
+The loop L1 contains the following elements:
+  * a task with the id a2 and the label "Run and measure time"
+  * a loop, which starts if the condition "> 25 minutes" is met, furthermore referred to as L2.
+  * a task with the id a5 and the label "Get starting number"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
+    The first branch of D1 is executed if the condition is "> 1 hour". 
+    The second branch of D1 is executed if the condition is "<= 1 hour". 
+  * a parallel gateway with 2 branches, furthermore dubbed PG1. 
+  * a task with the id a13 and the label "Receive final running time"
+The loop L2 contains the following elements:
+  * a task with the id a4 and the label "Train and check"
+  * a task with the id a2 and the label "Run and measure time"
+The first branch of D1 contains the following elements:
+  * a task with the id a7 and the label "Go from home"
+The second branch of D1 contains the following elements:
+  * a task with the id a8 and the label "Leave from work"
+The first branch of PG1 contains the following elements:
+  * a task with the id a10 and the label "Run at Night Run"
+The second branch of PG1 contains the following elements:
+  * a task with the id a11 and the label "Drink at Night Run"

@@ -1,0 +1,22 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Collect Requirements"
+  * a task with the id a3 and the label "Send Requirements to Architect"
+  * a task with the id a5 and the label "Receive Draft from Architect"
+  * an infinite loop (no condidition), furthermore referred to as L1.
+The loop L1 contains the following elements:
+  * a task with the id a7 and the label "Refine Draft"
+  * a loop, which starts if the condition "Additional Requirements" is met, furthermore referred to as L2.
+  * a task with the id a13 and the label "Create Materials List"
+  * a task with the id a15 and the label "Categorize Materials"
+  * a task with the id a17 and the label "Order Materials Online"
+  * a parallel gateway with 2 branches, furthermore dubbed PG1. 
+  * a task with the id a25 and the label "Build Tree House"
+  * a task with the id a29 and the label "Send Invitations for Tree House Party"
+  * a task with the id a31 and the label "Create Attendee List"
+  * a task with the id a33 and the label "Buy Snacks for Party"
+The loop L2 contains the following elements:
+  * a task with the id a7 and the label "Refine Draft"
+The first branch of PG1 contains the following elements:
+  * a task with the id a21 and the label "Send Messages to Friends for Building"
+The second branch of PG1 contains the following elements:
+  * a task with the id a23 and the label "Wait for Order Processing"

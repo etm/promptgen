@@ -1,0 +1,19 @@
+The process contains the following main elements, and the process ends.
+  * a task with the id a1 and the label "Develop Basic Design"
+  * a task with the id a3 and the label "Order Lego Brick Sets"
+  * a task with the id a5 and the label "Sort Lego Parts"
+  * an infinite loop (no condidition), furthermore referred to as L1.
+The loop L1 contains the following elements:
+  * a task with the id a7 and the label "Build Subcomponents"
+  * a loop, which starts if the condition "No more parts" is met, furthermore referred to as L2.
+  * an infinite loop (no condidition), furthermore referred to as L3.
+The loop L2 contains the following elements:
+  * a task with the id a11 and the label "Reorder Parts"
+  * a task with the id a7 and the label "Build Subcomponents"
+The loop L3 contains the following elements:
+  * a task with the id a15 and the label "Test Subcomponents"
+  * a loop, which starts if the condition "Test Failed" is met, furthermore referred to as L4.
+  * a task with the id a23 and the label "Assemble Subcomponents"
+The loop L4 contains the following elements:
+  * a task with the id a19 and the label "Redesign and Rebuild"
+  * a task with the id a15 and the label "Test Subcomponents"
