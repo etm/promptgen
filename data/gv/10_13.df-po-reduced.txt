@@ -1,1 +1,1 @@
-First, an exclusive decision with 2 branches occurs. The first decision branch is executed if the condition is "Request is valid". The second decision branch is executed if the condition is "Request is not valid". At this point all decision branches are finished, and the process ends.
+First, an exclusive decision with 2 branches occurs. The first decision branch is executed if the condition is "Request is valid". The second decision branch is executed if the condition is "Request is not valid". Following this, all decision branches are finished, and the process ends.
