@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a2 and the label "Read order"
   * an infinite loop (no condidition), furthermore referred to as L1.
 The loop L1 contains the following elements:
@@ -39,3 +39,4 @@ The second branch of D3 contains the following elements:
 The first branch of D4 contains the following elements:
   * a task with the id a7 and the label "Demand penalty"
 The second branch of D4 contains the following elements:
+This is the end of the process.

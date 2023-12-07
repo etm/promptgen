@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a3 and the label "Employee submits vacation request"
   * an infinite loop (no condidition), furthermore referred to as L1.
 The loop L1 contains the following elements:
@@ -10,3 +10,4 @@ The loop L2 contains the following elements:
   * a task with the id a5 and the label "Request is rejected"
   * a task with the id a6 and the label "Employee reviews rejection reasons"
   * a task with the id a4 and the label "Supervisor reviews request"
+This is the end of the process.

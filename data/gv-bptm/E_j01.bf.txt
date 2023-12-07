@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * an infinite loop (no condidition), furthermore referred to as L1.
 The loop L1 contains the following elements:
   * a loop, which starts if the condition "Probation phase continues" is met, furthermore referred to as L2.
@@ -8,3 +8,4 @@ The loop L1 contains the following elements:
 The loop L2 contains the following elements:
 The first branch of D1 contains the following elements:
 The second branch of D1 contains the following elements:
+This is the end of the process.

@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a1 and the label "Select starting block"
   * an infinite loop (no condidition), furthermore referred to as L1.
 The loop L1 contains the following elements:
@@ -21,3 +21,4 @@ The first branch of PG1 contains the following elements:
   * a task with the id a10 and the label "Run at Night Run"
 The second branch of PG1 contains the following elements:
   * a task with the id a11 and the label "Drink at Night Run"
+This is the end of the process.

@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a1 and the label "Report Job Applications"
   * a task with the id a3 and the label "Receive Job Offers"
   * a task with the id a5 and the label "Company Confirms and Rates Application"
@@ -10,3 +10,4 @@ The process contains the following main elements, and the process ends.
 The first branch of D1 contains the following elements:
 The second branch of D1 contains the following elements:
   * a task with the id a17 and the label "Continue Receiving Job Offers"
+This is the end of the process.

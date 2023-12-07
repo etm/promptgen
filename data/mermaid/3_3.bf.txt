@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a1 and the label "claims officer registers claim"
   * a task with the id a3 and the label "claims officer examines claim"
   * an infinite loop (no condidition), furthermore referred to as L1.
@@ -13,4 +13,5 @@ The first branch of D1 contains the following elements:
   * a task with the id a15 and the label "senior claims officer sends recommendation back"
 The second branch of D1 contains the following elements:
   * a task with the id a13 and the label "the claim handling process proceeds"
-At this point we escape the innermost loop. 
+  * at this point we escape the innermost loop.
+This is the end of the process.

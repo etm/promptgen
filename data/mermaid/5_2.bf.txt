@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a1 and the label "employee submits vacation request"
   * a task with the id a3 and the label "register the requirement"
   * a task with the id a5 and the label "supervisor receives the request"
@@ -11,3 +11,4 @@ The first branch of D1 contains the following elements:
 The second branch of D1 contains the following elements:
   * a task with the id a13 and the label "generate notification"
   * a task with the id a17 and the label "HR completes the respective management procedures"
+This is the end of the process.

@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a2 and the label "Send invitations"
   * a task with the id a3 and the label "Find out games"
   * a loop, which starts if the condition "8 or more agree?" is met, furthermore referred to as L1.
@@ -10,3 +10,4 @@ The loop L1 contains the following elements:
   * a task with the id a10 and the label "Enjoy LAN party"
 The loop L2 contains the following elements:
   * a task with the id a4 and the label "Appoint a date"
+This is the end of the process.

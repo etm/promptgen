@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a1 and the label "Select a starting block"
   * a task with the id a3 and the label "Run for 5km and measure the time"
   * a loop, which starts if the condition "Time more than 25 minutes" is met, furthermore referred to as L1.
@@ -14,3 +14,4 @@ The first branch of D1 contains the following elements:
   * a task with the id a15 and the label "Go there from home"
 The second branch of D1 contains the following elements:
   * a task with the id a17 and the label "Leave directly from work"
+This is the end of the process.

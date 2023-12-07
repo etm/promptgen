@@ -6,8 +6,9 @@ require_relative 'lib/cpee/transformation/text-df-PO-reduced'
 require_relative 'lib/cpee/transformation/text-df-PO-extended'
 require_relative 'lib/cpee/transformation/text-bf'
 
-source = CPEE::Transformation::Source::Mermaid.new(File.read('data/mermaid/1_2.mmd'))
+source = CPEE::Transformation::Source::Mermaid.new(File.read('data/mermaid-bptm/X_g03.mmd'))
 puts source.graph.to_s
+
 trans = CPEE::Transformation::Transformer.new(source)
 
 traces = trans.build_traces
@@ -17,4 +18,4 @@ puts traces.to_s
 trans.build_tree(false)
 puts source.tree.to_s
 
-puts trans.generate_model(CPEE::Transformation::Target::Text_bf)
+puts trans.generate_model(CPEE::Transformation::Target::Text_df_PO_extended)

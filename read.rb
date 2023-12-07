@@ -99,7 +99,7 @@ bpmn.each do |f|
 end
 
 #########################################################################################################
-### Write-Breath First traversed texts, with lots of enumerations.
+### Write-Breadth First traversed texts (not really), with lots of enumerations.
 #########################################################################################################
 mm.each do |f|
   source = CPEE::Transformation::Source::Mermaid.new(File.read(f))

@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a1 and the label "Read order from system"
   * a loop, which starts if the condition "Product not in stock" is met, furthermore referred to as L1.
   * a task with the id a5 and the label "Withdraw product from warehouse"
@@ -19,7 +19,9 @@ The first branch of D2 contains the following elements:
   * a task with the id a23 and the label "Select next product"
 The second branch of D2 contains the following elements:
   * a parallel gateway with 2 branches, furthermore dubbed PG1. 
-At this point we escape the innermost loop. The first branch of PG1 contains the following elements:
+  * at this point we escape the innermost loop.
+The first branch of PG1 contains the following elements:
   * a task with the id a25 and the label "Request courier"
 The second branch of PG1 contains the following elements:
   * a task with the id a27 and the label "Pack products"
+This is the end of the process.

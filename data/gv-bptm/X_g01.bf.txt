@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a2 and the label "Select a course"
   * a task with the id a3 and the label "Check account"
   * an exclusive decision with 2 branches. This decision will be furthermore refered to as D1. 
@@ -19,3 +19,4 @@ The first branch of D2 contains the following elements:
 The second branch of D2 contains the following elements:
   * a task with the id a6 and the label "Request activation"
 The second branch of D1 contains the following elements:
+This is the end of the process.

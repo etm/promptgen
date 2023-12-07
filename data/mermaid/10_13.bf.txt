@@ -1,4 +1,5 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a1 and the label "INQ transmits the transaction data request"
   * a task with the id a3 and the label "IP checks the request"
   * a task with the id a5 and the label "IP answers the question"
+This is the end of the process.

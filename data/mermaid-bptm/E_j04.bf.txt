@@ -1,4 +1,4 @@
-The process contains the following main elements, and the process ends.
+The process contains the following main elements:
   * a task with the id a1 and the label "Enter topic, money, experience, hobbies"
   * an infinite loop (no condidition), furthermore referred to as L1.
 The loop L1 contains the following elements:
@@ -10,3 +10,4 @@ The loop L1 contains the following elements:
   * a task with the id a19 and the label "Send tweets in parallel"
 The loop L2 contains the following elements:
   * a task with the id a3 and the label "Receive offers"
+This is the end of the process.
