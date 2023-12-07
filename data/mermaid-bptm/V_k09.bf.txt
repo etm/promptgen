@@ -11,7 +11,6 @@ The loop L1 contains the following elements:
   * a task with the id a13 and the label "Register product in stock management system"
   * an exclusive decision with 2 branches. This decision will be furthermore refered to as D2. 
     The first branch of D2 is executed if the condition is "Order not ready for shipment". 
-    The second branch of D2 is executed if the condition is "". 
 The first branch of D1 contains the following elements:
   * a task with the id a11 and the label "Demand penalty from wholesaler"
 The second branch of D1 contains the following elements:
@@ -19,9 +18,9 @@ The first branch of D2 contains the following elements:
   * a task with the id a23 and the label "Select next product"
 The second branch of D2 contains the following elements:
   * a parallel gateway with 2 branches, furthermore dubbed PG1. 
-  * at this point we escape the innermost loop.
+  * at this point the innermost loop is exited. 
 The first branch of PG1 contains the following elements:
   * a task with the id a25 and the label "Request courier"
 The second branch of PG1 contains the following elements:
   * a task with the id a27 and the label "Pack products"
-This is the end of the process.
+After this the process ends.

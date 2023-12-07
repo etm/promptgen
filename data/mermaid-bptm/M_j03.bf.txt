@@ -8,10 +8,9 @@ The process contains the following main elements:
   * an pre_test decision with 3 branches. This decision will be furthermore refered to as D2. 
     The first branch of D2 is executed if the condition is "If stock falls below 5". 
     The second branch of D2 is executed if the condition is "If stock falls below 3". 
-    The third branch of D2 is executed if the condition is "". 
   * a task with the id a21 and the label "Write a mail complaining about webshops"
 The first branch of D1 contains the following elements:
   * a task with the id a5 and the label "Order parts from cheapest shop"
 The second branch of D1 contains the following elements:
   * a task with the id a7 and the label "Order parts from several shops"
-This is the end of the process.
+After this the process ends.

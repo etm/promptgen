@@ -29,4 +29,4 @@ The second branch of PG2 contains the following elements:
   * a task with the id a7 and the label "Order chain width"
 The third branch of PG2 contains the following elements:
   * a task with the id a9 and the label "Order chainsaw type"
-This is the end of the process.
+After this the process ends.

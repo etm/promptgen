@@ -18,4 +18,4 @@ The second branch of D1 contains the following elements:
   * a task with the id a8 and the label "Reorder parts (fastest)"
 The third branch of D1 contains the following elements:
   * a task with the id a9 and the label "Complain to friends"
-This is the end of the process.
+After this the process ends.

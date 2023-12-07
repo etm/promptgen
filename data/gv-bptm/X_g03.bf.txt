@@ -21,4 +21,4 @@ The first branch of PG1 contains the following elements:
   * a task with the id a10 and the label "Run at Night Run"
 The second branch of PG1 contains the following elements:
   * a task with the id a11 and the label "Drink at Night Run"
-This is the end of the process.
+After this the process ends.

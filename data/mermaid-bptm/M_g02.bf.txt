@@ -17,4 +17,4 @@ The loop L3 contains the following elements:
 The loop L4 contains the following elements:
   * a task with the id a19 and the label "Redesign and Rebuild"
   * a task with the id a15 and the label "Test Subcomponents"
-This is the end of the process.
+After this the process ends.

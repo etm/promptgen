@@ -20,4 +20,4 @@ The first branch of PG1 contains the following elements:
   * a task with the id a21 and the label "Send Messages to Friends for Building"
 The second branch of PG1 contains the following elements:
   * a task with the id a23 and the label "Wait for Order Processing"
-This is the end of the process.
+After this the process ends.

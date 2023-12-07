@@ -10,4 +10,4 @@ The first branch of PG1 contains the following elements:
   * a task with the id a7 and the label "Manufacture Vodka Bar"
 The second branch of PG1 contains the following elements:
   * a task with the id a9 and the label "Manufacture Whiskey Bar"
-This is the end of the process.
+After this the process ends.

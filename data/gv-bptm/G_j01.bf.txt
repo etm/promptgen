@@ -8,4 +8,4 @@ The loop L1 contains the following elements:
     The first branch of D1 is executed if the condition is "Disaster strikes". 
     The second branch of D1 is executed if the condition is "Milestone reached". 
     The third branch of D1 is executed if the condition is "Update resources". 
-This is the end of the process.
+After this the process ends.

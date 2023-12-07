@@ -20,4 +20,4 @@ The first branch of D2 contains the following elements:
 The second branch of D2 contains the following elements:
 The second branch of D1 contains the following elements:
   * a task with the id a13 and the label "Order Color"
-This is the end of the process.
+After this the process ends.

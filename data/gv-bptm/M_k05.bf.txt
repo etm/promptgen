@@ -9,4 +9,4 @@ The process contains the following main elements:
   * a task with the id a8 and the label "Invite friends to party"
   * a task with the id a9 and the label "Create attendees list"
   * a task with the id a10 and the label "Buy snacks"
-This is the end of the process.
+After this the process ends.

@@ -13,4 +13,4 @@ The loop L1 contains the following elements:
 The loop L2 contains the following elements:
   * a task with the id a8 and the label "Technician leaves without repair"
   * a task with the id a5 and the label "Local facility makes appointment"
-This is the end of the process.
+After this the process ends.

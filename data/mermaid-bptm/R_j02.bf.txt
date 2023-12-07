@@ -14,4 +14,4 @@ The second branch of D1 contains the following elements:
 The first branch of D2 contains the following elements:
   * a task with the id a15 and the label "Answer additional questions"
 The second branch of D2 contains the following elements:
-This is the end of the process.
+After this the process ends.

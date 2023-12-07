@@ -10,4 +10,4 @@ The loop L1 contains the following elements:
   * a task with the id a10 and the label "Enjoy LAN party"
 The loop L2 contains the following elements:
   * a task with the id a4 and the label "Appoint a date"
-This is the end of the process.
+After this the process ends.

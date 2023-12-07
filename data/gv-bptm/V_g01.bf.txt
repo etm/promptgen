@@ -23,4 +23,4 @@ The loop L1 contains the following elements:
   * a task with the id a10 and the label "Deliver order"
 The loop L2 contains the following elements:
   * a task with the id a9 and the label "Give status updates"
-This is the end of the process.
+After this the process ends.

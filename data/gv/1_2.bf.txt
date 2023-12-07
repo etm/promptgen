@@ -21,4 +21,4 @@ The loop L2 contains the following elements:
   * a task with the id a15 and the label "Execute arbitrary repair activity"
   * a task with the id a12 and the label "Test system functionality"
 The second branch of D1 contains the following elements:
-This is the end of the process.
+After this the process ends.

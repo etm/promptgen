@@ -6,4 +6,4 @@ The process contains the following main elements:
   * a task with the id a25 and the label "Brag to Friends"
   * a task with the id a27 and the label "Send Materials to Friends"
 The loop L1 contains the following elements:
-This is the end of the process.
+After this the process ends.

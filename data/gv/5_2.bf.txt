@@ -10,4 +10,4 @@ The loop L2 contains the following elements:
   * a task with the id a5 and the label "Request is rejected"
   * a task with the id a6 and the label "Employee reviews rejection reasons"
   * a task with the id a4 and the label "Supervisor reviews request"
-This is the end of the process.
+After this the process ends.

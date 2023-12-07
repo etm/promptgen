@@ -21,4 +21,4 @@ The first branch of PG1 contains the following elements:
 The second branch of PG1 contains the following elements:
   * a task with the id a21 and the label "checks the software"
   * a task with the id a23 and the label "configures the software"
-This is the end of the process.
+After this the process ends.

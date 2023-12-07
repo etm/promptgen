@@ -16,4 +16,4 @@ The first branch of D2 contains the following elements:
   * a task with the id a19 and the label "Send review or video"
 The second branch of D2 contains the following elements:
   * a task with the id a21 and the label "Send to expert"
-This is the end of the process.
+After this the process ends.

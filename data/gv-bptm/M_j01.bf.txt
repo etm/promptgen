@@ -16,4 +16,4 @@ The loop L2 contains the following elements:
   * a task with the id a5 and the label "Assemble chainsaw"
   * a task with the id a6 and the label "Update customer"
   * a task with the id a7 and the label "Send first chainsaw to customer"
-This is the end of the process.
+After this the process ends.
