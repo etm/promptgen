@@ -25,5 +25,9 @@ The first branch of PG1 contains the following elements:
   * a task with the id a11 and the label "Wait for Bank Confirmation"
 The second branch of PG1 contains the following elements:
   * a task with the id a12 and the label "Enter Shipping Address"
+  * an exclusive decision with 2 branches. This decision will be furthermore refered to as D2. 
+The first branch of D2 contains the following elements:
+  * a task with the id a13 and the label "Enter Billing Address"
+The second branch of D2 contains the following elements:
 The second branch of D1 contains the following elements:
 After this the process ends.

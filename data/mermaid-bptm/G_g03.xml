@@ -9,6 +9,29 @@
       <arguments/>
     </parameters>
   </call>
+  <choose mode="exclusive">
+    <alternative condition="">
+      <call id="a3" endpoint="">
+        <parameters>
+          <label>"Enter account information"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'3'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+      <call id="a5" endpoint="">
+        <parameters>
+          <label>"Click the link in the confirmation mail"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'4'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition=""/>
+  </choose>
   <call id="a7" endpoint="">
     <parameters>
       <label>"Check if you have an active WoW subscription"</label>
@@ -18,6 +41,35 @@
       <arguments/>
     </parameters>
   </call>
+  <choose mode="exclusive">
+    <alternative condition="">
+      <choose mode="exclusive">
+        <alternative condition="Credit Card" language="text/javascript">
+          <call id="a13" endpoint="">
+            <parameters>
+              <label>"Enter your credit card information"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'7'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+        <alternative condition="Bank Account" language="text/javascript">
+          <call id="a15" endpoint="">
+            <parameters>
+              <label>"Enter your IBAN and BIC numbers"</label>
+              <method/>
+              <type>:task</type>
+              <mid>'8'</mid>
+              <arguments/>
+            </parameters>
+          </call>
+        </alternative>
+      </choose>
+    </alternative>
+    <alternative condition=""/>
+  </choose>
   <call id="a17" endpoint="">
     <parameters>
       <label>"Log into the game"</label>

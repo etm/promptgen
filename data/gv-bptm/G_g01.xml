@@ -48,6 +48,20 @@
         <arguments/>
       </parameters>
     </call>
+    <choose mode="exclusive">
+      <alternative condition="">
+        <call id="a7" endpoint="">
+          <parameters>
+            <label>"Download games"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Download games'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition=""/>
+    </choose>
     <call id="a8" endpoint="">
       <parameters>
         <label>"Find out beer"</label>
@@ -57,6 +71,20 @@
         <arguments/>
       </parameters>
     </call>
+    <choose mode="exclusive">
+      <alternative condition="">
+        <call id="a9" endpoint="">
+          <parameters>
+            <label>"Buy beer"</label>
+            <method/>
+            <type>:task</type>
+            <mid>'Buy beer'</mid>
+            <arguments/>
+          </parameters>
+        </call>
+      </alternative>
+      <alternative condition=""/>
+    </choose>
     <call id="a10" endpoint="">
       <parameters>
         <label>"Enjoy LAN party"</label>
