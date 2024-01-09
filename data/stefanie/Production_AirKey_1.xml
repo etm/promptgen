@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<description xmlns="http://cpee.org/ns/description/1.0">
+  <call id="a0" endpoint="">
+    <parameters>
+      <label>"Pallet Arrives"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'A'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a1" endpoint="">
+    <parameters>
+      <label>"Scan Results Empty"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'B'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <call id="a3" endpoint="">
+    <parameters>
+      <label>"Order Scanned"</label>
+      <method/>
+      <type>:task</type>
+      <mid>'C'</mid>
+      <arguments/>
+    </parameters>
+  </call>
+  <choose mode="exclusive">
+    <alternative condition="">
+      <call id="a5" endpoint="">
+        <parameters>
+          <label>"Scanning UI Displayed"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'D'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+    <alternative condition="">
+      <call id="a7" endpoint="">
+        <parameters>
+          <label>"Part Assembled"</label>
+          <method/>
+          <type>:task</type>
+          <mid>'E'</mid>
+          <arguments/>
+        </parameters>
+      </call>
+    </alternative>
+  </choose>
+</description>
