@@ -6,7 +6,7 @@ require_relative 'lib/cpee/transformation/text-df-PO-reduced'
 require_relative 'lib/cpee/transformation/text-df-PO-extended'
 require_relative 'lib/cpee/transformation/text-bf'
 
-source = CPEE::Transformation::Source::Mermaid.new(File.read('data/mermaid-bptm/X_g03.mmd'))
+source = CPEE::Transformation::Source::Mermaid.new(File.read('data/stefanie/Production_AirKey_1.mmd'))
 puts source.graph.to_s
 
 trans = CPEE::Transformation::Transformer.new(source)

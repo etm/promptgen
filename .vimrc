@@ -1,1 +1,1 @@
-map <F10> :!ruby test.rb<CR>
+map <F10> :!ruby test.script<CR>

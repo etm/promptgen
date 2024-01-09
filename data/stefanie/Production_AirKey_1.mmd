@@ -1,0 +1,5 @@
+graph TD
+  A[Pallet Arrives] -->|System empties scan results| B[Scan Results Empty]
+  B -->|Worker scans order| C[Order Scanned]
+  C -->|System displays scanning UI| D[Scanning UI Displayed]
+  C -->|Worker assembles part| E[Part Assembled]
